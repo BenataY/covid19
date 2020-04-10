@@ -34,57 +34,13 @@
       </v-icon>
 
       <nav class="SideNavigation-Menu">
-        <div class="SideNavigation-Language">
-          <div
-            v-if="this.$i18n.locales.length > 1"
-            class="SideNavigation-Language"
-          >
-            <label class="SideNavigation-LanguageLabel" for="LanguageSelector">
-              {{ $t('多言語対応選択メニュー') }}
-            </label>
-            <LanguageSelector />
-          </div>
-        </div>
         <MenuList :items="items" @click="$emit('closeNavi', $event)" />
       </nav>
 
       <footer class="SideNavigation-Footer">
         <div class="SideNavigation-Social">
           <a
-            href="https://line.me/R/ti/p/%40822sysfc"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="SideNavigation-SocialLink"
-          >
-            <picture>
-              <source srcset="/line.webp" type="image/webp" />
-              <img src="/line.png" alt="LINE" />
-            </picture>
-          </a>
-          <a
-            href="https://twitter.com/tokyo_bousai"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="SideNavigation-SocialLink"
-          >
-            <picture>
-              <source srcset="/twitter.webp" type="image/webp" />
-              <img src="/twitter.png" alt="Twitter" />
-            </picture>
-          </a>
-          <a
-            href="https://www.facebook.com/tochokoho"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="SideNavigation-SocialLink"
-          >
-            <picture>
-              <source srcset="/facebook.webp" type="image/webp" />
-              <img src="/facebook.png" alt="Facebook" />
-            </picture>
-          </a>
-          <a
-            href="https://github.com/tokyo-metropolitan-gov/covid19"
+            href="https://github.com/BenataY/covid19"
             target="_blank"
             rel="noopener noreferrer"
             class="SideNavigation-SocialLink"
@@ -143,7 +99,7 @@ export default Vue.extend({
       return [
         {
           icon: 'mdi-chart-timeline-variant',
-          title: this.$t('都内の最新感染動向'),
+          title: this.$t('県内の最新感染動向'),
           link: this.localePath('/')
         },
         {

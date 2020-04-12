@@ -123,7 +123,7 @@ export default Vue.extend({
         },
         {
           title: this.$t('各保健所相談窓口'),
-          link: 'https://www.pref.ibaraki.jp/hokenfukushi/yobo/kiki/yobo/kansen/idwr/information/other/documents/corona-soudan.html'
+          link: this.localePath('/healthCenter')
         },
         {
           title: this.$t('当サイトについて'),

@@ -15,6 +15,19 @@
           '新型コロナウイルス感染症に関する相談,感染予防に関すること,心配な症状が出たときの対応,など'
         )
       }}
+      <a href=''></a>
+
+      <a
+        :href="
+          $t(
+            'https://www.pref.ibaraki.jp/hokenfukushi/yobo/kiki/yobo/kansen/idwr/information/other/documents/corona-soudan.html'
+          )
+        "
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {{ $t('新型コロナウイルス感染症に関する電話相談窓口について') }}
+      </a>
       <br />
       <br />
     </StaticCard>

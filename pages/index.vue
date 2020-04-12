@@ -18,10 +18,15 @@
     <whats-new class="mb-4" :items="newsItems" />
     <static-info
       class="mb-4"
-      :url="localePath('/flow')"
-      :text="$t('自分や家族の症状に不安や心配があればまずは電話相談をどうぞ')"
-      :btn-text="$t('相談の手順を見る')"
+      :url="$t('https://www.pref.ibaraki.jp/1saigai/2019-ncov/documents/200408onegai.pdf')"
+      :text="$t('感染拡大要注意市町村（10市町） 令和２年４月８日時点')"
     />
+    <static-info
+      class="mb-4"
+      :url="$t('https://www.mhlw.go.jp/content/10900000/000599643.pdf')"
+      :text="$t('新型コロナウイルスを防ぐには')"
+    />
+
     <v-row class="DataBlock">
       <confirmed-cases-details-card />
       <tested-cases-details-card />

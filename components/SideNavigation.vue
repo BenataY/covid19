@@ -16,8 +16,8 @@
             :alt="$t('茨城県')"
           />
           <div class="SideNavigation-HeaderText">
-            {{ $t('menu/新型コロナウイルス感染症') }}<br />{{
-              $t('menu/情報まとめサイト')
+            {{ $t('新型コロナウイルス感染症') }}<br />{{
+              $t('情報まとめサイト')
             }}
           </div>
         </nuxt-link>
@@ -114,13 +114,18 @@ export default Vue.extend({
           divider: true
         },
         {
-          title: this.$t('当サイトについて'),
-          link: this.localePath('/about')
+          title: this.$t('県知事からのメッセージ'),
+          link:
+            'https://www.pref.ibaraki.jp/1saigai/2019-ncov/message.html'
         },
         {
-          title: this.$t('お問い合わせ先一覧'),
-          link: this.localePath('/contacts')
+          title: this.$t('各保健所相談窓口'),
+          link: this.localePath('/healthCenter')
         },
+        {
+          title: this.$t('当サイトについて'),
+          link: this.localePath('/about')
+        }
       ]
     }
   },

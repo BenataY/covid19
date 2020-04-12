@@ -23,7 +23,7 @@ const config: Configuration = {
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https://stopcovid19.metro.tokyo.lg.jp'
+        content: 'https://stopcovid19-ibaraki.jp'
       },
       {
         hid: 'twitter:card',
@@ -117,7 +117,7 @@ const config: Configuration = {
     }
   },
   googleAnalytics: {
-    id: process.env.GOOGLE_ANALYTICS_ID // .env.production などに設定してください。
+    id: ’UA-163407128-1’
   },
   build: {
     plugins: [
@@ -149,7 +149,7 @@ const config: Configuration = {
     // hardSource: process.env.NODE_ENV === 'development'
   },
   manifest: {
-    name: '東京都 新型コロナウイルス感染症対策サイト',
+    name: '茨城県 新型コロナウイルス感染症まとめサイト',
     theme_color: '#00a040',
     background_color: '#ffffff',
     display: 'standalone',

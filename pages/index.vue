@@ -19,12 +19,7 @@
     <static-info
       class="mb-4"
       :url="$t('https://www.pref.ibaraki.jp/1saigai/2019-ncov/documents/200408onegai.pdf')"
-      :text="$t('感染拡大要注意市町村（10市町） 令和２年４月８日時点')"
-    />
-    <static-info
-      class="mb-4"
-      :url="$t('https://www.mhlw.go.jp/content/10900000/000599643.pdf')"
-      :text="$t('新型コロナウイルスを防ぐには')"
+      :text="$t('感染拡大要注意市町村（10市町）')"
     />
 
     <v-row class="DataBlock">

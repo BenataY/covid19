@@ -114,6 +114,10 @@ export default Vue.extend({
           divider: true
         },
         {
+          title: this.$t('新型コロナウイルスを防ぐには'),
+          link: 'https://www.mhlw.go.jp/content/10900000/000599643.pdf'
+        },
+        {
           title: this.$t('県知事からのメッセージ'),
           link: 'https://www.pref.ibaraki.jp/1saigai/2019-ncov/message.html'
         },

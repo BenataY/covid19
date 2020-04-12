@@ -64,22 +64,16 @@ export default Vue.extend({
     WhatsNew,
     StaticInfo,
     ConfirmedCasesDetailsCard,
-    TestedCasesDetailsCard,
     ConfirmedCasesNumberCard,
     ConfirmedCasesAttributesCard,
-    TestedNumberCard,
-    InspectionPersonsNumberCard,
-    TelephoneAdvisoryReportsNumberCard,
-    ConsultationDeskReportsNumberCard,
-    MetroCard,
-    AgencyCard
+    TestedNumberCard
   },
   data() {
     const data = {
       Data,
       headerItem: {
         icon: 'mdi-chart-timeline-variant',
-        title: this.$t('都内の最新感染動向')
+        title: this.$t('県内の最新感染動向')
       },
       newsItems: News.newsItems
     }
@@ -92,7 +86,7 @@ export default Vue.extend({
   },
   head(): MetaInfo {
     return {
-      title: this.$t('都内の最新感染動向') as string
+      title: this.$t('県内の最新感染動向') as string
     }
   }
 })

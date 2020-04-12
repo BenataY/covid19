@@ -9,8 +9,8 @@
           href="http://www.sangyo-rodo.metro.tokyo.jp/chushou/kinyu/yuushi/yuushi/new"
           target="_blank"
           rel="noopener noreferrer"
-          >{{ $t('新型コロナウイルス感染症に対応した制度融資') }}</a
-        >
+          >{{ $t('新型コロナウイルス感染症に対応した制度融資') }}
+        </a>
       </h3>
       <p>
         {{
@@ -26,8 +26,8 @@
           href="https://www.tokyo-kosha.or.jp/topics/2003/0001.html"
           target="_blank"
           rel="noopener noreferrer"
-          >{{ $t('新型コロナウイルスによる経営課題に関する専門家派遣') }}</a
-        >
+          >{{ $t('新型コロナウイルスによる経営課題に関する専門家派遣') }}
+        </a>
       </h3>
       <p>
         {{

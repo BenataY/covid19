@@ -115,12 +115,11 @@ export default Vue.extend({
         },
         {
           title: this.$t('県知事からのメッセージ'),
-          link:
-            'https://www.pref.ibaraki.jp/1saigai/2019-ncov/message.html'
+          link: 'https://www.pref.ibaraki.jp/1saigai/2019-ncov/message.html'
         },
         {
           title: this.$t('各保健所相談窓口'),
-          link: this.localePath('/healthCenter')
+          link: 'https://www.pref.ibaraki.jp/hokenfukushi/yobo/kiki/yobo/kansen/idwr/information/other/documents/corona-soudan.html'
         },
         {
           title: this.$t('当サイトについて'),

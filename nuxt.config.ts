@@ -15,7 +15,7 @@ const config: Configuration = {
     htmlAttrs: {
       prefix: 'og: http://ogp.me/ns#'
     },
-    titleTemplate: '%s | 茨城県 新型コロナウイルス感染症まとめサイト',
+    titleTemplate: '%s | 茨城県 新型コロナウイルス感染症情報まとめサイト',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -149,7 +149,7 @@ const config: Configuration = {
     // hardSource: process.env.NODE_ENV === 'development'
   },
   manifest: {
-    name: '茨城県 新型コロナウイルス感染症まとめサイト',
+    name: '茨城県 新型コロナウイルス感染症情報まとめサイト',
     theme_color: '#00a040',
     background_color: '#ffffff',
     display: 'standalone',

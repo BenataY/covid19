@@ -12,7 +12,7 @@
         <nuxt-link :to="localePath('/')" class="SideNavigation-HeaderLink">
           <img
             class="SideNavigation-HeaderLogo"
-            src="/logo.png"
+            src="/logo.svg"
             :alt="$t('茨城県')"
           />
           <div class="SideNavigation-HeaderText">

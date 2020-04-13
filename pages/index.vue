@@ -18,8 +18,8 @@
     <whats-new class="mb-4" :items="newsItems" />
     <static-info
       class="mb-4"
-      :url="$t('https://www.pref.ibaraki.jp/1saigai/2019-ncov/documents/200408onegai.pdf')"
-      :text="$t('感染拡大要注意市町村（10市町）')"
+      :url="$t('https://www.pref.ibaraki.jp/1saigai/2019-ncov/documents/200413minasamahe.pdf')"
+      :text="$t('茨城県にお住いのすべての皆様へ')"
     />
 
     <v-row class="DataBlock">

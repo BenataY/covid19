@@ -40,10 +40,16 @@
           {{ $t('各保健所の電話番号について') }}
           <br />
           <a
-            href="https://www.fukushihoken.metro.tokyo.lg.jp/iryo/kansen/coronasodan.html"
+            href="https://www.pref.ibaraki.jp/hokenfukushi/yobo/kiki/yobo/kansen/idwr/information/other/documents/20200130-corona.html"
             target="_blank"
             rel="noopener noreferrer"
-            >{{ $t('「新型コロナウイルス感染症にかかる相談窓口について」') }}</a
+            >{{ $t('新型コロナウイルス感染症（対策・相談窓口等）について') }}</a
+          >
+          <a
+            href="https://www.pref.ibaraki.jp/hokenfukushi/yobo/kiki/yobo/kansen/idwr/information/other/documents/corona-soudan.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ $t('新型コロナウイルス感染症に関する電話相談窓口について') }}</a
           >
         </li>
       </ul>

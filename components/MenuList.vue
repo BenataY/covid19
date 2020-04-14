@@ -44,7 +44,8 @@ type MenuItem = {
 export default Vue.extend({
   components: {
     CovidIcon,
-    ParentIcon
+    ParentIcon,
+    FoodIcon
   },
   props: {
     items: {

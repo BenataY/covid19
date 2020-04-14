@@ -105,7 +105,8 @@ export default Vue.extend({
         {
           icon: 'ParentIcon',
           title: this.$t('お子様をお持ちの皆様へ'),
-          link: this.localePath('/parent')
+          link: this.localePath('/parent'),
+          divider: true
         },
         {
           title: this.$t('新型コロナウイルスを防ぐには'),

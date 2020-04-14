@@ -45,6 +45,7 @@
             rel="noopener noreferrer"
             >{{ $t('新型コロナウイルス感染症（対策・相談窓口等）について') }}</a
           >
+          <br />
           <a
             href="https://www.pref.ibaraki.jp/hokenfukushi/yobo/kiki/yobo/kansen/idwr/information/other/documents/corona-soudan.html"
             target="_blank"

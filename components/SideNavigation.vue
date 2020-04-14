@@ -105,7 +105,12 @@ export default Vue.extend({
         {
           icon: 'ParentIcon',
           title: this.$t('お子様をお持ちの皆様へ'),
-          link: this.localePath('/parent'),
+          link: this.localePath('/parent')
+        },
+        {
+          icon: 'FoodIcon',
+          title: this.$t('県内テイクアウト情報'),
+          link: this.localePath('/takeout'),
           divider: true
         },
         {

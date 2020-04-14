@@ -32,6 +32,7 @@
 import Vue, { PropType } from 'vue'
 import CovidIcon from '@/static/covid.svg'
 import ParentIcon from '@/static/parent.svg'
+import FoodIcon from '@/static/food.svg'
 
 type MenuItem = {
   icon?: string

@@ -116,27 +116,56 @@
               <a
                 :href="
                   $t(
-                    'https://yuuki.inetcci.or.jp/musubimeshi'
+                    'http://www.hcci.jp/corona/takeout/index.htm'
                   )
                 "
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {{ $t('#結城むすびめし') }}
+                {{ $t('テイクアウト＆デリバリー応援キャンペーン') }}
               </a>
             </td>
-            <td class="bureau">{{ $t('結城市') }}</td>
+            <td class="bureau">{{ $t('ひたちなか市') }}</td>
             <td class="bureau">
               <a
                 :href="
                   $t(
-                    'https://yuuki.inetcci.or.jp/'
+                    'http://www.hcci.jp/'
                   )
                 "
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {{ $t('結城商工会議所') }}
+                {{ $t('ひたちなか商工会議所') }}
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="content" v-bind="headingAttrs">
+              <a
+                :href="
+                  $t(
+                    'http://www.shimodate-cci.or.jp/latest_information/202004062200/'
+                  )
+                "
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {{ $t('shimodateテイクアウトサービス') }}
+              </a>
+            </td>
+            <td class="bureau">{{ $t('筑西市') }}</td>
+            <td class="bureau">
+              <a
+                :href="
+                  $t(
+                    'http://www.shimodate-cci.or.jp/'
+                  )
+                "
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {{ $t('下館商工会議所') }}
               </a>
             </td>
           </tr>

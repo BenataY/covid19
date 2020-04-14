@@ -108,7 +108,6 @@ export default Vue.extend({
           link: this.localePath('/parent')
         },
         {
-          icon: 'FoodIcon',
           title: this.$t('県内テイクアウト情報'),
           link: this.localePath('/takeout'),
           divider: true

@@ -108,12 +108,6 @@ export default Vue.extend({
           link: this.localePath('/parent')
         },
         {
-          icon: 'mdi-domain',
-          title: this.$t('企業の皆様・はたらく皆様へ'),
-          link: this.localePath('/worker'),
-          divider: true
-        },
-        {
           title: this.$t('新型コロナウイルスを防ぐには'),
           link: 'https://www.mhlw.go.jp/content/10900000/000599643.pdf'
         },

@@ -15,6 +15,11 @@
         <span>{{ $t('注釈') }} </span>
       </div>
     </div>
+    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">
+      Tweet
+    </a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fstopcovid19-ibaraki.jp%2F&layout=button&size=small&width=69&height=20&appId" width="69" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
     <whats-new class="mb-4" :items="newsItems" />
     <static-info
       class="mb-4"

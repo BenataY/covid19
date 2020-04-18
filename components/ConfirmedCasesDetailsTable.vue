@@ -28,11 +28,20 @@
             <li :class="[$style.box, $style.short, $style.minor]">
               <div :class="$style.pillar">
                 <div :class="$style.content">
-                  <!-- eslint-disable vue/no-v-html-->
-                  <span v-html="$t('軽症・<br />中等症')" />
-                  <!-- eslint-enable vue/no-v-html-->
+                  <span>{{ $t('軽症') }}</span>
                   <span>
-                    <strong>{{ 軽症中等症 }}</strong>
+                    <strong>{{ 軽症 }}</strong>
+                    <span :class="$style.unit">{{ $t('人') }}</span>
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li :class="[$style.box, $style.short, $style.minor]">
+              <div :class="$style.pillar">
+                <div :class="$style.content">
+                  <span>{{ $t('中等症') }}</span>
+                  <span>
+                    <strong>{{ 中等症 }}</strong>
                     <span :class="$style.unit">{{ $t('人') }}</span>
                   </span>
                 </div>
@@ -65,9 +74,11 @@
         <li :class="[$style.box, $style.recovered]">
           <div :class="$style.pillar">
             <div :class="$style.content">
-              <span>{{ $t('退院') }}</span>
+              <!-- eslint-disable vue/no-v-html-->
+              <span v-html="$t('退院・<br />不明')" />
+              <!-- eslint-enable vue/no-v-html-->
               <span>
-                <strong>{{ 退院 }}</strong>
+                <strong>{{ 退院不明 }}</strong>
                 <span :class="$style.unit">{{ $t('人') }}</span>
               </span>
             </div>
@@ -96,7 +107,11 @@ export default Vue.extend({
       type: Number,
       required: true
     },
-    軽症中等症: {
+    軽症: {
+      type: Number,
+      required: true
+    },
+    中等症: {
       type: Number,
       required: true
     },
@@ -108,7 +123,7 @@ export default Vue.extend({
       type: Number,
       required: true
     },
-    退院: {
+    退院不明: {
       type: Number,
       required: true
     }

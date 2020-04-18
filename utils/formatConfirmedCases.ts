@@ -49,8 +49,7 @@ type ConfirmedCasesType = {
   中等症: number
   重症: number
   死亡: number
-  退院: number
-  不明: number
+  退院不明: number
 }
 
 /**
@@ -67,8 +66,7 @@ export default (data: DataType) => {
     中等症: data.children[0].children[0].children[1].value,
     重症: data.children[0].children[0].children[2].value,
     死亡: data.children[0].children[2].value,
-    退院: data.children[0].children[1].value,
-    不明: data.children[0].children[3].value
+    退院不明: Number(data.children[0].children[1].value) + Number(data.children[0].children[3].value)
   }
   return formattedData
 }

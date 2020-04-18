@@ -7,8 +7,8 @@
       :chart-option="{}"
       :date="Data.patients.date"
       :info="sumInfoOfPatients"
-      :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/index.html'"
-      :source="$t('オープンデータを入手')"
+      :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/hassei.html'"
+      :source="$t('参考元データ')"
     />
   </v-col>
 </template>

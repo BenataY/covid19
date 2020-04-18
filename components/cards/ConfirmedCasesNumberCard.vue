@@ -7,7 +7,8 @@
       :chart-data="patientsGraph"
       :date="Data.patients.date"
       :unit="$t('人')"
-      :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/index.html'"
+      :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/hassei.html'"
+      :source="$t('参考元データ')"
     />
   </v-col>
 </template>

@@ -33,6 +33,7 @@
       <consultation-desk-reports-number-card />
       <metro-card />
       <agency-card />
+      <sickbeds-summary-card />
     </v-row>
     <v-divider />
   </div>
@@ -56,6 +57,7 @@ import TelephoneAdvisoryReportsNumberCard from '@/components/cards/TelephoneAdvi
 import ConsultationDeskReportsNumberCard from '@/components/cards/ConsultationDeskReportsNumberCard.vue'
 import MetroCard from '@/components/cards/MetroCard.vue'
 import AgencyCard from '@/components/cards/AgencyCard.vue'
+import SickbedsSummaryCard from '@/components/cards/SickbedsSummaryCard.vue'
 import { convertDatetimeToISO8601Format } from '@/utils/formatDate'
 
 export default Vue.extend({
@@ -65,7 +67,8 @@ export default Vue.extend({
     StaticInfo,
     ConfirmedCasesDetailsCard,
     ConfirmedCasesNumberCard,
-    ConfirmedCasesAttributesCard
+    ConfirmedCasesAttributesCard,
+    SickbedsSummaryCard
   },
   data() {
     const data = {

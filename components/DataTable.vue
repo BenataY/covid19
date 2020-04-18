@@ -5,6 +5,7 @@
     </template>
     <v-data-table
       :ref="'displayedTable'"
+      :disable-sort="true"
       :headers="chartData.headers"
       :items="chartData.datasets"
       :items-per-page="-1"

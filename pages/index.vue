@@ -65,8 +65,7 @@ export default Vue.extend({
     StaticInfo,
     ConfirmedCasesDetailsCard,
     ConfirmedCasesNumberCard,
-    ConfirmedCasesAttributesCard,
-    InspectionPersonsNumberCard
+    ConfirmedCasesAttributesCard
   },
   data() {
     const data = {

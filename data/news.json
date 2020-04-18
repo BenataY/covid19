@@ -2,6 +2,11 @@
     "newsItems": [
         {
             "date": "2020\/04\/17",
+            "url": "https:\/\/www.pref.ibaraki.jp\/1saigai\/2019-ncov\/kinkyu.html",
+            "text": "新型コロナウイルス感染症に関する県の緊急事態措置（外出自粛要請、休業要請・協力金の相談窓口等）について"
+        },
+        {
+            "date": "2020\/04\/17",
             "url": "https:\/\/www.pref.ibaraki.jp\/1saigai\/2019-ncov\/index.html",
             "text": "新型コロナウイルス感染症対策本部発表資料"
         },

@@ -18,8 +18,8 @@
     <whats-new class="mb-4" :items="newsItems" />
     <static-info
       class="mb-4"
-      :url="$t('https://www.pref.ibaraki.jp/1saigai/2019-ncov/documents/200413minasamahe.pdf')"
-      :text="$t('茨城県にお住いのすべての皆様へ')"
+      :url="$t('https://www.pref.ibaraki.jp/1saigai/2019-ncov/documents/200417kinkyujitaisochi.pdf')"
+      :text="$t('新型コロナウイルス感染症に関する茨城県における緊急事態措置等')"
     />
 
     <v-row class="DataBlock">

@@ -2,7 +2,7 @@ import dayjs from 'dayjs'
 
 const headers = [
   { text: 'NO', value: '区分', align: 'center' },
-  { text: '公表日', value: '公表日' },
+  { text: 'リリース日', value: '公表日' },
   { text: '居住地', value: '居住地' },
   { text: '年代', value: '年代' },
   { text: '性別', value: '性別' }
@@ -45,8 +45,8 @@ export default (data: DataType[]) => {
   }
   data.forEach(d => {
     const TableRow: TableDataType = {
-      sortNo: d['NO'] ?? 0,
-      区分: (d['NO'] + '例目'),
+      sortNo: Number(d['NO']) ?? 0,
+      区分: d['NO'] + "例目",
       公表日: dayjs(d['リリース日']).format('MM/DD') ?? '不明',
       居住地: d['居住地'] ?? '調査中',
       年代: d['年代'] ?? '不明',

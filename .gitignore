@@ -100,3 +100,4 @@ ogp/*
 # Vagrant
 .vagrant
 *.back
+data_0418.json

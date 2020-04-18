@@ -25,15 +25,11 @@ type DataType = {
           ]
         },
         {
-          attr: '退院'
-          value: number
-        },
-        {
           attr: '死亡'
           value: number
         },
         {
-          attr: '不明'
+          attr: '退院不明'
           value: number
         }
       ]
@@ -65,8 +61,8 @@ export default (data: DataType) => {
     軽症: data.children[0].children[0].children[0].value,
     中等症: data.children[0].children[0].children[1].value,
     重症: data.children[0].children[0].children[2].value,
-    死亡: data.children[0].children[2].value,
-    退院不明: Number(data.children[0].children[1].value) + Number(data.children[0].children[3].value)
+    死亡: data.children[0].children[1].value,
+    退院不明: data.children[0].children[2].value
   }
   return formattedData
 }

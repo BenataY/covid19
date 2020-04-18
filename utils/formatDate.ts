@@ -26,3 +26,7 @@ export const convertDateToISO8601Format = (dateString: string): string => {
 export const convertDateToSimpleFormat = (dateString: string): string => {
   return dayjs(dateString).format('YYYY/MM/DD')
 }
+
+export const convertDateToMDFormat = (dateString: string): string => {
+  return dayjs(dateString).format('M月D日')
+}

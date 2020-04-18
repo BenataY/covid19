@@ -1,7 +1,7 @@
 <template>
   <v-col cols="12" md="6" class="DataCard">
     <circle-chart
-      :title="$t('入院患者数と病床数')"
+      :title="$t('入院患者数と残病床数')"
       :title-id="'patietns-and-sickedbeds'"
       :chart-data="sickbedsGraph"
       :date="date"
@@ -32,7 +32,7 @@ export default {
   methods: {
     setData() {
       this.sickbedsGraph = formatVariableGraph(Data.sickbeds_summary.data)
-      this.date = '2020/04/10'
+      this.date = Data.sickbeds_summary.date
     }
   }
 }

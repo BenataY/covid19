@@ -4,15 +4,14 @@ aaaaaaaaaa
     <template v-slot:button>
       <ul :class="$style.notes">
         <li>
-          {{
-            $t(
-              '病院以外で対応する場合もあるため、これが最大許容数ではありません。'
-            )
-          }}
+            {{ $t('必ずしも最新のデータではありません。') }}
+        </li>
+        <li>
+            {{ $t('{date}時点のデータを元に更新しております。', { date }) }}
         </li>
       </ul>
     </template>
-    <pie-chart
+    <doughnut-chart
       :chart-id="chartId"
       :chart-data="displayData"
       :options="displayOption"
@@ -52,7 +51,7 @@ export default {
     chartId: {
       type: String,
       required: false,
-      default: 'pie-chart'
+      default: 'doughnut-chart'
     },
     chartData: {
       type: Array,
@@ -178,7 +177,6 @@ export default {
     isNotLoaded() {
       return this.chartData.length === 0
     }
-
   }
 }
 </script>

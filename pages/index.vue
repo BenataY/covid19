@@ -21,7 +21,11 @@
       :url="$t('https://www.pref.ibaraki.jp/1saigai/2019-ncov/documents/200417kinkyujitaisochi.pdf')"
       :text="$t('新型コロナウイルス感染症に関する茨城県における緊急事態措置等')"
     />
-
+    <static-button
+      :url="$t('https://www.kango-roo.com/sn/a/view/7495')"
+      :text="$t('＃看護師さんありがとう　＃医療従事者に感謝')"
+      :icon="'HeartIcon'"
+    />
     <v-row class="DataBlock">
       <confirmed-cases-details-card />
       <tested-cases-details-card />
@@ -45,6 +49,7 @@ import { MetaInfo } from 'vue-meta'
 import PageHeader from '@/components/PageHeader.vue'
 import WhatsNew from '@/components/WhatsNew.vue'
 import StaticInfo from '@/components/StaticInfo.vue'
+import StaticButton from '@/components/StaticButton.vue'
 import Data from '@/data/data.json'
 import News from '@/data/news.json'
 import ConfirmedCasesDetailsCard from '@/components/cards/ConfirmedCasesDetailsCard.vue'
@@ -65,6 +70,7 @@ export default Vue.extend({
     PageHeader,
     WhatsNew,
     StaticInfo,
+    StaticButton,
     ConfirmedCasesDetailsCard,
     ConfirmedCasesNumberCard,
     ConfirmedCasesAttributesCard,

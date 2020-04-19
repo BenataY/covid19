@@ -34,6 +34,7 @@
       <confirmed-cases-number-card />
       <sickbeds-summary-card />
       <age-card />
+      <cities-card />
     </v-row>
     <v-divider />
   </div>
@@ -53,6 +54,7 @@ import ConfirmedCasesNumberCard from '@/components/cards/ConfirmedCasesNumberCar
 import ConfirmedCasesAttributesCard from '@/components/cards/ConfirmedCasesAttributesCard.vue'
 import SickbedsSummaryCard from '@/components/cards/SickbedsSummaryCard.vue'
 import AgeCard from '@/components/cards/AgeCard.vue'
+import CitiesCard from '@/components/cards/CitiesCard.vue'
 import { convertDatetimeToISO8601Format } from '@/utils/formatDate'
 
 export default Vue.extend({
@@ -65,7 +67,8 @@ export default Vue.extend({
     ConfirmedCasesNumberCard,
     ConfirmedCasesAttributesCard,
     SickbedsSummaryCard,
-    AgeCard
+    AgeCard,
+    CitiesCard
   },
   data() {
     const data = {

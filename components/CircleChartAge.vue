@@ -1,15 +1,5 @@
 <template>
   <data-view :title="title" :title-id="titleId" :date="date" :url="url">
-    <template v-slot:button>
-      <ul :class="$style.notes">
-        <li>
-            {{ $t('必ずしも最新のデータではありません。') }}
-        </li>
-        <li>
-            {{ $t('{date}時点のデータを元に更新しております。', { date }) }}
-        </li>
-      </ul>
-    </template>
     <doughnut-chart
       :chart-id="chartId"
       :chart-data="displayData"
@@ -89,11 +79,9 @@ export default {
       }
 
       const chartData = this.chartData[this.chartData.length - 1]
-      const total = chartData.cumulative
-      const remaining = chartData.transition
-      const patients = total - remaining
+      const total = chartData.cumulative.toLocaleString()
       return {
-        lText: patients + '/' + total,
+        lText: total,
         sText: this.info,
         unit: this.unit
       }
@@ -101,19 +89,13 @@ export default {
     displayData() {
       if (this.isNotLoaded()) {
         return {
-          labels: [''],
-          datasets: [
-            {
-              label: '',
-              data: '',
-              backgroundColor: '',
-              borderWidth: 0
-            }
-          ]
+          lText: '',
+          sText: '',
+          unit: ''
         }
       }
 
-      const colorArray = ['#00B849', '#D9D9D9']
+      const colorArray = ['#0e470e', '#1d8d1d', '#2bd52b', '#95ea95', '#dcf8dc']
       return {
         labels: this.chartData.map(d => {
           return this.$t(d.label)
@@ -139,9 +121,7 @@ export default {
         return {}
       }
 
-      const unitBed = this.unit
       const unitPerson = this.$t('人')
-      const label = this.$t('病床数')
       const chartData = this.chartData
       return {
         tooltips: {
@@ -150,11 +130,9 @@ export default {
             label(tooltipItem) {
               const index = tooltipItem.index
               const numerator = chartData[index].transition
-              const numeratorUnit = index === 1 ? unitBed : unitPerson
-              const denominator =
-                chartData[0].transition + chartData[1].transition
-              const denominatorLabel = label
-              return `${numerator} ${numeratorUnit} (${denominatorLabel}: ${denominator}${unitBed})`
+              const numeratorUnit = unitPerson
+              const per = Math.round((numerator / chartData[chartData.length - 1].cumulative) * 100);
+              return `${numerator} ${numeratorUnit} ( ${per} % )`
             },
             title(tooltipItem, data) {
               return data.labels[tooltipItem[0].index]
@@ -185,20 +163,9 @@ export default {
 .Graph-Desc {
   margin: 10px 0;
   font-size: 12px;
-  color: $gray-3;
+  color: red;
 }
 .link {
   text-decoration: none;
-}
-ul.notes {
-  margin-top: 10px;
-  margin-bottom: 0;
-  padding-left: 0 !important;
-  font-size: 12px;
-  color: $gray-3;
-
-  > li {
-    list-style-type: none;
-  }
 }
 </style>

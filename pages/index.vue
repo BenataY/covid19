@@ -23,11 +23,6 @@
       <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fstopcovid19-ibaraki.jp%2F&layout=button&size=small&width=69&height=20&appId" width="69" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
     </div>
     <whats-new class="mb-4" :items="newsItems" />
-    <static-info
-      class="mb-4"
-      :url="$t('https://www.pref.ibaraki.jp/1saigai/2019-ncov/documents/200417kinkyujitaisochi.pdf')"
-      :text="$t('新型コロナウイルス感染症に関する茨城県における緊急事態措置等')"
-    />
 
     <v-row class="DataBlock">
       <confirmed-cases-details-card />

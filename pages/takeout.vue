@@ -20,7 +20,7 @@
               {{ $t('テイクアウト情報') }}
             </th>
             <th class="text-center" scope="col">{{ $t('市町村') }}</th>
-            <th class="text-center" scope="col">{{ $t('管理元') }}</th>
+            <th class="text-center" scope="col">{{ $t('情報元') }}</th>
           </tr>
         </thead>
         <tbody>

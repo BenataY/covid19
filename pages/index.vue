@@ -24,7 +24,7 @@
     </div>
     <whats-new class="mb-4" :items="newsItems" />
     <static-button
-      :url="$t('https://www.kango-roo.com/sn/a/view/7495')"
+      :url="'https://www.kango-roo.com/sn/a/view/7495'"
       :text="$t('＃看護師さんありがとう　＃医療従事者に感謝')"
       :icon="'HeartIcon'"
     />

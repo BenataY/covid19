@@ -1,7 +1,7 @@
 <template>
   <v-col cols="12" md="6" class="DataCard">
     <circle-chart-age
-      :title="$t('年代別陽性患者数')"
+      :title="$t('年代別 陽性患者数')"
       :title-id="'patietns-and-age'"
       :chart-data="ageGraph"
       :date="date"

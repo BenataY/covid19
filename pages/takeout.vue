@@ -6,7 +6,7 @@
     <StaticCard>
       {{
         $t(
-          '各商工会議所のテイクアウト情報の一覧'
+          '各市町村のテイクアウト情報の一覧'
         )
       }}
       <br />
@@ -79,6 +79,35 @@
                 rel="noopener noreferrer"
               >
                 {{ $t('日立商工会議所') }}
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="content" v-bind="headingAttrs">
+              <a
+                :href="
+                  $t(
+                    'https://no-sss.net/ishioka-yell/%e7%9f%b3%e5%b2%a1%e3%81%ae%e3%81%86%e3%81%be%e3%81%84%e9%a3%af'
+                  )
+                "
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {{ $t('#石岡エール飯') }}
+              </a>
+            </td>
+            <td class="bureau">{{ $t('石岡市') }}</td>
+            <td class="bureau">
+              <a
+                :href="
+                  $t(
+                    'https://no-sss.net/ishioka-yell/'
+                  )
+                "
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {{ $t('いしおか応援プロジェクト') }}
               </a>
             </td>
           </tr>
@@ -166,6 +195,35 @@
                 rel="noopener noreferrer"
               >
                 {{ $t('下館商工会議所') }}
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="content" v-bind="headingAttrs">
+              <a
+                :href="
+                  $t(
+                    'http://www.kamisu-kanko.jp/taberu/index.html'
+                  )
+                "
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {{ $t('#神栖テイクアウト') }}
+              </a>
+            </td>
+            <td class="bureau">{{ $t('神栖市') }}</td>
+            <td class="bureau">
+              <a
+                :href="
+                  $t(
+                    'http://www.kamisu-kanko.jp/index.html'
+                  )
+                "
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {{ $t('神栖市観光協会') }}
               </a>
             </td>
           </tr>

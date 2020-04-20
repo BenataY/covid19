@@ -177,7 +177,7 @@ export default Vue.extend({
   },
   head(): MetaInfo {
     return {
-      title: this.$t('お問い合わせ先一覧') as string
+      title: this.$t('各保健所相談窓口') as string
     }
   }
 })

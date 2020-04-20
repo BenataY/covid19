@@ -273,7 +273,7 @@ export default Vue.extend({
   },
   head(): MetaInfo {
     return {
-      title: this.$t('お問い合わせ先一覧') as string
+      title: this.$t('県内テイクアウト情報') as string
     }
   }
 })

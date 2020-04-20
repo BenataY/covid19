@@ -33,8 +33,8 @@
       <confirmed-cases-attributes-card />
       <confirmed-cases-number-card />
       <sickbeds-summary-card />
-      <age-card />
       <cities-card />
+      <age-card />
     </v-row>
     <v-divider />
   </div>

@@ -2,8 +2,8 @@
     "newsItems": [
         {
             "date": "2020/04/21",
-            "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/kinkyu2.html",
-            "text": "新型コロナウイルス感染症に関する県の緊急事態措置等について【第2弾】"
+            "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/documents/0421144146.pdf",
+            "text": "本日分のデータを反映させました。（新規陽性者 ３名）"
         },
         {
             "date": "2020/04/21",
@@ -14,6 +14,10 @@
             "date": "2020/04/21",
             "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/message.html",
             "text": "新型コロナウイルス感染症に係る知事メッセージ（4月21日更新）"
+        },
+        {
+            "date": "2020/04/21",
+            "text": "県内テイクアウト情報を＃茨城エール飯へのリンクにしました。（２５市町村対応）"
         }
     ]
 }

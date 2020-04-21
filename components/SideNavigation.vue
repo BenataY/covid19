@@ -110,7 +110,7 @@ export default Vue.extend({
         {
           icon: 'FoodIcon',
           title: this.$t('県内テイクアウト情報'),
-          link: this.localePath('/takeout'),
+          link: 'https://ibaraki-yell-meshi.com/',
           divider: true
         },
         {

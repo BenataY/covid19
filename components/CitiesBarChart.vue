@@ -188,24 +188,22 @@ const options: ThisTypedComponentOptionsWithRecordProps<
         scales: {
           xAxes: [
             {
-              stacked: true,
               gridLines: {
                 display: false
               },
               ticks: {
-                fontSize: 9,
+                fontSize: 12,
                 fontColor: '#808080'
               }
             }
           ],
           yAxes: [
             {
-              stacked: true,
               gridLines: {
                 display: true
               },
               ticks: {
-                fontSize: 9,
+                fontSize: 12,
                 fontColor: '#808080',
                 maxTicksLimit: 10,
                 callback(label) {

@@ -192,7 +192,7 @@ const options: ThisTypedComponentOptionsWithRecordProps<
                 display: false
               },
               ticks: {
-                fontSize: 12,
+                fontSize: 9,
                 fontColor: '#808080'
               }
             }
@@ -203,7 +203,7 @@ const options: ThisTypedComponentOptionsWithRecordProps<
                 display: true
               },
               ticks: {
-                fontSize: 12,
+                fontSize: 9,
                 fontColor: '#808080',
                 maxTicksLimit: 10,
                 callback(label) {

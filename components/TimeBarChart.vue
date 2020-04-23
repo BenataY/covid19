@@ -269,7 +269,7 @@ const options: ThisTypedComponentOptionsWithRecordProps<
                 display: false
               },
               ticks: {
-                fontSize: 12,
+                fontSize: 9,
                 maxTicksLimit: 20,
                 fontColor: '#808080',
                 maxRotation: 0,
@@ -290,7 +290,7 @@ const options: ThisTypedComponentOptionsWithRecordProps<
                 tickMarkLength: 10
               },
               ticks: {
-                fontSize: 12,
+                fontSize: 11,
                 fontColor: '#808080',
                 padding: 3,
                 fontStyle: 'bold',

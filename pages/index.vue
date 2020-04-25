@@ -23,11 +23,6 @@
       <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fstopcovid19-ibaraki.jp%2F&layout=button&size=small&width=69&height=20&appId" width="69" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
     </div>
     <whats-new class="mb-4" :items="newsItems" />
-    <static-button
-      :url="'https://www.kango-roo.com/sn/a/view/7495'"
-      :text="$t('＃看護師さんありがとう ＃医療従事者に感謝')"
-      :icon="'HeartIcon'"
-    />
     <v-row class="DataBlock">
       <confirmed-cases-details-card />
       <confirmed-cases-attributes-card />

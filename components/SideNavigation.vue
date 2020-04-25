@@ -103,6 +103,11 @@ export default Vue.extend({
           link: this.localePath('/')
         },
         {
+          icon: 'HeartIcon2',
+          title: this.$t('医療従事者に感謝を'),
+          link: 'https://www.kango-roo.com/sn/a/view/7495'
+        },
+        {
           icon: 'ParentIcon',
           title: this.$t('お子様をお持ちの皆様へ'),
           link: this.localePath('/parent')

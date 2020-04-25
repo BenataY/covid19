@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+  <script>
+    L_NO_TOUCH = false;
+    L_DISABLE_3D = false;
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    #map_ibaraki {
+      position: relative;
+      width: 100.0%;
+      height: 100.0%;
+      left: 0.0%;
+      top: 0.0%;
+    }
+  </style>
+  </head>
+<body>
+
+  <div class="folium-map" id="map_ibaraki"></div>
+
+</body>
+<script>
+
+  var map_ibaraki = L.map(
+    "map_ibaraki",
+    {
+      center: [36.38, 140.4],
+      crs: L.CRS.EPSG3857,
+      zoom: 9,
+      minZoom: 9,
+      maxZoom: 9,
+      zoomControl: false,
+      preferCanvas: false,
+    }
+  );
+
+  var tile_layer_ibaraki = L.tileLayer(
+    "https://cyberjapandata.gsi.go.jp/xyz/blank/{z}/{x}/{y}.png",
+    {
+      "attribution": "<a href='https://maps.gsi.go.jp/development/ichiran.html' target='_blank'>地理院タイル</a>",
+      "detectRetina": false,
+      "maxNativeZoom": 18,
+      "maxZoom": 18,
+      "minZoom": 0,
+      "noWrap": false,
+      "opacity": 1,
+      "subdomains": "abc",
+      "tms": false
+    }
+  ).addTo(map_ibaraki);
+
+  // 水戸保健所
+  var markers_mito = L.markerClusterGroup();
+  for (var i = 0; i < 7; i++) {
+    var marker = L.marker([36.35, 140.46]);
+    marker.bindPopup("<b>陽性患者</b>");
+    markers_mito.addLayer(marker);
+  }
+  map_ibaraki.addLayer(markers_mito);
+
+  // 中央保健所 一旦水戸に集約
+  /*
+  var markers_chuou = L.markerClusterGroup();
+    for (var i = 0; i < 2; i++) {
+      var marker = L.marker([36.35, 140.46]);
+      marker.bindPopup("<b>陽性患者</b>");
+      markers_chuou.addLayer(marker);
+    }
+  map_ibaraki.addLayer(markers_chuou);
+  */
+
+  // ひたちなか保健所
+  var markers_hitachinaka = L.markerClusterGroup();
+  for (var i = 0; i < 7; i++) {
+    var marker = L.marker([36.38, 140.58]);
+    marker.bindPopup("<b>陽性患者</b>");
+    markers_hitachinaka.addLayer(marker);
+  }
+  map_ibaraki.addLayer(markers_hitachinaka);
+
+  // ひたちなか保健所 常陸大宮支所
+  var markers_oomiya = L.markerClusterGroup();
+  for (var i = 0; i < 2; i++) {
+    var marker = L.marker([36.56, 140.40]);
+    marker.bindPopup("<b>陽性患者</b>");
+    markers_oomiya.addLayer(marker);
+  }
+  map_ibaraki.addLayer(markers_oomiya);
+
+  // 日立保健所
+  var markers_hitachi = L.markerClusterGroup();
+  for (var i = 0; i < 1; i++) {
+    var marker = L.marker([36.59, 140.65]);
+    marker.bindPopup("<b>陽性患者</b>");
+    markers_hitachi.addLayer(marker);
+  }
+  map_ibaraki.addLayer(markers_hitachi);
+
+  // 潮来保健所
+  var markers_itako = L.markerClusterGroup();
+  for (var i = 0; i < 21; i++) {
+    var marker = L.marker([35.94, 140.57]);
+    marker.bindPopup("<b>陽性患者</b>");
+    markers_itako.addLayer(marker);
+  }
+  map_ibaraki.addLayer(markers_itako);
+
+  // 潮来保健所 鉾田支所
+  var markers_hokota = L.markerClusterGroup();
+  for (var i = 0; i < 0; i++) {
+    var marker = L.marker([36.16, 140.52]);
+    marker.bindPopup("<b>陽性患者</b>");
+    markers_hokota.addLayer(marker);
+  }
+  map_ibaraki.addLayer(markers_hokota);
+
+  // 龍ケ崎保健所
+  var markers_ryugasaki = L.markerClusterGroup();
+  for (var i = 0; i < 26; i++) {
+    var marker = L.marker([35.91, 140.19]);
+    marker.bindPopup("<b>陽性患者</b>");
+    markers_ryugasaki.addLayer(marker);
+  }
+  map_ibaraki.addLayer(markers_ryugasaki);
+
+  // 土浦保健所
+  var markers_tsuchiura = L.markerClusterGroup();
+  for (var i = 0; i < 6; i++) {
+    var marker = L.marker([36.07, 140.19]);
+    marker.bindPopup("<b>陽性患者</b>");
+    markers_tsuchiura.addLayer(marker);
+  }
+  map_ibaraki.addLayer(markers_tsuchiura);
+
+  // つくば保健所
+  var markers_tsukuba = L.markerClusterGroup();
+  for (var i = 0; i < 37; i++) {
+    var marker = L.marker([36.06, 140.10]);
+    marker.bindPopup("<b>陽性患者</b>");
+    markers_tsukuba.addLayer(marker);
+  }
+  map_ibaraki.addLayer(markers_tsukuba);
+
+  // 筑西保健所
+  var markers_chikusei = L.markerClusterGroup();
+  for (var i = 0; i < 8; i++) {
+    var marker = L.marker([36.31, 139.98]);
+    marker.bindPopup("<b>陽性患者</b>");
+    markers_chikusei.addLayer(marker);
+  }
+  map_ibaraki.addLayer(markers_chikusei);
+
+  // 古河保健所
+  var markers_koga = L.markerClusterGroup();
+  for (var i = 0; i < 29; i++) {
+    var marker = L.marker([36.20, 139.72]);
+    marker.bindPopup("<b>陽性患者</b>");
+    markers_koga.addLayer(marker);
+  }
+  map_ibaraki.addLayer(markers_koga);
+
+</script>

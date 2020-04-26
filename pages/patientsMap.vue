@@ -1,14 +1,11 @@
 <template>
-  <div>
+  <div class="map_content">
     <page-header class="mb-3">
-      {{ $t('陽性患者分布MAP') }}
+      {{ $t('県内の感染者分布マップ') }}
     </page-header>
     <iframe
       src="/patients_map.html"
-      title="陽性患者分布MAP"
-      frameborder="0"
-      width="100%"
-      height="600px"
+      title="感染者分布マップ"
     />
   </div>
 </template>
@@ -24,8 +21,16 @@ export default Vue.extend({
   },
   head(): MetaInfo {
     return {
-      title: this.$t('陽性患者分布MAP') as string
+      title: this.$t('茨城県内の感染者状況分布マップ') as string
     }
   }
 })
 </script>
+
+<style lang="scss" module>
+  iframe {
+      width: 100%;
+      height: 500px;
+      border:1px solid #CCC;
+  }
+</style>

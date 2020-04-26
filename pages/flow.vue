@@ -5,25 +5,14 @@
       <page-header class="Flow-Heading-Title">
         {{ $t('新型コロナウイルス感染症が心配なときに') }}
       </page-header>
-      <PrinterButton :wrapper-class="'Flow-PullRight'" to="/print/flow" />
     </div>
     <div>
-      <div class="Flow-Card-Button-Wrapper">
-        <a
-          href="https://www.fukushihoken.metro.tokyo.lg.jp/iryo/kansen/coronasodan.html"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="Flow-Card-Button"
-        >
-          <span class="Flow-Card-Button-Description">
-            {{ $t('かかりつけ医に相談することもできます。') }}<br />
-            {{ $t('詳しくはこちらをご参照ください。') }}
-          </span>
-          {{ $t('詳細を見る（東京都福祉保健局）') }}
-          <v-icon class="Flow-Card-Button-ExternalLinkIcon" size="20">
-            mdi-open-in-new
-          </v-icon>
-        </a>
+      <div class="Flow-Card-Wrapper">
+        <span class="Flow-Card">
+          {{ $t('新型コロナウイルス感染症の患者や入院に協力した医療機関等に対して、') }}<br />
+          {{ $t('SNSや電話等で誹謗中傷をするなど、不当な差別、偏見などが散見されております。') }}<br />
+          {{ $t('人権侵害につながることがないよう、冷静な行動をお願いいたします。') }}
+        </span>
       </div>
       <div class="only-pc" aria-hidden="true">
         <flow-pc />
@@ -86,6 +75,25 @@ export default Vue.extend({
     }
   }
 
+  &-Card {
+    @include font-size(20);
+
+    width: 100%;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    padding: 24px 36px;
+    border-radius: 4px;
+    background-color: $white;
+    border: 1px solid $green-1;
+    color: $green-1 !important;
+
+    &-Wrapper {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
   &-Card-Button {
     @include button-text('md');
     @include font-size(20);
@@ -139,4 +147,5 @@ export default Vue.extend({
     display: none;
   }
 }
+
 </style>

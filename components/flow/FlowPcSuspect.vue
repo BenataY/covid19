@@ -1,12 +1,6 @@
 <template>
   <div :class="$style.FlowComponent">
     <div :class="[$style.SubtleBox, $style.Box1]">
-      <img
-        :class="$style.Box1Icon"
-        src="/flow/flow_arrow.svg"
-        aria-hidden="true"
-        alt=" "
-      />
       <div :class="$style.RowItems">
         <div :class="$style.RowItemsHeader">
           <img
@@ -18,66 +12,116 @@
           {{ $t('不安に思う方') }}
         </div>
       </div>
-      <div :class="$style.RowItems">
-        <div :class="$style.CheckBox">
-          <img
-            :class="$style.CheckBoxIcon"
-            src="/flow/check_circle-24px.svg"
-            aria-hidden="true"
-            alt=" "
-          />
+      <div :class="$style.FlowCondition">
+        <em :class="$style.FlowSymptom">
           {{ $t('微熱') }}
-        </div>
-        <div :class="$style.CheckBox">
           <img
-            :class="$style.CheckBoxIcon"
+            :class="$style.FlowSymptomIcon"
             src="/flow/check_circle-24px.svg"
             aria-hidden="true"
             alt=" "
           />
+        </em>
+        <span :class="$style.FlowComponentText">{{ $t('または') }}</span>
+        <em :class="$style.FlowSymptom">
           {{ $t('軽い咳') }}
-        </div>
-        <div :class="$style.CheckBox">
           <img
-            :class="$style.CheckBoxIcon"
+            :class="$style.FlowSymptomIcon"
             src="/flow/check_circle-24px.svg"
             aria-hidden="true"
             alt=" "
           />
+        </em>
+        <span :class="$style.FlowComponentText">{{ $t('または') }}</span>
+        <em :class="$style.FlowSymptom">
           {{ $t('感染の不安') }}
-        </div>
-      </div>
-    </div>
-
-    <div :class="[$style.SubtleBox, $style.Box2, $style.Center]">
-      <div :class="$style.LargerText">
-        {{ $t('新型コロナコールセンター') }}
-      </div>
-      <div :class="$style.SmallerText">
-        {{ $t('午前9時から午後9時（土日祝含む）') }}
-      </div>
-
-      <div :class="$style.Tel">
-        <a :class="$style.TelLink" href="tel:0570550571">
           <img
-            :class="$style.TelLinkIcon"
-            src="/flow/phone-24px.svg"
+            :class="$style.FlowSymptomIcon"
+            src="/flow/check_circle-24px.svg"
             aria-hidden="true"
-            :alt="$t('電話番号')"
+            alt=" "
           />
-          0570-550571
-        </a>
+        </em>
       </div>
     </div>
   </div>
 </template>
 
 <style module lang="scss">
+.Flow {
+  @include card-container($withDivider: true);
+
+  position: relative;
+  padding-bottom: 20px;
+  color: $gray-2;
+  text-align: center;
+
+  &Condition {
+    display: flex;
+    width: 100%;
+    padding: 0 15px;
+    margin-top: 15px;
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+
+    @include largerThan($large) {
+      padding: 0 20px;
+    }
+  }
+  &Symptom {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 22%;
+    padding: 10px;
+    border: 2px solid $green-1;
+    border-radius: 3px;
+    background-color: $white;
+    font-size: calc(0.875rem + ((1vw - 7.68px) * 0.8929));
+    font-weight: bold;
+    font-style: normal;
+
+    &Icon {
+      position: absolute;
+      left: -8px;
+      top: -8px;
+      width: 24px;
+      height: 24px;
+    }
+
+    &::before {
+      position: absolute;
+      left: -4px;
+      top: -4px;
+      width: 20px;
+      height: 20px;
+      background-color: white;
+      content: '';
+    }
+
+    @include largerThan($large) {
+      max-width: 190px;
+      font-size: 20px;
+    }
+  }
+}
+
 .FlowComponent {
   color: $gray-2;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  &Text {
+    padding: 10px;
+    font-size: calc(0.75rem + ((1vw - 7.68px) * 1.4881));
+    font-weight: bold;
+  }
 }
 
 .Tel {
@@ -117,10 +161,11 @@
   border-radius: 4px;
   margin: 8px 0;
   padding: 10px;
-  max-width: 200px;
+  width: 20%;
   text-align: center;
   font-weight: bold;
   font-size: calc(0.875rem + ((1vw - 7.68px) * 0.8929));
+  font-style: normal;
 
   @include largerThan($large) {
     font-size: 20px;
@@ -156,9 +201,9 @@
 
 .Box1 {
   position: relative;
+  width: 100%;
   flex-grow: 0;
   flex-shrink: 0;
-  width: 60%;
   flex-direction: row;
 
   &Icon {
@@ -169,18 +214,6 @@
     display: block;
     width: 46px;
     height: 46px;
-  }
-}
-
-.Box2 {
-  flex-grow: 0;
-  flex-shrink: 0;
-  width: 38%;
-  flex-direction: column;
-  justify-content: center;
-
-  div {
-    margin: 0.5em;
   }
 }
 
@@ -200,7 +233,7 @@
   &Icon {
     display: block;
     margin: auto;
-    width: 45px;
+    width: 100px;
     height: 45px;
   }
 }
@@ -226,4 +259,5 @@
 .SmallerText {
   font-size: smaller;
 }
+
 </style>

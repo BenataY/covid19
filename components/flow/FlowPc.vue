@@ -1,7 +1,7 @@
 <template>
   <div :class="$style.FlowCard">
     <div :class="$style.FirstSectionWrapper">
-      <h3>{{ $t('新型コロナウイルス感染症にかかる相談窓口について') }}</h3>
+      <h3>{{ $t('新型コロナウイルス感染症に係わる相談窓口について') }}</h3>
       <div :class="[$style.Outer, $style.OuterUpper]">
         <div :class="[$style.CardBlock, $style.Past]">
           <div :class="[$style.CardBlockInner]">
@@ -40,83 +40,8 @@
         </div>
         <div :class="$style.Advisory">
           <flow-pc-advisory />
-          <img
-            :class="$style.AdvisoryIcon"
-            src="/flow/flow_arrow.svg"
-            aria-hidden="true"
-            alt=" "
-          />
-        </div>
-        <div :class="$style.Advisory2">
-          <flow-pc-advisory2 />
         </div>
       </div>
-    </div>
-    <div :class="$style.SecondSectionWrapper">
-      <h3>
-        <i18n
-          :class="$style.TitleSmall"
-          tag="span"
-          path="{advisory}による相談結果"
-        >
-          <template v-slot:advisory>
-            <span :class="$style.TitleLarge">
-              {{ $t('新型コロナ受診相談窓口') }}
-            </span>
-          </template>
-        </i18n>
-      </h3>
-      <div :class="[$style.Outer, $style.OuterLower]">
-        <div
-          :class="[$style.CardBlock, $style.CardBlockRequired, $style.Required]"
-        >
-          <div :class="[$style.CardBlockInner]">
-            <flow-pc-required />
-            <img
-              :class="$style.CardBlockIcon"
-              src="/flow/flow_arrow.svg"
-              aria-hidden="true"
-              alt=" "
-            />
-            <img
-              :class="$style.CardBlockIcon"
-              src="/flow/flow_arrow.svg"
-              aria-hidden="true"
-              alt=" "
-            />
-          </div>
-        </div>
-        <div :class="[$style.CardBlock, $style.CardBlockPcr, $style.Pcr]">
-          <div :class="[$style.CardBlockInner]">
-            <flow-pc-pcr />
-            <img
-              :class="$style.CardBlockIcon"
-              src="/flow/flow_arrow.svg"
-              aria-hidden="true"
-              alt=" "
-            />
-            <img
-              :class="$style.CardBlockIcon"
-              src="/flow/flow_arrow.svg"
-              aria-hidden="true"
-              alt=" "
-            />
-          </div>
-        </div>
-        <div :class="$style.NotRequired">
-          <flow-pc-not-required />
-        </div>
-        <div :class="$style.Hospitalized">
-          <flow-pc-hospitalized />
-        </div>
-      </div>
-      <p :class="$style.Note">
-        {{
-          $t(
-            '※保険適用となる検査は、当面の間、院内感染防止等の観点から、「帰国者・接触者外来」等の医療機関で実施'
-          )
-        }}
-      </p>
     </div>
   </div>
 </template>
@@ -284,14 +209,14 @@ export default {
 
   &Icon {
     position: absolute;
-    bottom: 10%;
+    bottom: 40%;
     right: -30px;
     z-index: 1;
   }
 
   &Suspect {
     .CardBlockIcon {
-      bottom: 40%;
+      bottom: 20%;
     }
   }
 
@@ -347,7 +272,7 @@ export default {
 
 .Advisory {
   grid-column: 2 / 3;
-  grid-row: 1 / 3;
+  grid-row: 1 / 4;
   position: relative;
 
   &Icon {

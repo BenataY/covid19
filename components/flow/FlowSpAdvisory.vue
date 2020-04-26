@@ -1,63 +1,44 @@
 <template>
   <div :class="$style.container">
     <h4 id="consult" :class="[$style.heading, $style.fzXLarge]">
-      {{ $t('新型コロナ受診相談窓口（日本語のみ）') }}
-      <small :class="[$style.break, $style.fzRegular, $style.mt5]">{{
-        $t('帰国者・接触者 電話相談センター')
-      }}</small>
+      {{ $t('茨城県庁') }}
+      <br />
+      {{ $t('新型コロナ相談窓口') }}
+      <small :class="[$style.break, $style.fzRegular, $style.mt5]">
+        {{ $t('帰国者・接触者相談センター') }}
+        <br />
+        {{ $t('兼　一般相談窓口') }}
+      </small>
     </h4>
     <p :class="[$style.open, $style.fzMedium]">
-      <span>{{ $t('24時間対応') }}</span>
+      <span>
+        {{ $t('24時間対応') }}
+      </span>
     </p>
+    <div :class="[$style.phone, $style.fzNumeric]">
+      <span :class="$style.icon">
+        <PhoneIcon alt="Phone" />
+      </span>
+      <a href="tel:0293013200">029-301-3200</a>
+    </div>
     <dl>
       <div :class="$style.daytime">
         <dt :class="[$style.title, $style.fzMedium]">
-          {{ $t('平日（日中）') }}
+          {{ $t('平日') }}
+          <br />
+          {{ $t('9:00 〜 18:00') }}
         </dt>
         <dd :class="$style.link">
           <a
-            href="https://www.fukushihoken.metro.tokyo.lg.jp/iryo/kansen/coronasodan.html"
+            href="https://www.pref.ibaraki.jp/hokenfukushi/yobo/kiki/yobo/kansen/idwr/information/other/documents/corona-soudan.html"
             target="_blank"
             rel="noopener noreferrer"
           >
-            {{ $t('各保健所の電話番号は福祉保健局HPへ') }}
+            {{ $t('各保健所の電話番号は茨城県庁HPへ') }}
             <v-icon size="16">
               mdi-open-in-new
             </v-icon>
           </a>
-        </dd>
-      </div>
-      <div>
-        <dt>
-          <ul :class="[$style.night]">
-            <li>
-              <span :class="[$style.fzMedium, $style.break, $style.mb10]">
-                {{ $t('平日（夜間）') }}
-              </span>
-              {{ $t('午後5時から翌朝午前9時') }}
-            </li>
-            <li>
-              <span :class="$style.fzMedium">
-                {{ $t('土日祝 終日') }}
-              </span>
-            </li>
-          </ul>
-        </dt>
-        <dd>
-          <div :class="[$style.phone, $style.fzNumeric]">
-            <span :class="$style.icon">
-              <PhoneIcon alt="Phone" />
-            </span>
-            <a href="tel:0353204592">03-5320-4592</a>
-          </div>
-          <div
-            v-if="!['ja', 'ja-basic'].includes($i18n.locale)"
-            :class="[$style.phone, $style.fzNumeric]"
-          >
-            <span :class="[$style.fzMedium, $style.break, $style.mb10]">
-              {{ $t('ひまわり') }}
-            </span>
-          </div>
         </dd>
       </div>
     </dl>
@@ -85,6 +66,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     background-color: $white;
     color: $green-1;
     padding: px2vw(20) px2vw(40);
@@ -96,7 +78,6 @@ export default {
   margin-top: px2vw(20);
   display: flex;
   border-top: 1px solid $gray-4;
-  border-bottom: 1px solid $gray-4;
 
   > * {
     padding: px2vw(30) px2vw(10);
@@ -131,6 +112,12 @@ export default {
       margin-top: px2vw(20);
     }
   }
+}
+
+.smallText {
+  padding: 50px;
+  font-size: 16px;
+  color: $gray-2;
 }
 
 @include largerThan($small) {

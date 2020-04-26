@@ -7,13 +7,6 @@
       </page-header>
     </div>
     <div>
-      <div class="Flow-Card-Wrapper">
-        <span class="Flow-Card">
-          {{ $t('新型コロナウイルス感染症の患者や入院に協力した医療機関等に対して、') }}<br />
-          {{ $t('SNSや電話等で誹謗中傷をするなど、不当な差別、偏見などが散見されております。') }}<br />
-          {{ $t('人権侵害につながることがないよう、冷静な行動をお願いいたします。') }}
-        </span>
-      </div>
       <div class="only-pc" aria-hidden="true">
         <flow-pc />
       </div>

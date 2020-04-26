@@ -1,28 +1,31 @@
 <template>
-  <div :class="$style.FlowCard">
-    <h3 :class="['mb-4', $style.FlowCardHeading]">
-      {{ $t('新型コロナウイルス感染症にかかる相談窓口について') }}
-    </h3>
-    <div :class="$style.FlowCard">
-      <flow-sp-past />
+  <div>
+    <div class="Flow-Card-Wrapper">
+      <span class="Flow-Card">
+        {{ $t('新型コロナ感染者や医療機関等に対して、') }}<br />
+        {{ $t('不当な差別、偏見が散見されております。') }}<br />
+        {{ $t('冷静な行動をお願いいたします。') }}
+      </span>
     </div>
     <div :class="$style.FlowCard">
-      <flow-sp-general />
-    </div>
-    <div :class="$style.FlowCard">
-      <flow-sp-elder />
-    </div>
-    <div :class="$style.FlowCard">
-      <flow-sp-suspect />
-    </div>
-    <div :class="[$style.FlowCard, $style.FlowCardGrayBg]">
-      <flow-sp-advisory />
-    </div>
-    <div :class="$style.FlowCard">
-      <flow-sp-according />
-    </div>
-    <div :class="$style.FlowCard">
-      <flow-sp-hospitalized />
+      <h3 :class="['mb-4', $style.FlowCardHeading]">
+        {{ $t('新型コロナウイルス感染症にかかる相談窓口について') }}
+      </h3>
+      <div :class="$style.FlowCard">
+        <flow-sp-past />
+      </div>
+      <div :class="$style.FlowCard">
+        <flow-sp-general />
+      </div>
+      <div :class="$style.FlowCard">
+        <flow-sp-elder />
+      </div>
+      <div :class="$style.FlowCard">
+        <flow-sp-suspect />
+      </div>
+      <div :class="[$style.FlowCard, $style.FlowCardGrayBg]">
+        <flow-sp-advisory />
+      </div>
     </div>
   </div>
 </template>

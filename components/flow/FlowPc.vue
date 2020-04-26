@@ -1,45 +1,54 @@
 <template>
-  <div :class="$style.FlowCard">
-    <div :class="$style.FirstSectionWrapper">
-      <h3>{{ $t('新型コロナウイルス感染症に係わる相談窓口について') }}</h3>
-      <div :class="[$style.Outer, $style.OuterUpper]">
-        <div :class="[$style.CardBlock, $style.Past]">
-          <div :class="[$style.CardBlockInner]">
-            <flow-pc-past />
-            <img
-              :class="$style.CardBlockIcon"
-              src="/flow/flow_arrow.svg"
-              aria-hidden="true"
-              alt=" "
-            />
+  <div>
+    <div class="Flow-Card-Wrapper">
+      <span class="Flow-Card">
+        {{ $t('新型コロナウイルス感染症の患者や入院に協力した医療機関等に対して、') }}<br />
+        {{ $t('SNSや電話等で誹謗中傷をするなど、不当な差別、偏見などが散見されております。') }}<br />
+        {{ $t('人権侵害につながることがないよう、冷静な行動をお願いいたします。') }}
+      </span>
+    </div>
+    <div :class="$style.FlowCard">
+      <div :class="$style.FirstSectionWrapper">
+        <h3>{{ $t('新型コロナウイルス感染症に係わる相談窓口について') }}</h3>
+        <div :class="[$style.Outer, $style.OuterUpper]">
+          <div :class="[$style.CardBlock, $style.Past]">
+            <div :class="[$style.CardBlockInner]">
+              <flow-pc-past />
+              <img
+                :class="$style.CardBlockIcon"
+                src="/flow/flow_arrow.svg"
+                aria-hidden="true"
+                alt=" "
+              />
+            </div>
           </div>
-        </div>
-        <div :class="[$style.CardBlock, $style.Days]">
-          <div :class="[$style.CardBlockInner]">
-            <flow-pc-days />
-            <img
-              :class="$style.CardBlockIcon"
-              src="/flow/flow_arrow.svg"
-              aria-hidden="true"
-              alt=" "
-            />
+          <div :class="[$style.CardBlock, $style.Days]">
+            <div :class="[$style.CardBlockInner]">
+              <flow-pc-days />
+              <img
+                :class="$style.CardBlockIcon"
+                src="/flow/flow_arrow.svg"
+                aria-hidden="true"
+                alt=" "
+              />
+            </div>
           </div>
-        </div>
-        <div
-          :class="[$style.CardBlock, $style.CardBlockSuspect, $style.Suspect]"
-        >
-          <div :class="[$style.CardBlockInner]">
-            <flow-pc-suspect />
-            <img
-              :class="$style.CardBlockIcon"
-              src="/flow/flow_arrow.svg"
-              aria-hidden="true"
-              alt=" "
-            />
+          <div
+            :class="[$style.CardBlock, $style.CardBlockSuspect, $style.Suspect]"
+          >
+            <div :class="[$style.CardBlockInner]">
+              <flow-pc-suspect />
+              <img
+                :class="$style.CardBlockIcon"
+                src="/flow/flow_arrow.svg"
+                aria-hidden="true"
+                alt=" "
+              />
+            </div>
           </div>
-        </div>
-        <div :class="$style.Advisory">
-          <flow-pc-advisory />
+          <div :class="$style.Advisory">
+            <flow-pc-advisory />
+          </div>
         </div>
       </div>
     </div>

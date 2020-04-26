@@ -21,7 +21,7 @@ export default Vue.extend({
   },
   head(): MetaInfo {
     return {
-      title: this.$t('茨城県内の感染者状況分布マップ') as string
+      title: this.$t('県内の感染者状況分布マップ') as string
     }
   }
 })

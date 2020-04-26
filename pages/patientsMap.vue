@@ -1,7 +1,7 @@
 <template>
-  <div class="map_content">
+  <div :class="$style.map_content">
     <page-header class="mb-3">
-      {{ $t('県内の感染者分布マップ') }}
+      {{ $t('県内感染者分布マップ') }}
     </page-header>
     <p>
       {{ $t('現在β版なため、表示に数秒かかります。（今後改善予定）') }}
@@ -9,6 +9,7 @@
     <iframe
       src="/patients_map.html"
       title="感染者分布マップ"
+      frameborder="0"
     />
   </div>
 </template>
@@ -32,8 +33,13 @@ export default Vue.extend({
 
 <style lang="scss" module>
   iframe {
-      width: 100%;
-      height: 500px;
-      border:1px solid #CCC;
+    width: 100%;
+    height: 78vh;
+    border:1px solid #CCC;
+
+    @include lessThan($small) {
+      height: 70vh;
+    }
   }
+
 </style>

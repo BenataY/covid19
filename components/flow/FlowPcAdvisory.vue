@@ -2,13 +2,12 @@
   <div :class="$style.Advisory">
     <div :class="$style.AdvisoryContainer">
       <div :class="$style.AdvisoryContents">
-        <p :class="$style.AdvisoryText">
-          {{ $t('かけ間違いにご注意下さい') }}
-        </p>
         <div>
-          <span :class="$style.AdvisoryContentsTitle">{{
-            $t('県庁 新型コロナ相談窓口')
-          }}</span>
+          <span :class="$style.AdvisoryContentsTitle">
+            {{　$t('茨城県庁')　}}
+            <br />
+            {{　$t('新型コロナ相談窓口')　}}
+          </span>
         </div>
         <div>
           <div :class="[$style.AdvisoryBoxContainer, $style.AdvisoryWhiteBox]">

@@ -121,6 +121,11 @@
     padding: 10px;
     font-size: calc(0.75rem + ((1vw - 7.68px) * 1.4881));
     font-weight: bold;
+
+    @include largerThan($large) {
+      max-width: 190px;
+      font-size: 21px;
+    }
   }
 }
 

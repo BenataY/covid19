@@ -25,14 +25,14 @@ export default Vue.extend({
   },
   head(): MetaInfo {
     return {
-      title: this.$t('県内の感染者状況分布マップ') as string
+      title: this.$t('県内感染者分布マップ') as string
     }
   }
 })
 </script>
 
 <style lang="scss" module>
-  iframe {
+  .map_content > iframe {
     width: 100%;
     height: 78vh;
     border:1px solid #CCC;

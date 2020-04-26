@@ -108,11 +108,6 @@ export default Vue.extend({
           link: this.localePath('/patientsmap/')
         },
         {
-          icon: 'HeartIcon2',
-          title: this.$t('医療従事者に感謝を'),
-          link: 'https://www.kango-roo.com/sn/a/view/7495'
-        },
-        {
           icon: 'ParentIcon',
           title: this.$t('お子様をお持ちの皆様へ'),
           link: this.localePath('/parent/')
@@ -120,7 +115,12 @@ export default Vue.extend({
         {
           icon: 'FoodIcon',
           title: this.$t('県内テイクアウト情報'),
-          link: 'https://ibaraki-yell-meshi.com/',
+          link: 'https://ibaraki-yell-meshi.com/'
+        },
+        {
+          icon: 'HeartIcon2',
+          title: this.$t('医療従事者に感謝を'),
+          link: 'https://www.kango-roo.com/sn/a/view/7495',
           divider: true
         },
         {

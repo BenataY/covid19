@@ -22,7 +22,7 @@
             alt=" "
           />
         </em>
-        <span :class="$style.FlowComponentText">{{ $t('または') }}</span>
+        <span :class="$style.FlowComponentText"></span>
         <em :class="$style.FlowSymptom">
           {{ $t('軽い咳') }}
           <img
@@ -32,7 +32,7 @@
             alt=" "
           />
         </em>
-        <span :class="$style.FlowComponentText">{{ $t('または') }}</span>
+        <span :class="$style.FlowComponentText"></span>
         <em :class="$style.FlowSymptom">
           {{ $t('感染の不安') }}
           <img
@@ -77,8 +77,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 22%;
-    padding: 10px;
+    width: 26%;
+    padding: 5px 10px;
     border: 2px solid $green-1;
     border-radius: 3px;
     background-color: $white;
@@ -118,9 +118,13 @@
   justify-content: space-between;
 
   &Text {
-    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1px 10px;
     font-size: calc(0.75rem + ((1vw - 7.68px) * 1.4881));
-    font-weight: bold;
+    white-space: nowrap;
 
     @include largerThan($large) {
       max-width: 190px;
@@ -238,7 +242,7 @@
   &Icon {
     display: block;
     margin: auto;
-    width: 100px;
+    width: 120px;
     height: 45px;
   }
 }

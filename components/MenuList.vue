@@ -33,6 +33,7 @@ import Vue, { PropType } from 'vue'
 import CovidIcon from '@/static/covid.svg'
 import ParentIcon from '@/static/parent.svg'
 import FoodIcon from '@/static/food.svg'
+import MapIcon from '@/static/map.svg'
 
 type MenuItem = {
   icon?: string
@@ -45,7 +46,8 @@ export default Vue.extend({
   components: {
     CovidIcon,
     ParentIcon,
-    FoodIcon
+    FoodIcon,
+    MapIcon
   },
   props: {
     items: {

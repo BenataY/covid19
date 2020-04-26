@@ -3,6 +3,9 @@
     <page-header class="mb-3">
       {{ $t('県内の感染者分布マップ') }}
     </page-header>
+    <p>
+      {{ $t('現在β版なため、表示に数秒かかります。（今後改善予定）') }}
+    </p>
     <iframe
       src="/patients_map.html"
       title="感染者分布マップ"

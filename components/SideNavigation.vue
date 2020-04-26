@@ -103,6 +103,11 @@ export default Vue.extend({
           link: this.localePath('/')
         },
         {
+          icon: 'MapIcon',
+          title: this.$t('県内感染者分布マップ'),
+          link: this.localePath('/patientsmap/')
+        },
+        {
           icon: 'HeartIcon2',
           title: this.$t('医療従事者に感謝を'),
           link: 'https://www.kango-roo.com/sn/a/view/7495'
@@ -110,7 +115,7 @@ export default Vue.extend({
         {
           icon: 'ParentIcon',
           title: this.$t('お子様をお持ちの皆様へ'),
-          link: this.localePath('/parent')
+          link: this.localePath('/parent/')
         },
         {
           icon: 'FoodIcon',
@@ -128,11 +133,11 @@ export default Vue.extend({
         },
         {
           title: this.$t('各保健所相談窓口'),
-          link: this.localePath('/healthCenter')
+          link: this.localePath('/healthCenter/')
         },
         {
           title: this.$t('当サイトについて'),
-          link: this.localePath('/about')
+          link: this.localePath('/about/')
         }
       ]
     }

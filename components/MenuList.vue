@@ -34,6 +34,7 @@ import CovidIcon from '@/static/covid.svg'
 import ParentIcon from '@/static/parent.svg'
 import FoodIcon from '@/static/food.svg'
 import HeartIcon2 from '@/static/heart2.svg'
+import MapIcon from '@/static/map.svg'
 
 type MenuItem = {
   icon?: string
@@ -47,7 +48,8 @@ export default Vue.extend({
     CovidIcon,
     ParentIcon,
     FoodIcon,
-    HeartIcon2
+    HeartIcon2,
+    MapIcon
   },
   props: {
     items: {

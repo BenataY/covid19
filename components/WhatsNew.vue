@@ -12,7 +12,7 @@
           mdi-bullhorn
         </v-icon>
         <external-link
-          url="https://www.pref.ibaraki.jp/1saigai/2019-ncov/kinkyu2.html"
+          url="https://www.pref.ibaraki.jp/1saigai/2019-ncov/kinkyu.html"
         >
           {{ $t('茨城県緊急事態措置について') }}
         </external-link>

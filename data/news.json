@@ -1,8 +1,14 @@
 {
     "newsItems": [
         {
-            "date": "2020/04/27",
-            "text": "本日の新規陽性者はおりませんでした"
+            "date": "2020/04/28",
+            "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/documents/0428162.pdf",
+            "text": "本日分のデータを反映させました。（新規感染者１名）"
+        },
+        {
+            "date": "2020/04/28",
+            "url": "https://www.pref.ibaraki.jp/hokenfukushi/jinzai/ishikakuho/covid-19taisakukikin.html",
+            "text": "茨城県新型コロナウイルス感染症対策医療従事者応援金"
         },
         {
             "date": "2020/04/24",
@@ -13,11 +19,6 @@
             "date": "2020/04/21",
             "url": "https://www.pref.ibaraki.jp/shokorodo/chusho/shogyo/2020korona.html",
             "text": "休業要請・協力金（相談窓口・ＦＡＱ等）について"
-        },
-        {
-            "date": "2020/04/21",
-            "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/message.html",
-            "text": "新型コロナウイルス感染症に係る知事メッセージ（4月21日更新）"
         }
     ]
 }

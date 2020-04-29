@@ -1,8 +1,8 @@
-# 茨城県 新型コロナウイルス感染症情報まとめサイト
+# 茨城県 新型コロナウイルス感染症ポータルサイト
 
 ![](https://github.com/tokyo-metropolitan-gov/covid19/workflows/production%20deploy/badge.svg)
 
-[![茨城県 新型コロナウイルス感染症情報まとめサイト](/static/ogp.png)](https://stopcovid19-ibaraki.jp/)
+[![茨城県 新型コロナウイルス感染症ポータルサイト](/static/ogp.png)](https://stopcovid19-ibaraki.jp/)
 
 ## 貢献の仕方
 Issues にあるいろいろな修正にご協力いただけると嬉しいです。

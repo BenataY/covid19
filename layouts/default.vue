@@ -128,7 +128,7 @@ export default Vue.extend({
             ' ' +
             this.$t('新型コロナウイルス感染症') +
             ' ' +
-            this.$t('情報まとめサイト')
+            this.$t('ポータルサイト')
         },
         {
           hid: 'og:url',
@@ -144,7 +144,7 @@ export default Vue.extend({
             ' ' +
             this.$t('新型コロナウイルス感染症') +
             ' ' +
-            this.$t('情報まとめサイト')
+            this.$t('ポータルサイト')
         },
         {
           hid: 'og:description',
@@ -169,7 +169,7 @@ export default Vue.extend({
             ' ' +
             this.$t('新型コロナウイルス感染症') +
             ' ' +
-            this.$t('情報まとめサイト')
+            this.$t('ポータルサイト')
         },
         {
           hid: 'twitter:image',

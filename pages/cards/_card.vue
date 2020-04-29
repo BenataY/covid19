@@ -146,7 +146,7 @@ export default {
             this.$t('茨城県') +
             ' ' +
             this.$t('新型コロナウイルス感染症') +
-            this.$t('情報まとめサイト')
+            this.$t('ポータルサイト')
         },
         {
           hid: 'description',

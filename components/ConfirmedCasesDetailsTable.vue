@@ -133,7 +133,7 @@ export default Vue.extend({
 
 <style lang="scss" module>
 $default-bdw: 3px;
-$default-boxh: 150px;
+$default-boxh: 120px;
 $default-boxdiff: 35px;
 
 // .container > .box > (.group > .box > ...) .pillar > .content

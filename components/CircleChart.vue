@@ -1,20 +1,11 @@
 <template>
   <data-view :title="title" :title-id="titleId" :date="date" :url="url">
-    <template v-slot:button>
-      <ul :class="$style.notes">
-        <li>
-            {{ $t('必ずしも最新のデータではありません。') }}
-        </li>
-        <li>
-            {{ $t('{date}時点のデータを元に更新しております。', { date }) }}
-        </li>
-      </ul>
-    </template>
     <doughnut-chart
       :chart-id="chartId"
       :chart-data="displayData"
       :options="displayOption"
       :height="240"
+      :plugins="[labelplugin]"
     />
     <template v-slot:infoPanel>
       <data-view-basic-info-panel
@@ -145,27 +136,85 @@ export default {
       const chartData = this.chartData
       return {
         tooltips: {
-          displayColors: false,
-          callbacks: {
-            label(tooltipItem) {
-              const index = tooltipItem.index
-              const numerator = chartData[index].transition
-              const numeratorUnit = index === 1 ? unitBed : unitPerson
-              const denominator =
-                chartData[0].transition + chartData[1].transition
-              const denominatorLabel = label
-              return `${numerator} ${numeratorUnit} (${denominatorLabel}: ${denominator}${unitBed})`
-            },
-            title(tooltipItem, data) {
-              return data.labels[tooltipItem[0].index]
-            }
-          }
+          enabled: false
         },
         responsive: true,
         maintainAspectRatio: false,
         legend: {
           display: true,
           position: 'right'
+        }
+      }
+    },
+    labelplugin() {
+      return {
+        afterDatasetsDraw: function (chart, easing) {
+          var ctx = chart.ctx;
+          let per = 0;  // 表示用の数値
+          let padding = 8
+
+          chart.data.datasets.forEach((dataset, i) => {
+            let dataSum = 0
+            dataset.data.forEach((element) => {
+              dataSum += element
+            })
+
+            let meta = chart.getDatasetMeta(i)
+            if (!meta.hidden) {
+              meta.data.forEach(function (element, index) {
+                // フォントの設定
+                let fontSize = 12
+                let fontStyle = 'normal'
+                let fontFamily = 'Helvetica Neue'
+                ctx.fillStyle = '#333'
+                // 設定を適用
+                ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily)
+                let labelString = dataset.label[index]
+                // positionの設定
+                ctx.textAlign = 'center'
+                ctx.textBaseline = 'middle'
+                let position = element.tooltipPosition()
+                ctx.fillText(labelString, position.x, position.y - (fontSize / 2))  // データの百分率
+
+                // 数値部分はフォントサイズ変更
+                fontSize = 16
+                ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily)
+                let dataString = dataset.data[index]
+                if (index == 0) {
+                  dataString += '人'
+                  per = Math.round((dataset.data[index] / dataSum) * 100)
+                } else {
+                  dataString += '床'
+                }
+                ctx.fillText(dataString, position.x, position.y + (fontSize / 2))  // データの百分率
+              })
+            }
+          })
+
+          // 使用率のラベル
+          let fontSize = 18;
+          let fontStyle = 'normal';
+          let fontFamily = "Helvetica Neue";
+          ctx.fillStyle = '#666';
+          ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
+
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.fillText('使用率', chart.width / 2 - 60, (chart.height - fontSize) / 2 - padding);
+
+          // 使用率の数値
+          fontSize = 36;
+          if (per < 50) {
+            ctx.fillStyle = '#666';
+          } else if (per >= 50 && per < 80) {
+            ctx.fillStyle = '#F6AA00';
+          } else if (per >= 80) {
+            ctx.fillStyle = '#FF4B00';
+          } else {
+            ctx.fillStyle = '#666';
+          }
+          ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
+          ctx.fillText(per + '%', chart.width / 2 - 60, (chart.height + fontSize) / 2 - padding);
         }
       }
     }

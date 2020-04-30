@@ -4,8 +4,6 @@
       :title="$t('検査陽性者の状況')"
       :title-id="'details-of-confirmed-cases'"
       :date="Data.patients.date"
-      :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/hassei.html'"
-      :source="$t('参考元データ')"
     >
       <template v-slot:button>
         <p :class="$style.note">

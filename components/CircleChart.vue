@@ -136,7 +136,21 @@ export default {
       const chartData = this.chartData
       return {
         tooltips: {
-          enabled: false
+          displayColors: false,
+          callbacks: {
+            label(tooltipItem) {
+              const index = tooltipItem.index
+              const numerator = chartData[index].transition
+              const numeratorUnit = index === 1 ? unitBed : unitPerson
+              const denominator =
+                chartData[0].transition + chartData[1].transition
+              const denominatorLabel = label
+              return `${numerator} ${numeratorUnit} (${denominatorLabel}: ${denominator}${unitBed})`
+            },
+            title(tooltipItem, data) {
+              return data.labels[tooltipItem[0].index]
+            }
+          }
         },
         responsive: true,
         maintainAspectRatio: false,
@@ -166,7 +180,7 @@ export default {
                 let fontSize = 12
                 let fontStyle = 'normal'
                 let fontFamily = 'Helvetica Neue'
-                ctx.fillStyle = '#333'
+                ctx.fillStyle = '#666'
                 // 設定を適用
                 ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily)
                 let labelString = dataset.label[index]
@@ -174,25 +188,26 @@ export default {
                 ctx.textAlign = 'center'
                 ctx.textBaseline = 'middle'
                 let position = element.tooltipPosition()
-                ctx.fillText(labelString, position.x, position.y - (fontSize / 2))  // データの百分率
+                //ctx.fillText(labelString, position.x, position.y - (fontSize / 2))  // データの百分率
 
                 // 数値部分はフォントサイズ変更
                 fontSize = 16
                 ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily)
                 let dataString = dataset.data[index]
                 if (index == 0) {
-                  dataString += '人'
+                  //dataString += '人'
                   per = Math.round((dataset.data[index] / dataSum) * 100)
                 } else {
-                  dataString += '床'
+                  //dataString += '床'
                 }
-                ctx.fillText(dataString, position.x, position.y + (fontSize / 2))  // データの百分率
+                //ctx.fillText(dataString, position.x, position.y + (fontSize / 2))  // データの百分率
+                //ctx.fillText(dataString, position.x, position.y)  // データの百分率
               })
             }
           })
 
           // 使用率のラベル
-          let fontSize = 18;
+          let fontSize = 16;
           let fontStyle = 'normal';
           let fontFamily = "Helvetica Neue";
           ctx.fillStyle = '#666';
@@ -203,7 +218,7 @@ export default {
           ctx.fillText('使用率', chart.width / 2 - 60, (chart.height - fontSize) / 2 - padding);
 
           // 使用率の数値
-          fontSize = 36;
+          fontSize = 32;
           if (per < 50) {
             ctx.fillStyle = '#666';
           } else if (per >= 50 && per < 80) {

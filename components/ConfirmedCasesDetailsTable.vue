@@ -207,7 +207,7 @@ $default-boxdiff: 35px;
     background-color: $gray-5;
     margin-right: $default-bdw;
     border: $default-bdw solid $gray-3;
-    width: 19.3%;
+    width: 21.3%;
     flex: 0 0 auto;
     text-align: center;
     color: $gray-2;
@@ -224,7 +224,7 @@ $default-boxdiff: 35px;
   }
 
   &.confirmed {
-    width: 80.7%;
+    width: 78.7%;
 
     > .pillar {
       // [4列] 1/4

@@ -1,23 +1,29 @@
 {
     "newsItems": [
         {
-            "date": "2020/04/30",
-            "text": "本日の新規感染者はおりませんでした。"
+            "date": "2020/05/01",
+            "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/documents/0501164165.pdf",
+            "text": "本日分のデータを反映しました。（新規感染者２名）"
         },
         {
-            "date": "2020/04/28",
+            "date": "2020/05/01",
+            "url": "https://www.pref.ibaraki.jp/shokorodo/chusho/shogyo/2020kyouryokukin.html",
+            "text": "休業要請協力金に関する申請関係について"
+        },
+        {
+            "date": "2020/05/01",
             "url": "https://www.pref.ibaraki.jp/hokenfukushi/jinzai/ishikakuho/covid-19taisakukikin.html",
-            "text": "茨城県新型コロナウイルス感染症対策医療従事者応援金"
+            "text": "医療従事者応援金について"
         },
         {
-            "date": "2020/04/24",
-            "url": "https://www.pref.ibaraki.jp/kikaku/seisaku/seisaku/200424kitakantokmessage.html",
-            "text": "北関東三県知事による共同・緊急メッセージ"
+            "date": "2020/05/01",
+            "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/documents/0501kaiken.pdf",
+            "text": "知事記者会見 - パチンコ店休業要請、医療用物資製造・提供のお願い"
         },
         {
-            "date": "2020/04/21",
-            "url": "https://www.pref.ibaraki.jp/shokorodo/chusho/shogyo/2020korona.html",
-            "text": "休業要請・協力金（相談窓口・ＦＡＱ等）について"
+            "date": "2020/05/01",
+            "url": "https://www.pref.ibaraki.jp/shokorodo/sangi/jiba/coronavirus.html",
+            "text": "医療用物資に関する提供協力（有償・無償）・製造協力のお願いについて"
         }
     ]
 }

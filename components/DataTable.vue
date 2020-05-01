@@ -13,6 +13,7 @@
       :height="240"
       :fixed-header="true"
       :mobile-breakpoint="0"
+      :custom-sort="customSort"
       class="cardTable"
     />
     <template v-slot:infoPanel>
@@ -27,7 +28,6 @@
     </template>
   </data-view>
 </template>
-
 <style lang="scss">
 .cardTable {
   &.v-data-table {
@@ -36,7 +36,6 @@
       padding: 8px 10px;
       height: auto;
       border-bottom: 1px solid $gray-4;
-      white-space: nowrap;
       color: $gray-2;
       font-size: 12px;
 
@@ -49,6 +48,10 @@
       tr {
         color: $gray-1;
 
+        th {
+          font-weight: normal;
+        }
+
         td {
           padding: 8px 10px;
           height: auto;
@@ -60,14 +63,9 @@
         }
 
         &:nth-child(odd) {
+          th,
           td {
             background: rgba($gray-4, 0.3);
-          }
-        }
-
-        &:not(:last-child) {
-          td:not(.v-data-table__mobile-row) {
-            border: none;
           }
         }
       }
@@ -79,9 +77,15 @@
 }
 
 .note {
-  padding: 8px;
+  margin: 8px 0 0;
   font-size: 12px;
   color: $gray-3;
+
+  ul,
+  ol {
+    list-style-type: none;
+    padding: 0;
+  }
 }
 </style>
 
@@ -117,6 +121,27 @@ export default Vue.extend({
     url: {
       type: String,
       default: ''
+    },
+    customSort: {
+      type: Function,
+      default(items: Object[], index: string[], isDesc: boolean[]) {
+        items.sort((a: any, b: any) => {
+          let comparison = 0
+          if (String(a[index[0]]) < String(b[index[0]])) {
+            comparison = -1
+          } else if (String(b[index[0]]) < String(a[index[0]])) {
+            comparison = 1
+          }
+          // a と b が等しい場合は上記のif文を両方とも通過するので 0 のままとなる
+
+          // 降順指定の場合は符号を反転
+          if (comparison !== 0) {
+            comparison = isDesc[0] ? comparison * -1 : comparison
+          }
+          return comparison
+        })
+        return items
+      }
     }
   },
   mounted() {

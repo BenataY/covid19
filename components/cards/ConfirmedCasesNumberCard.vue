@@ -5,7 +5,7 @@
       :title-id="'number-of-confirmed-cases'"
       :chart-id="'time-bar-chart-patients'"
       :chart-data="patientsGraph"
-      :date="Data.patients.date"
+      :date="Data.patients_summary.date"
       :unit="$t('人')"
       :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/hassei.html'"
       :source="$t('参考元データ')"

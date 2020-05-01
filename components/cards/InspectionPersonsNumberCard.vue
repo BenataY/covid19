@@ -5,19 +5,11 @@
       :title-id="'number-of-inspection-persons'"
       :chart-id="'number-of-inspection-persons'"
       :chart-data="graphData"
-      :date="data.date"
+      :date="data.patients_summary.date"
       :unit="$t('人')"
     >
       <template v-slot:description>
         <ul>
-          <li>
-            {{ $t('（注）医療機関が保険適用で行った検査は含まれていない') }}
-          </li>
-          <li>
-            {{
-              $t('（注）チャーター機帰国者、クルーズ船乗客等は含まれていない')
-            }}
-          </li>
           <li>
             {{
               $t(
@@ -41,18 +33,11 @@ export default {
     TimeBarChart
   },
   data() {
-    const formatData = Data.inspection_persons.labels.map((date, i) => {
-      return {
-        日付: date,
-        小計: Data.inspection_persons.datasets[0].data[i]
-      }
-    })
-
     // 検査実施人数グラフ
-    const graphData = formatGraph(formatData)
+    const graphData = formatGraph(Data.patients_summary.data, 1)
 
     return {
-      data: Data.inspection_persons,
+      data: Data,
       graphData
     }
   }

@@ -218,7 +218,7 @@ export default Vue.extend({
     .scrollable {
       overflow-x: scroll;
       &::-webkit-scrollbar {
-        height: 4px;
+        height: 8px;
         background-color: rgba(0, 0, 0, 0.01);
       }
       &::-webkit-scrollbar-thumb {

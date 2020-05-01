@@ -8,13 +8,13 @@
     <h4 :id="`${titleId}-graph`" class="visually-hidden">
       {{ $t(`{title}のグラフ`, { title }) }}
     </h4>
-    <bar
+    <horizontal-bar
       :ref="'barChart'"
       :style="{ display: canvas ? 'block' : 'none' }"
       :chart-id="chartId"
       :chart-data="displayData"
       :options="displayOption"
-      :height="240"
+      :height="300"
     />
     <v-data-table
       :style="{ top: '-9999px', position: canvas ? 'fixed' : 'static' }"
@@ -22,7 +22,7 @@
       :items="tableData"
       :items-per-page="-1"
       :hide-default-footer="true"
-      :height="240"
+      :height="300"
       :fixed-header="true"
       :disable-sort="true"
       :mobile-breakpoint="0"
@@ -189,26 +189,25 @@ const options: ThisTypedComponentOptionsWithRecordProps<
           xAxes: [
             {
               gridLines: {
-                display: false
+                display: true
               },
               ticks: {
                 fontSize: 9,
-                fontColor: '#808080'
+                fontColor: '#808080',
+                callback(label) {
+                  return `${label}${self.unit}`
+                }
               }
             }
           ],
           yAxes: [
             {
               gridLines: {
-                display: true
+                display: false
               },
               ticks: {
-                fontSize: 9,
-                fontColor: '#808080',
-                maxTicksLimit: 10,
-                callback(label) {
-                  return `${label}${self.unit}`
-                }
+                fontSize: 11,
+                fontColor: '#808080'
               }
             }
           ]

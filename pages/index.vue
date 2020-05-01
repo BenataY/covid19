@@ -28,9 +28,9 @@
       <confirmed-cases-attributes-card />
       <confirmed-cases-details-card />
       <sickbeds-summary-card />
+      <inspection-persons-number-card />
       <cities-card />
       <age-card />
-      <inspection-persons-number-card />
     </v-row>
     <v-divider />
   </div>

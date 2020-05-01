@@ -19,6 +19,32 @@
       <div class="DataView-CardText">
         <slot />
       </div>
+      <div v-if="this.$slots.dataTable" class="DataView-Details">
+        <v-expansion-panels v-if="showDetails" flat>
+          <v-expansion-panel>
+            <v-expansion-panel-header
+              :hide-actions="true"
+              :style="{ transition: 'none' }"
+              @click="toggleDetails"
+            >
+              <template slot:actions>
+                <div class="v-expansion-panel-header__icon">
+                  <v-icon left>mdi-chevron-right</v-icon>
+                </div>
+              </template>
+              <span class="expansion-panel-text">{{
+                $t('テーブルを表示')
+              }}</span>
+            </v-expansion-panel-header>
+            <v-expansion-panel-content>
+              <slot name="dataTable" />
+            </v-expansion-panel-content>
+          </v-expansion-panel>
+        </v-expansion-panels>
+        <template v-else>
+          <slot name="dataTable" />
+        </template>
+      </div>
       <div class="DataView-Description">
         <slot name="footer-description" />
       </div>
@@ -49,6 +75,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { convertDatetimeToISO8601Format } from '@/utils/formatDate'
+import { EventBus, TOGGLE_EVENT } from '@/utils/card-event-bus'
 
 export default Vue.extend({
   props: {
@@ -74,7 +101,9 @@ export default Vue.extend({
     return {
       openGraphEmbed: false,
       displayShare: false,
-      showOverlay: false
+      showOverlay: false,
+      showDetails: false,
+      openDetails: false
     }
   },
   computed: {
@@ -88,6 +117,9 @@ export default Vue.extend({
         '" frameborder="0"></iframe>'
       return graphEmbedValue
     }
+  },
+  mounted() {
+    this.showDetails = true
   },
   watch: {
     displayShare(isShow: boolean) {
@@ -143,9 +175,9 @@ export default Vue.extend({
         'https://twitter.com/intent/tweet?text=' +
         this.title +
         ' / ' +
-        this.$t('東京都') +
+        this.$t('茨城県') +
         this.$t('新型コロナウイルス感染症') +
-        this.$t('対策サイト') +
+        this.$t('ポータルサイト') +
         '&url=' +
         this.permalink(true) +
         '&' +
@@ -162,6 +194,10 @@ export default Vue.extend({
         'https://social-plugins.line.me/lineit/share?url=' +
         this.permalink(true)
       window.open(url)
+    },
+    toggleDetails() {
+      this.openDetails = !this.openDetails
+      EventBus.$emit(TOGGLE_EVENT, { dataView: this.$refs.dataView })
     }
   }
 })
@@ -174,6 +210,27 @@ export default Vue.extend({
   @include card-container();
 
   height: 100%;
+
+  .LegendStickyChart {
+    margin: 16px 0;
+    position: relative;
+    overflow: hidden;
+    .scrollable {
+      overflow-x: scroll;
+      &::-webkit-scrollbar {
+        height: 4px;
+        background-color: rgba(0, 0, 0, 0.01);
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.07);
+      }
+    }
+    .sticky-legend {
+      position: absolute;
+      top: 0;
+      pointer-events: none;
+    }
+  }
 
   &-Header {
     display: flex;
@@ -257,6 +314,21 @@ export default Vue.extend({
     }
   }
 
+  &-Details {
+    margin: 5px 0;
+
+    .v-data-table .text-end {
+      text-align: right;
+    }
+  }
+
+  &-DetailsSummary {
+    @include font-size(14);
+
+    color: $gray-2;
+    cursor: pointer;
+  }
+
   &-CardTextForXS {
     margin-bottom: 46px;
     margin-top: 70px;
@@ -272,6 +344,7 @@ export default Vue.extend({
     padding: 0 !important;
     display: flex;
     justify-content: space-between;
+    margin-top: auto;
     color: $gray-3 !important;
     text-align: right;
     background-color: $white !important;
@@ -298,7 +371,8 @@ export default Vue.extend({
 
       .DataView-Share-Opener {
         cursor: pointer;
-        margin-right: 6px;
+        margin: -14px;
+        padding: 14px;
 
         > svg {
           width: auto !important;
@@ -376,7 +450,6 @@ export default Vue.extend({
 
           .icon-resize {
             border-radius: 50%;
-            font-size: 30px;
 
             &.twitter {
               color: #fff;
@@ -437,5 +510,21 @@ textarea {
   font: 400 11px system-ui;
   width: 100%;
   height: 2.4rem;
+}
+
+.v-expansion-panel-header__icon {
+  margin-left: -5px !important;
+
+  & .v-icon--left {
+    margin-right: 5px;
+  }
+
+  .v-expansion-panel--active & .v-icon {
+    transform: rotate(90deg) !important;
+  }
+}
+
+.expansion-panel-text {
+  color: $gray-1;
 }
 </style>

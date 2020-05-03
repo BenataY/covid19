@@ -14,7 +14,7 @@
       :chart-id="chartId"
       :chart-data="displayData"
       :options="displayOption"
-      :height="330"
+      :height="400"
     />
     <v-data-table
       :style="{ top: '-9999px', position: canvas ? 'fixed' : 'static' }"
@@ -173,6 +173,8 @@ const options: ThisTypedComponentOptionsWithRecordProps<
             }
           }
         },
+        responsive: true,
+        maintainAspectRatio: false,
         legend: {
           display: false,
           onHover: (e: HTMLElementEvent<HTMLInputElement>) => {

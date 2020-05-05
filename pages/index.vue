@@ -26,6 +26,7 @@
     <v-row class="DataBlock">
       <confirmed-cases-number-card />
       <confirmed-cases-attributes-card />
+      <ibaraki-analysis-card />
       <confirmed-cases-details-card />
       <sickbeds-summary-card />
       <inspection-persons-number-card />
@@ -52,6 +53,7 @@ import SickbedsSummaryCard from '@/components/cards/SickbedsSummaryCard.vue'
 import AgeCard from '@/components/cards/AgeCard.vue'
 import CitiesCard from '@/components/cards/CitiesCard.vue'
 import InspectionPersonsNumberCard from '@/components/cards/InspectionPersonsNumberCard.vue'
+import IbarakiAnalysisCard from '@/components/cards/IbarakiAnalysisCard.vue'
 import { convertDatetimeToISO8601Format } from '@/utils/formatDate'
 
 export default Vue.extend({
@@ -66,7 +68,8 @@ export default Vue.extend({
     SickbedsSummaryCard,
     AgeCard,
     CitiesCard,
-    InspectionPersonsNumberCard
+    InspectionPersonsNumberCard,
+    IbarakiAnalysisCard
   },
   data() {
     const data = {

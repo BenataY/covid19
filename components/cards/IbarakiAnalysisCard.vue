@@ -3,7 +3,7 @@
     <data-label
       :title="$t('県内の数値指標')"
       :title-id="'ibaraki-analysis'"
-      :date="'2020/01/01'"
+      :date="date"
     />
   </v-col>
 </template>
@@ -17,6 +17,10 @@ export default {
     DataLabel
   },
   data() {
+    const date = Data.date
+    return {
+      date
+    }
   }
 }
 </script>

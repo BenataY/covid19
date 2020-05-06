@@ -13,24 +13,27 @@
         <data-label-item
           title="陽性率"
           titleSub="全期間"
-          value="4.8"
-          sub1="168"
-          sub2="3362"
+          :value="datas.kensaTotal.value"
+          :sub1="datas.kensaTotal.sub1"
+          :sub2="datas.kensaTotal.sub2"
           annotation="（注）検査数の確定は数日遅いため、若干数値が高くなります"
         />
         <data-label-item
           title="陽性率"
           titleSub="直近1週間"
-          value="1.5"
-          sub1="7"
-          sub2="352"
-          startdate="4/26"
-          enddate="5/2"
+          :value="datas.kensa1week.value"
+          :sub1="datas.kensa1week.sub1"
+          :sub2="datas.kensa1week.sub2"
+          :startdate="datas.kensa1week.start"
+          :enddate="datas.kensa1week.end"
           annotation="（注）検査数が確定している直近の1週間で算出してます"
         />
         <data-label-item
           title="病床使用率"
-          value="24.5"
+          :value="datas.sickbeds.value"
+          :sub1="datas.sickbeds.sub1"
+          :sub2="datas.sickbeds.sub2"
+          subUnit="床"
         />
         <data-label-item
           title="経路不明者"
@@ -55,6 +58,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import Data from '@/data/analysis.json'
 import DataLabelItem from '@/components/DataLabelItem.vue'
 
 export default Vue.extend({
@@ -81,7 +85,9 @@ export default Vue.extend({
     }
   },
   data() {
+    const datas = Data.ibaraki
     return {
+      datas
     }
   },
   computed: {

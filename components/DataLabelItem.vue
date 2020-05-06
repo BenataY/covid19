@@ -15,6 +15,11 @@
             {{ value + $t(unit) }}<span v-if="sub1 && sub2" >（ {{ sub1 + $t(subUnit) }} / {{ sub2 + $t(subUnit) }} ）</span>
           </v-col>
         </v-row>
+        <v-row v-if="annotation" cols="12">
+          <v-col class="Annotation">
+            {{ $t(annotation) }}
+          </v-col>
+        </v-row>
       </v-card-text>
     </v-card>
   </div>
@@ -60,6 +65,10 @@ export default Vue.extend({
     enddate: {
       type: String,
       default: ''
+    },
+    annotation: {
+      type: String,
+      default: ''
     }
   }
 })
@@ -75,22 +84,36 @@ export default Vue.extend({
     .Title {
       font-size: 18px;
       padding: 0 12px;
+
+      @include largerThan($large) {
+        font-size: 20px;
+      }
     }
 
     .TitleSub {
       font-size: 12px;
-      padding: 0 12px 3px 12px;
+      padding: 0 12px 6px 12px;
     }
 
     .LabelMain {
-      font-size: 18px;
+      font-size: 20px;
       padding: 0 12px;
+
+      @include largerThan($large) {
+        font-size: 24px;
+      }
     }
 
     .LabelMain span {
       font-size: 12px;
       color: $gray-1;
       padding: 0 12px;
+    }
+
+    .Annotation {
+      font-size: 12px;
+      color: $gray-3;
+      padding: 3px 12px;
     }
   }
 </style>

@@ -16,6 +16,7 @@
           value="4.8"
           sub1="168"
           sub2="3362"
+          annotation="（注）検査数の確定は数日遅いため、若干数値が高くなります"
         />
         <data-label-item
           title="陽性率"
@@ -25,6 +26,7 @@
           sub2="352"
           startdate="4/26"
           enddate="5/2"
+          annotation="（注）検査数が確定している直近の1週間で算出してます"
         />
         <data-label-item
           title="病床使用率"
@@ -134,7 +136,7 @@ export default Vue.extend({
     color: $gray-2;
 
     @include largerThan($large) {
-      margin-bottom: 0;
+      margin-bottom: 20px;
       &.with-infoPanel {
         width: 50%;
       }

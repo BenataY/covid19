@@ -25,8 +25,8 @@
     <whats-new class="mb-4" :items="newsItems" />
     <v-row class="DataBlock">
       <confirmed-cases-number-card />
-      <confirmed-cases-attributes-card />
       <ibaraki-analysis-card />
+      <confirmed-cases-attributes-card />
       <confirmed-cases-details-card />
       <sickbeds-summary-card />
       <inspection-persons-number-card />

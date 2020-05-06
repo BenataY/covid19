@@ -1,12 +1,9 @@
 <template>
   <v-col cols="12" md="6" class="DataCard">
     <data-label
-      :title="$t('数値指標')"
+      :title="$t('県内の数値指標')"
       :title-id="'ibaraki-analysis'"
       :date="Data.patients.date"
-      :info="sumInfoOfPatients"
-      :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/hassei.html'"
-      :source="$t('参考元データ')"
     />
   </v-col>
 </template>

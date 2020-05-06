@@ -10,23 +10,32 @@
         </h3>
       </div>
       <div class="DataLabel-Data">
-        <v-card outlined>
-          <v-card-text>
-            <v-row cols="12">
-              <v-col class="LabelTitleSub">
-                全期間の
-              </v-col>
-            </v-row>
-            <v-row align="center">
-              <v-col class="LabelTitle" cols="4">
-                陽性率
-              </v-col>
-              <v-col cols="8">
-                4.8%
-              </v-col>
-            </v-row>
-          </v-card-text>
-        </v-card>
+        <data-label-item
+          title="陽性率"
+          titleSub="全期間"
+          value="4.8"
+          sub1="168"
+          sub2="3362"
+        />
+        <data-label-item
+          title="陽性率"
+          titleSub="直近1週間"
+          value="1.5"
+          sub1="7"
+          sub2="352"
+          startdate="4/26"
+          enddate="5/2"
+        />
+        <data-label-item
+          title="病床使用率"
+          value="24.5"
+        />
+        <data-label-item
+          title="経路不明者"
+          titleSub="直近1週間"
+          value="準備中"
+          unit=""
+        />
       </div>
       <div class="DataLabel-Footer">
         <div class="Footer-Left">
@@ -44,8 +53,12 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import DataLabelItem from '@/components/DataLabelItem.vue'
 
 export default Vue.extend({
+  components: {
+    DataLabelItem
+  },
   props: {
     title: {
       type: String,
@@ -125,16 +138,6 @@ export default Vue.extend({
       &.with-infoPanel {
         width: 50%;
       }
-    }
-  }
-
-  &-Data {
-    .LabelTitle {
-      font-size: 32px;
-    }
-
-    .LabelTitleSub {
-      padding: 0 12px;
     }
   }
 

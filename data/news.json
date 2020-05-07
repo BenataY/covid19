@@ -1,8 +1,18 @@
 {
     "newsItems": [
         {
-            "date": "2020/05/06",
+            "date": "2020/05/07",
             "text": "本日の新規感染者はおりませんでした"
+        },
+        {
+            "date": "2020/05/07",
+            "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/kaiken.html",
+            "text": "知事記者会見（5月7日更新）"
+        },
+        {
+            "date": "2020/05/07",
+            "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/documents/0507kaiken2.pdf",
+            "text": "社会経済活動再開に向けた現状認識と考え方"
         },
         {
             "date": "2020/05/01",
@@ -13,16 +23,6 @@
             "date": "2020/05/01",
             "url": "https://www.pref.ibaraki.jp/hokenfukushi/jinzai/ishikakuho/covid-19taisakukikin.html",
             "text": "医療従事者応援金について"
-        },
-        {
-            "date": "2020/05/01",
-            "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/documents/0501kaiken.pdf",
-            "text": "知事記者会見 - パチンコ店休業要請、医療用物資製造・提供のお願い"
-        },
-        {
-            "date": "2020/05/01",
-            "url": "https://www.pref.ibaraki.jp/shokorodo/sangi/jiba/coronavirus.html",
-            "text": "医療用物資に関する提供協力（有償・無償）・製造協力のお願いについて"
         }
     ]
 }

@@ -7,8 +7,6 @@
       :date="date"
       :unit="$t('床')"
       :info="$t('入院患者数') + '/' + $t('病床数')"
-      :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/documents/01200228.pdf'"
-      :source="$t('参考元データ')"
     />
   </v-col>
 </template>

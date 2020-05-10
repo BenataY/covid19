@@ -1,6 +1,6 @@
 <template>
   <a class="OpenDataLink" :href="url" target="_blank" rel="noopener noreferrer">
-    {{ $t('参考元データ') }}
+    {{ $t(label) }}
     <v-icon
       class="ExternalLinkIcon"
       size="15"
@@ -29,6 +29,10 @@ export default Vue.extend({
     url: {
       type: String,
       default: ''
+    },
+    label: {
+      type: String,
+      default: '参考元データ'
     }
   }
 })

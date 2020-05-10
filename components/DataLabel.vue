@@ -8,36 +8,48 @@
         >
           {{ title }}
         </h3>
+        <v-icon>mdi-help-circle-outline</v-icon>
       </div>
       <div class="DataLabel-Data">
         <data-label-item
-          title="陽性率"
-          titleSub="全期間"
+          title="重症病床稼働率"
           :value="datas.kensaTotal.value"
+          stage=1
           :sub1="datas.kensaTotal.sub1"
           :sub2="datas.kensaTotal.sub2"
-          annotation="（注）検査数の確定は数日遅いため、若干数値が高くなります"
         />
         <data-label-item
-          title="陽性率"
-          titleSub="直近1週間"
+          title="病床稼働率"
           :value="datas.kensa1week.value"
           :sub1="datas.kensa1week.sub1"
           :sub2="datas.kensa1week.sub2"
-          :startdate="datas.kensa1week.start"
-          :enddate="datas.kensa1week.end"
-          annotation="（注）検査数が確定している直近の1週間で算出してます"
         />
         <data-label-item
-          title="病床使用率"
+          title="陽性者数"
+          titleSub="１日あたり"
           :value="datas.sickbeds.value"
           :sub1="datas.sickbeds.sub1"
           :sub2="datas.sickbeds.sub2"
           subUnit="床"
         />
         <data-label-item
-          title="経路不明者"
-          titleSub="直近1週間"
+          title="濃厚接触者以外"
+          titleSub="陽性者のうち"
+          :value="datas.sickbeds.value"
+          :sub1="datas.sickbeds.sub1"
+          :sub2="datas.sickbeds.sub2"
+          subUnit="床"
+        />
+        <data-label-item
+          title="陽性率"
+          :value="datas.sickbeds.value"
+          :sub1="datas.sickbeds.sub1"
+          :sub2="datas.sickbeds.sub2"
+          subUnit="床"
+        />
+        <data-label-item
+          title="経路不明陽性者"
+          titleSub="１日あたり"
           value="準備中"
           unit=""
         />
@@ -60,10 +72,12 @@
 import Vue from 'vue'
 import Data from '@/data/analysis.json'
 import DataLabelItem from '@/components/DataLabelItem.vue'
+import QuestionIcon from '@/static/question.svg'
 
 export default Vue.extend({
   components: {
-    DataLabelItem
+    DataLabelItem,
+    QuestionIcon
   },
   props: {
     title: {

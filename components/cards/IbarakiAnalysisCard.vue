@@ -1,7 +1,7 @@
 <template>
   <v-col cols="12" md="6" class="DataCard">
     <data-label
-      :title="$t('県内の数値指標')"
+      :title="$t('緊急事態措置等の強化・緩和に関する判断指標')"
       :title-id="'ibaraki-analysis'"
       :date="date"
     />

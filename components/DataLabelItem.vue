@@ -2,9 +2,12 @@
   <div>
     <v-card flat>
       <v-card-text class="Data">
-        <v-row v-if="titleSub" cols="12">
-          <v-col class="TitleSub">
-            {{ $t(titleSub) }}<span v-if="startdate && enddate" >（ {{ startdate }} 〜 {{ enddate }} ）</span>
+        <v-row>
+          <v-col class="TitleSub" cols="4">
+            {{ $t(titleSub) }}
+          </v-col>
+          <v-col class="TitleSub" cols="8">
+            {{ "stage " + stage }}
           </v-col>
         </v-row>
         <v-row align="center">
@@ -12,7 +15,7 @@
             {{ $t(title) }}
           </v-col>
           <v-col class="LabelMain" cols="8">
-            {{ value + $t(unit) }}<span v-if="sub1 && sub2" >（ {{ sub1 + $t(subUnit) }} / {{ sub2 + $t(subUnit) }} ）</span>
+            {{ value + $t(unit) }} （ 前日: 4.5% )
           </v-col>
         </v-row>
         <v-row v-if="annotation" cols="12">
@@ -42,6 +45,10 @@ export default Vue.extend({
       type: String,
       default: ''
     },
+    stage: {
+      type: Number,
+      default: 0
+    },
     unit: {
       type: String,
       default: '%'
@@ -57,14 +64,6 @@ export default Vue.extend({
     subUnit: {
       type: String,
       default: '人'
-    },
-    startdate: {
-      type: String,
-      default: ''
-    },
-    enddate: {
-      type: String,
-      default: ''
     },
     annotation: {
       type: String,

@@ -12,45 +12,44 @@
       <div class="DataLabel-Data">
         <data-label-item
           title="重症病床稼働率"
-          :value="datas.kensaTotal.value"
+          :valueToday=1
+          valueYesterday=1
           stage=1
-          :sub1="datas.kensaTotal.sub1"
-          :sub2="datas.kensaTotal.sub2"
         />
         <data-label-item
           title="病床稼働率"
-          :value="datas.kensa1week.value"
-          :sub1="datas.kensa1week.sub1"
-          :sub2="datas.kensa1week.sub2"
+          valueToday=1
+          valueYesterday=1
+          stage=1
         />
         <data-label-item
           title="陽性者数"
           titleSub="１日あたり"
-          :value="datas.sickbeds.value"
-          :sub1="datas.sickbeds.sub1"
-          :sub2="datas.sickbeds.sub2"
-          subUnit="床"
+          valueToday=1
+          valueYesterday=1
+          stage=1
+          unit="人"
         />
         <data-label-item
           title="濃厚接触者以外"
           titleSub="陽性者のうち"
-          :value="datas.sickbeds.value"
-          :sub1="datas.sickbeds.sub1"
-          :sub2="datas.sickbeds.sub2"
-          subUnit="床"
+          valueToday=1
+          valueYesterday=1
+          stage=1
+          unit="人"
         />
         <data-label-item
           title="陽性率"
-          :value="datas.sickbeds.value"
-          :sub1="datas.sickbeds.sub1"
-          :sub2="datas.sickbeds.sub2"
-          subUnit="床"
+          valueToday=1
+          valueYesterday=1
+          stage=1
         />
         <data-label-item
           title="経路不明陽性者"
           titleSub="１日あたり"
-          value="準備中"
-          unit=""
+          valueToday=1
+          valueYesterday=1
+          stage=1
         />
       </div>
       <div class="DataLabel-Footer">

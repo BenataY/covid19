@@ -6,21 +6,19 @@
           <v-col class="TitleSub" cols="4">
             {{ $t(titleSub) }}
           </v-col>
-          <v-col class="TitleSub" cols="8">
-            {{ "stage " + stage }}
+          <v-col class="TitleSub" cols="4">
+
           </v-col>
         </v-row>
         <v-row align="center">
           <v-col class="Title" cols="4">
             {{ $t(title) }}
           </v-col>
-          <v-col class="LabelMain" cols="8">
-            {{ value + $t(unit) }} （ 前日: 4.5% )
+          <v-col class="LabelMain" cols="4">
+            {{ valueToday + $t(unit) }} <span class="TitleSub">{{ "前日 : " + valueYesterday + $t(unit) }}</span>
           </v-col>
-        </v-row>
-        <v-row v-if="annotation" cols="12">
-          <v-col class="Annotation">
-            {{ $t(annotation) }}
+          <v-col class="LabelMain" cols="4">
+            <span class="Stage" >stage</span> {{ stage }}
           </v-col>
         </v-row>
       </v-card-text>
@@ -41,7 +39,11 @@ export default Vue.extend({
       type: String,
       default: ''
     },
-    value: {
+    valueToday: {
+      type: String,
+      default: ''
+    },
+    valueYesterday: {
       type: String,
       default: ''
     },
@@ -52,22 +54,6 @@ export default Vue.extend({
     unit: {
       type: String,
       default: '%'
-    },
-    sub1: {
-      type: String,
-      default: ''
-    },
-    sub2: {
-      type: String,
-      default: ''
-    },
-    subUnit: {
-      type: String,
-      default: '人'
-    },
-    annotation: {
-      type: String,
-      default: ''
     }
   }
 })
@@ -81,7 +67,7 @@ export default Vue.extend({
     background-color: $gray-5;
 
     .Title {
-      font-size: 18px;
+      font-size: 16px;
       padding: 0 12px;
 
       @include largerThan($large) {
@@ -103,16 +89,8 @@ export default Vue.extend({
       }
     }
 
-    .LabelMain span {
-      font-size: 12px;
-      color: $gray-1;
-      padding: 0 12px;
-    }
-
-    .Annotation {
-      font-size: 12px;
-      color: $gray-3;
-      padding: 3px 12px;
+    .Stage {
+      font-size: 18px;
     }
   }
 </style>

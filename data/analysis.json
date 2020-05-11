@@ -1,25 +1,35 @@
 {
-  "date": "2020/05/07 00:15",
+  "date": "2020/05/11 22:15",
   "ibaraki": {
-    "kensaTotal": {
-      "value": 4.6,
-      "sub1": 168,
-      "sub2": 3684
+    "criticalBeds": {
+      "today": 9.0,
+      "yesterday": 10.0,
+      "stage": 1
     },
-    "kensa1week": {
-      "value": 1.9,
-      "sub1": 7,
-      "sub2": 377,
-      "start": "4/26",
-      "end": "5/2"
+    "beds": {
+      "today": 28.6,
+      "yesterday": 30.6,
+      "stage": 1
     },
-    "sickbeds": {
-      "value": 23.5,
-      "sub1": 88,
-      "sub2": 375
+    "positive": {
+      "today": 0.1,
+      "yesterday": 0.4,
+      "stage": 1
     },
-    "youseiZinkou": {
-      "value": 0.59
+    "contactor": {
+      "today": 0.0,
+      "yesterday": 0.1,
+      "stage": 1
+    },
+    "positiveRate": {
+      "today": 0.2,
+      "yesterday": 0.5,
+      "stage": 1
+    },
+    "pathUnknown": {
+      "today": 17.9,
+      "yesterday": 25.3,
+      "stage": 2
     }
   }
 }

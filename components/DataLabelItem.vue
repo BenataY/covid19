@@ -59,7 +59,7 @@ export default Vue.extend({
 <style lang="scss">
   .Data {
     font-family: 'Hiragino Sans', sans-serif;
-    padding: 9px 16px;
+    padding: 9px 16px !important;
     margin: 9px 0;
 
     .Title {

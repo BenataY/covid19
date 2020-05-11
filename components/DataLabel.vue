@@ -111,10 +111,6 @@ export default Vue.extend({
     }
   },
   computed: {
-  },
-  mounted() {
-  },
-  methods: {
   }
 })
 </script>

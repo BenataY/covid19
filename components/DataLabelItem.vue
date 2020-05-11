@@ -12,7 +12,7 @@
             {{ $t(title) }}
           </v-col>
           <v-col class="LabelMain" cols="5">
-            {{ valueToday + $t(unit) }} <span class="TitleSub">{{ "前日 : " + valueYesterday + $t(unit) }}</span>
+            {{ valueToday + $t(unit) }} <br v-if="smallSize" /><span class="TitleSub">{{ "前日 : " + valueYesterday + $t(unit) }}</span>
           </v-col>
           <v-col class="LabelMain" cols="3">
             <span class="Stage" >stage</span> {{ stage }}
@@ -52,6 +52,31 @@ export default Vue.extend({
       type: String,
       default: '%'
     }
+  },
+  data() {
+    return {
+      smallSize: {}
+    }
+  },
+  methods: {
+        handleResize: function() {
+            if (window.innerWidth <= 800) {
+                this.smallSize = true
+            } else {
+                this.smallSize = false
+            }
+        }
+  },
+  mounted: function () {
+    if (window.innerWidth <= 800) {
+        this.smallSize = true
+    } else {
+        this.smallSize = false
+    }
+    window.addEventListener('resize', this.handleResize)
+  },
+  beforeDestroy: function () {
+    window.removeEventListener('resize', this.handleResize)
   }
 })
 </script>
@@ -73,7 +98,12 @@ export default Vue.extend({
 
     .TitleSub {
       font-size: 12px;
-      padding: 0 0 0 6px;
+      padding: 0;
+
+      @include largerThan($large) {
+        font-size: 12px;
+        padding: 0 0 0 6px;
+      }
     }
 
     .LabelMain {
@@ -86,7 +116,7 @@ export default Vue.extend({
     }
 
     .Stage {
-      font-size: 16px;
+      font-size: 14px;
 
       @include largerThan($large) {
         font-size: 18px;

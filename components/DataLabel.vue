@@ -8,53 +8,61 @@
         >
           {{ title }}
         </h3>
+        <h4
+          class="DataLabel-TitleSub"
+        >
+          現在の感染状況はStage2（5月7日策定時）ですが、予防的観点からStage4の対策中
+        </h4>
       </div>
       <div class="DataLabel-Data">
         <data-label-item
           title="重症病床稼働率"
-          :valueToday=1
-          valueYesterday=1
-          stage=1
+          :valueToday="datas.criticalBeds.today"
+          :valueYesterday="datas.criticalBeds.yesterday"
+          :stage="datas.criticalBeds.stage"
         />
         <data-label-item
           title="病床稼働率"
-          valueToday=1
-          valueYesterday=1
-          stage=1
+          :valueToday="datas.beds.today"
+          :valueYesterday="datas.beds.yesterday"
+          :stage="datas.beds.stage"
         />
         <data-label-item
           title="陽性者数"
           titleSub="１日あたり"
-          valueToday=1
-          valueYesterday=1
-          stage=1
+          :valueToday="datas.positive.today"
+          :valueYesterday="datas.positive.yesterday"
+          :stage="datas.positive.stage"
           unit="人"
         />
         <data-label-item
           title="濃厚接触者以外"
           titleSub="陽性者のうち"
-          valueToday=1
-          valueYesterday=1
-          stage=1
+          :valueToday="datas.contactor.today"
+          :valueYesterday="datas.contactor.yesterday"
+          :stage="datas.contactor.stage"
           unit="人"
         />
         <data-label-item
           title="陽性率"
-          valueToday=1
-          valueYesterday=1
-          stage=1
+          :valueToday="datas.positiveRate.today"
+          :valueYesterday="datas.positiveRate.yesterday"
+          :stage="datas.positiveRate.stage"
         />
         <data-label-item
           title="経路不明陽性者"
-          titleSub="１日あたり"
-          valueToday=1
-          valueYesterday=1
-          stage=1
+          titleSub="【都内】１日あたり"
+          :valueToday="datas.pathUnknown.today"
+          :valueYesterday="datas.pathUnknown.yesterday"
+          :stage="datas.pathUnknown.stage"
         />
       </div>
       <div class="DataLabel-Footer">
         <div class="Footer-Left">
           <slot name="footer" />
+          <open-data-link :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/shihyo1.html'" label="「緊急事態措置等の強化・緩和に関する判断指標」の考え方" />
+          <br />
+          <open-data-link :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/handanshihyo.html'" label="【茨城版コロナNext】緊急事態措置等の強化・緩和に関する判断指標" />
           <div>
             <time :datetime="formattedDate">
               {{ $t('{date} 更新', { date }) }}
@@ -69,10 +77,12 @@
 <script lang="ts">
 import Vue from 'vue'
 import Data from '@/data/analysis.json'
+import OpenDataLink from '@/components/OpenDataLink.vue'
 import DataLabelItem from '@/components/DataLabelItem.vue'
 
 export default Vue.extend({
   components: {
+    OpenDataLink,
     DataLabelItem
   },
   props: {
@@ -153,6 +163,22 @@ export default Vue.extend({
 
     @include largerThan($large) {
       margin-bottom: 20px;
+      &.with-infoPanel {
+        width: 50%;
+      }
+    }
+  }
+
+  &-TitleSub {
+    width: 100%;
+    margin-bottom: 2px;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    font-weight: normal;
+    color: $gray-2;
+
+    @include largerThan($large) {
+      margin-bottom: 2px;
       &.with-infoPanel {
         width: 50%;
       }

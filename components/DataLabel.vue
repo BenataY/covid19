@@ -8,7 +8,6 @@
         >
           {{ title }}
         </h3>
-        <v-icon>mdi-help-circle-outline</v-icon>
       </div>
       <div class="DataLabel-Data">
         <data-label-item
@@ -72,12 +71,10 @@
 import Vue from 'vue'
 import Data from '@/data/analysis.json'
 import DataLabelItem from '@/components/DataLabelItem.vue'
-import QuestionIcon from '@/static/question.svg'
 
 export default Vue.extend({
   components: {
-    DataLabelItem,
-    QuestionIcon
+    DataLabelItem
   },
   props: {
     title: {

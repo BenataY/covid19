@@ -3,19 +3,19 @@
     <v-card flat>
       <v-card-text :class="{'Stage1': (stage == 1), 'Stage2': (stage == 2), 'Stage3': (stage == 3), 'Stage4': (stage == 4)}" class="Data">
         <v-row >
-          <v-col class="TitleSub" cols="12">
+          <v-col class="col-12 TitleSub">
             {{ $t(titleSub) }}
           </v-col>
         </v-row>
         <v-row align="center">
-          <v-col class="Title" cols="4">
+          <v-col class="col-4 Title">
             {{ $t(title) }}
           </v-col>
-          <v-col class="LabelMain" cols="5">
-            {{ valueToday + $t(unit) }} <br v-if="smallSize" /><span class="TitleSub">{{ "前日 : " + valueYesterday + $t(unit) }}</span>
+          <v-col class="col-4 col-md-5 LabelMain">
+            {{ valueToday + $t(unit) }} <br v-if="smallSize" /><span class="LabelSub">{{ "前日 : " + valueYesterday + $t(unit) }}</span>
           </v-col>
-          <v-col class="LabelMain" cols="3">
-            <span class="Stage" >stage</span> {{ stage }}
+          <v-col class="col-4 col-md-3 LabelMain">
+            <span class="Stage" >Stage</span> {{ stage }}
           </v-col>
         </v-row>
       </v-card-text>
@@ -60,7 +60,7 @@ export default Vue.extend({
   },
   methods: {
         handleResize: function() {
-            if (window.innerWidth <= 800) {
+            if (window.innerWidth <= 600) {
                 this.smallSize = true
             } else {
                 this.smallSize = false
@@ -68,7 +68,7 @@ export default Vue.extend({
         }
   },
   mounted: function () {
-    if (window.innerWidth <= 800) {
+    if (window.innerWidth <= 600) {
         this.smallSize = true
     } else {
         this.smallSize = false
@@ -88,7 +88,7 @@ export default Vue.extend({
     margin: 9px 0;
 
     .Title {
-      font-size: 16px;
+      font-size: 14px;
       padding: 0 12px;
 
       @include largerThan($large) {
@@ -97,12 +97,11 @@ export default Vue.extend({
     }
 
     .TitleSub {
-      font-size: 12px;
-      padding: 0;
+      font-size: 10px;
+      padding: 0 12px;
 
       @include largerThan($large) {
         font-size: 12px;
-        padding: 0 0 0 6px;
       }
     }
 
@@ -115,8 +114,18 @@ export default Vue.extend({
       }
     }
 
+    .LabelSub {
+      font-size: 10px;
+      padding: 0;
+
+      @include largerThan($large) {
+        font-size: 12px;
+      padding: 0 0 0 6px;
+      }
+    }
+
     .Stage {
-      font-size: 14px;
+      font-size: 12px;
 
       @include largerThan($large) {
         font-size: 18px;

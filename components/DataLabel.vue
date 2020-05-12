@@ -11,7 +11,7 @@
         <h4
           class="DataLabel-TitleSub"
         >
-          現在の感染状況はStage2（5月7日策定時）ですが、予防的観点からStage4の対策中
+          県内では予防的観点からStage4の対策中
         </h4>
       </div>
       <div class="DataLabel-Data">
@@ -168,7 +168,7 @@ export default Vue.extend({
   &-TitleSub {
     width: 100%;
     margin-bottom: 2px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     line-height: 1.5;
     font-weight: normal;
     color: $gray-2;

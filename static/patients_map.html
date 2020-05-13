@@ -7,6 +7,7 @@
   <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+  <link rel="stylesheet" href="./patients_map.css" />
   <style>
     html,
     body {
@@ -22,13 +23,23 @@
       height: 100.0%;
       left: 0.0%;
       top: 0.0%;
+      z-index: 1;
     }
   </style>
   </head>
 <body>
+  <!--  ****** loading anim -->
+  <div id="loadingAnim" class="loadingAnim"><i class="loadingAnim_line"></i></div>
+  <!--  ////// loading anim -->
+
   <div class="folium-map" id="map_ibaraki"></div>
 </body>
 <script>
+
+  var $loadingAnim = $('#loadingAnim'),
+      $body = $('body'),
+      $target = $('#map_ibaraki');
+
   var map_ibaraki = L.map('map_ibaraki').setView([36.35, 140.25], 9);
   L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/blank/{z}/{x}/{y}.png', {
     attribution: '<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank">地理院タイル</a>',
@@ -106,5 +117,10 @@
         markers.addLayer(marker_test);
       }
       map_ibaraki.addLayer(markers);
+
+      $body.addClass('loaded');
+      $loadingAnim.find('.loadingAnim_line').on('transitionend', function (e) {
+        $(this).parent().remove();
+      });
   });
 </script>

@@ -128,12 +128,21 @@ export default Vue.extend({
           link: 'https://www.mhlw.go.jp/content/10900000/000599643.pdf'
         },
         {
+          title: this.$t('県知事記者会見'),
+          link: 'https://www.pref.ibaraki.jp/1saigai/2019-ncov/kaiken.html'
+        },
+        {
           title: this.$t('県知事からのメッセージ'),
           link: 'https://www.pref.ibaraki.jp/1saigai/2019-ncov/message.html'
         },
         {
           title: this.$t('各保健所相談窓口'),
-          link: this.localePath('/healthCenter/')
+          link: this.localePath('/healthCenter/'),
+          divider: true
+        },
+        {
+          title: this.$t('茨城県庁HP'),
+          link: 'https://www.pref.ibaraki.jp/'
         },
         {
           title: this.$t('当サイトについて'),

@@ -7,6 +7,7 @@
       :chart-data="graphData"
       :date="data.patients_summary.date"
       :unit="$t('人')"
+      :url="'https://www.pref.ibaraki.jp/hokenfukushi/eiken/kikaku/covid-19_ibarakieiken_kensa.html'"
     >
       <template v-slot:description>
         <ul>

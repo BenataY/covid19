@@ -52,7 +52,7 @@
           <div :class="$style.pillar">
             <div :class="$style.content">
               <!-- eslint-disable vue/no-v-html-->
-              <span>{{ $t('退院') }}</span>
+              <span>{{ $t('退院等') }}</span>
               <!-- eslint-enable vue/no-v-html-->
               <span>
                 <strong>{{ 退院不明 }}</strong>

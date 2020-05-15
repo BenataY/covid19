@@ -1,18 +1,18 @@
 {
     "newsItems": [
         {
-            "date": "2020/05/14",
+            "date": "2020/05/15",
             "text": "本日の新規感染者はおりませんでした"
         },
         {
-            "date": "2020/05/07",
+            "date": "2020/05/15",
             "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/kaiken.html",
-            "text": "知事記者会見（5月7日更新）"
+            "text": "知事記者会見（5月15日更新）"
         },
         {
-            "date": "2020/05/07",
-            "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/documents/0507kaiken2.pdf",
-            "text": "社会経済活動再開に向けた現状認識と考え方"
+            "date": "2020/05/15",
+            "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/message.html",
+            "text": "知事メッセージ（5月15日更新）"
         },
         {
             "date": "2020/05/01",

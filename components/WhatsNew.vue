@@ -12,9 +12,9 @@
           mdi-bullhorn
         </v-icon>
         <external-link
-          url="https://www.pref.ibaraki.jp/1saigai/2019-ncov/kinkyu.html"
+          url="https://www.pref.ibaraki.jp/1saigai/2019-ncov/documents/0515kaiken_1.pdf"
         >
-          {{ $t('茨城県緊急事態措置について') }}
+          {{ $t('対策 Stage 3（夜間外出自粛）') }}
         </external-link>
       </span>
     </div>

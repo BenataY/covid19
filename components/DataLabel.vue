@@ -11,7 +11,7 @@
         <h4
           class="DataLabel-TitleSub"
         >
-          県内では予防的観点からStage4の対策中
+          県内では予防的観点からStage3の対策中 <br /> 5月25日以降Stage2へ対策の緩和を予定
         </h4>
       </div>
       <div class="DataLabel-Data">

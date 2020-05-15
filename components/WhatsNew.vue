@@ -12,7 +12,7 @@
           mdi-bullhorn
         </v-icon>
         <external-link
-          url="https://www.pref.ibaraki.jp/1saigai/2019-ncov/documents/0515kaiken_1.pdf"
+          :url="this.localePath('/stage.pdf')"
         >
           {{ $t('対策 Stage 3（夜間外出自粛）') }}
         </external-link>
@@ -53,7 +53,7 @@
             >
               {{ formattedDateForDisplay(item.date) }}
             </time>
-            <span>
+            <span class="WhatsNew-list-item-anchor-nolink">
               {{ item.text }}
             </span>
           </div>
@@ -180,6 +180,14 @@ export default Vue.extend({
           flex: 0 1 auto;
 
           @include text-link();
+
+          @include lessThan($medium) {
+            padding-left: 8px;
+          }
+        }
+
+        &-nolink {
+          flex: 0 1 auto;
 
           @include lessThan($medium) {
             padding-left: 8px;

@@ -119,9 +119,9 @@ export default Vue.extend({
     }
 
     .WhatsNew-link-to-emergency-page {
-      background-color: $emergency;
-      border: 2px solid $emergency;
-      color: $gray-2;
+      background-color: $warning;
+      border: 2px solid $warning;
+      color: $gray-1;
       border-radius: 4px;
       font-size: 1rem;
       padding: 4px 8px;
@@ -132,7 +132,7 @@ export default Vue.extend({
       }
 
       .ExternalLink {
-        color: $gray-2 !important;
+        color: $gray-1 !important;
         text-decoration: none;
       }
 

@@ -109,7 +109,7 @@ export default Vue.extend({
         },
         {
           icon: 'ParentIcon',
-          title: this.$t('お子様をお持ちの皆様へ'),
+          title: this.$t('お子様・保護者の方へ'),
           link: this.localePath('/parent/')
         },
         {

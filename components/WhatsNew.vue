@@ -12,7 +12,7 @@
           mdi-bullhorn
         </v-icon>
         <external-link
-          :url="this.localePath('/stage.pdf')"
+          url="https://www.pref.ibaraki.jp/1saigai/2019-ncov/stage3.html"
         >
           {{ $t('対策 Stage 3（夜間外出自粛）') }}
         </external-link>

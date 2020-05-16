@@ -1,8 +1,13 @@
 {
     "newsItems": [
         {
-            "date": "2020/05/15",
+            "date": "2020/05/16",
             "text": "本日の新規感染者はおりませんでした"
+        },
+        {
+            "date": "2020/05/16",
+            "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/stage3.html",
+            "text": "茨城版コロナNext【Stage3】社会経済活動再開に向けた対策の段階的緩和について"
         },
         {
             "date": "2020/05/15",
@@ -13,11 +18,6 @@
             "date": "2020/05/15",
             "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/message.html",
             "text": "知事メッセージ（5月15日更新）"
-        },
-        {
-            "date": "2020/05/01",
-            "url": "https://www.pref.ibaraki.jp/shokorodo/chusho/shogyo/2020kyouryokukin.html",
-            "text": "休業要請協力金に関する申請関係について"
         },
         {
             "date": "2020/05/01",

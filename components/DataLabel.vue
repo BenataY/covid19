@@ -79,6 +79,7 @@ import Vue from 'vue'
 import Data from '@/data/analysis.json'
 import OpenDataLink from '@/components/OpenDataLink.vue'
 import DataLabelItem from '@/components/DataLabelItem.vue'
+import { convertDatetimeToISO8601Format } from '@/utils/formatDate'
 
 export default Vue.extend({
   components: {
@@ -111,6 +112,9 @@ export default Vue.extend({
     }
   },
   computed: {
+    formattedDate(): string {
+      return convertDatetimeToISO8601Format(this.date)
+    }
   }
 })
 </script>

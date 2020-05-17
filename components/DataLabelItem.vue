@@ -4,12 +4,12 @@
       <v-card-text :class="{'Stage1': (stage == 1), 'Stage2': (stage == 2), 'Stage3': (stage == 3), 'Stage4': (stage == 4)}" class="Data">
         <v-row >
           <v-col class="col-12 TitleSub">
-            {{ $t(titleSub) }}
+            {{ titleSub }}
           </v-col>
         </v-row>
         <v-row align="center">
           <v-col class="col-4 Title">
-            {{ $t(title) }}
+            {{ title }}
           </v-col>
           <v-col class="col-4 col-md-5 LabelMain">
             {{ valueToday + $t(unit) }} <br v-if="smallSize" /><span class="LabelSub">{{ "前日 : " + valueYesterday + $t(unit) }}</span>

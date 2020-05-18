@@ -1,8 +1,13 @@
 {
     "newsItems": [
         {
-            "date": "2020/05/17",
+            "date": "2020/05/18",
             "text": "本日の新規感染者はおりませんでした"
+        },
+        {
+            "date": "2020/05/18",
+            "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/oneteam.html",
+            "text": "一人の力を大きな力に #ワンチーム茨城"
         },
         {
             "date": "2020/05/16",
@@ -18,11 +23,6 @@
             "date": "2020/05/15",
             "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/message.html",
             "text": "知事メッセージ（5月15日更新）"
-        },
-        {
-            "date": "2020/05/01",
-            "url": "https://www.pref.ibaraki.jp/hokenfukushi/jinzai/ishikakuho/covid-19taisakukikin.html",
-            "text": "医療従事者応援金について"
         }
     ]
 }

@@ -119,8 +119,8 @@ export default Vue.extend({
         },
         {
           icon: 'HeartIcon2',
-          title: this.$t('医療従事者に感謝を'),
-          link: 'https://www.kango-roo.com/sn/a/view/7495',
+          title: this.$t('#ワンチーム茨城'),
+          link: 'https://www.pref.ibaraki.jp/1saigai/2019-ncov/oneteam.html',
           divider: true
         },
         {

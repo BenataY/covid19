@@ -128,6 +128,10 @@ export default Vue.extend({
           link: 'https://www.mhlw.go.jp/content/10900000/000599643.pdf'
         },
         {
+          title: this.$t('拡大防止ガイドライン'),
+          link: 'https://www.pref.ibaraki.jp/shokorodo/chusho/shogyo/2020korona/guideline.html'
+        },
+        {
           title: this.$t('県知事記者会見'),
           link: 'https://www.pref.ibaraki.jp/1saigai/2019-ncov/kaiken.html'
         },

@@ -131,7 +131,7 @@
             県立学校
           </v-col>
           <v-col class="col-1 StageLevel2-Border">
-            ○
+            ×
           </v-col>
           <v-col class="col-3 StageLevel2-Border">
 

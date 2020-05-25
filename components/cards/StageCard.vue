@@ -1,7 +1,7 @@
 <template>
   <v-col cols="12" md="6" class="DataCard">
-    <stage-label
-      :title="'茨城版コロナNext（コロナ対策指針）'"
+    <stage-view
+      :title="'茨城版コロナNext（現在のコロナ対策指針）'"
       :title-id="'stage'"
       :date="date"
       :stage="3"
@@ -11,11 +11,11 @@
 
 <script>
 import Data from '@/data/analysis.json'
-import StageLabel from '@/components/StageLabel.vue'
+import StageView from '@/components/StageView.vue'
 
 export default {
   components: {
-    StageLabel
+    StageView
   },
   data() {
     const date = Data.date

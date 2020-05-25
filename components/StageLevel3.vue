@@ -1,6 +1,15 @@
 <template>
   <div>
     <v-card flat>
+      <v-card-text class="StageTitle">
+        <v-row >
+          <v-col class="col-12">
+            Stage2
+          </v-col>
+        </v-row>
+      </v-card-text>
+    </v-card>
+    <v-card flat>
       <v-card-text class="Data" align="center">
         <v-row>
           <v-col class="col-2 Title">

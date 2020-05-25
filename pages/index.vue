@@ -26,7 +26,6 @@
     <v-row class="DataBlock">
       <stage-card />
       <confirmed-cases-number-card />
-      <ibaraki-analysis-card />
       <confirmed-cases-attributes-card />
       <confirmed-cases-details-card />
       <sickbeds-summary-card />

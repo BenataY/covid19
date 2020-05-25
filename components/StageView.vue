@@ -9,31 +9,35 @@
           {{ title }}
         </h3>
       </div>
-      <div class="DataLabel-Data">
-        <div>
-          <v-card flat>
-            <v-card-text class="StageTitle">
-              <v-row >
-                <v-col class="col-12">
-                  Stage3
-                </v-col>
-              </v-row>
-            </v-card-text>
-          </v-card>
-        </div>
-        <stage-label-item
-          title="平日昼間"
-          :valueToday="datas.criticalBeds.today"
-          :valueYesterday="datas.criticalBeds.yesterday"
-          :stage="datas.criticalBeds.stage"
-        />
-      </div>
+      <stage-level2 />
+      <v-expansion-panels class="DataLabel-Detail" flat>
+        <v-expansion-panel>
+          <v-expansion-panel-header
+            :hide-actions="true"
+            :style="{ transition: 'none' }"
+          >
+            <template slot:actions>
+              <div class="v-expansion-panel-header__icon">
+                <v-icon left>mdi-chevron-right</v-icon>
+              </div>
+            </template>
+            <span class="expansion-panel-text">{{
+              $t('現在の判断指標を表示')
+            }}</span>
+          </v-expansion-panel-header>
+          <v-expansion-panel-content>
+            <stage-detail
+              :title="'緊急事態措置等の強化・緩和に関する判断指標'"
+              :title-id="'ibaraki-analysis'"
+              :date="date"
+            />
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+      </v-expansion-panels>
       <div class="DataLabel-Footer">
         <div class="Footer-Left">
           <slot name="footer" />
-          <open-data-link :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/shihyo1.html'" label="「緊急事態措置等の強化・緩和に関する判断指標」の考え方" />
-          <br />
-          <open-data-link :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/handanshihyo.html'" label="【茨城版コロナNext】緊急事態措置等の強化・緩和に関する判断指標" />
+          <open-data-link :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/stage2.html'" label="【茨城県庁】茨城版コロナNext について" />
           <div>
             <time :datetime="formattedDate">
               {{ $t('{date} 更新', { date }) }}
@@ -49,15 +53,17 @@
 import Vue from 'vue'
 import Data from '@/data/analysis.json'
 import OpenDataLink from '@/components/OpenDataLink.vue'
-import DataLabelItem from '@/components/DataLabelItem.vue'
-import StageLabelItem from '@/components/StageLabelItem.vue'
+import StageDetail from '@/components/StageDetail.vue'
+import StageLevel2 from '@/components/StageLevel2.vue'
+import StageLevel3 from '@/components/StageLevel3.vue'
 import { convertDatetimeToISO8601Format } from '@/utils/formatDate'
 
 export default Vue.extend({
   components: {
     OpenDataLink,
-    DataLabelItem,
-    StageLabelItem
+    StageDetail,
+    StageLevel2,
+    StageLevel3
   },
   props: {
     title: {
@@ -160,6 +166,10 @@ export default Vue.extend({
         width: 50%;
       }
     }
+  }
+
+  &-Detail {
+    margin-top: 6px;
   }
 
   &-Footer {
@@ -350,12 +360,5 @@ textarea {
 
 .expansion-panel-text {
   color: $gray-1;
-}
-
-.StageTitle {
-  font-size: 20px;
-  padding: 0;
-  text-align: center;
-  background-color: #FE9933;
 }
 </style>

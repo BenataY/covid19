@@ -8,61 +8,36 @@
         >
           {{ title }}
         </h3>
-        <h4
-          class="DataLabel-TitleSub"
-        >
-          県内では予防的観点からStage3の対策中 <br /> 5月25日以降Stage2へ対策の緩和を予定
-        </h4>
       </div>
-      <div class="DataLabel-Data">
-        <data-label-item
-          title="重症病床稼働率"
-          :valueToday="datas.criticalBeds.today"
-          :valueYesterday="datas.criticalBeds.yesterday"
-          :stage="datas.criticalBeds.stage"
-        />
-        <data-label-item
-          title="病床稼働率"
-          :valueToday="datas.beds.today"
-          :valueYesterday="datas.beds.yesterday"
-          :stage="datas.beds.stage"
-        />
-        <data-label-item
-          title="陽性者数"
-          titleSub="１日あたり"
-          :valueToday="datas.positive.today"
-          :valueYesterday="datas.positive.yesterday"
-          :stage="datas.positive.stage"
-          unit="人"
-        />
-        <data-label-item
-          title="濃厚接触者以外"
-          titleSub="陽性者のうち"
-          :valueToday="datas.contactor.today"
-          :valueYesterday="datas.contactor.yesterday"
-          :stage="datas.contactor.stage"
-          unit="人"
-        />
-        <data-label-item
-          title="陽性率"
-          :valueToday="datas.positiveRate.today"
-          :valueYesterday="datas.positiveRate.yesterday"
-          :stage="datas.positiveRate.stage"
-        />
-        <data-label-item
-          title="経路不明陽性者"
-          titleSub="【都内】１日あたり"
-          :valueToday="datas.pathUnknown.today"
-          :valueYesterday="datas.pathUnknown.yesterday"
-          :stage="datas.pathUnknown.stage"
-        />
-      </div>
+      <stage-level2 />
+      <v-expansion-panels class="DataLabel-Detail" flat>
+        <v-expansion-panel>
+          <v-expansion-panel-header
+            :hide-actions="true"
+            :style="{ transition: 'none' }"
+          >
+            <template slot:actions>
+              <div class="v-expansion-panel-header__icon">
+                <v-icon left>mdi-chevron-right</v-icon>
+              </div>
+            </template>
+            <span class="expansion-panel-text">{{
+              $t('現在の判断指標を表示')
+            }}</span>
+          </v-expansion-panel-header>
+          <v-expansion-panel-content>
+            <stage-detail
+              :title="'緊急事態措置等の強化・緩和に関する判断指標'"
+              :title-id="'ibaraki-analysis'"
+              :date="date"
+            />
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+      </v-expansion-panels>
       <div class="DataLabel-Footer">
         <div class="Footer-Left">
           <slot name="footer" />
-          <open-data-link :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/shihyo1.html'" label="「緊急事態措置等の強化・緩和に関する判断指標」の考え方" />
-          <br />
-          <open-data-link :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/handanshihyo.html'" label="【茨城版コロナNext】緊急事態措置等の強化・緩和に関する判断指標" />
+          <open-data-link :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/stage2.html'" label="【茨城県庁】茨城版コロナNext について" />
           <div>
             <time :datetime="formattedDate">
               {{ $t('{date} 更新', { date }) }}
@@ -78,13 +53,17 @@
 import Vue from 'vue'
 import Data from '@/data/analysis.json'
 import OpenDataLink from '@/components/OpenDataLink.vue'
-import DataLabelItem from '@/components/DataLabelItem.vue'
+import StageDetail from '@/components/StageDetail.vue'
+import StageLevel2 from '@/components/StageLevel2.vue'
+import StageLevel3 from '@/components/StageLevel3.vue'
 import { convertDatetimeToISO8601Format } from '@/utils/formatDate'
 
 export default Vue.extend({
   components: {
     OpenDataLink,
-    DataLabelItem
+    StageDetail,
+    StageLevel2,
+    StageLevel3
   },
   props: {
     title: {
@@ -98,6 +77,10 @@ export default Vue.extend({
     date: {
       type: String,
       default: ''
+    },
+    stage: {
+      type: Number,
+      default: 0
     },
     loading: {
       type: Boolean,
@@ -183,6 +166,10 @@ export default Vue.extend({
         width: 50%;
       }
     }
+  }
+
+  &-Detail {
+    margin-top: 6px;
   }
 
   &-Footer {

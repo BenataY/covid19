@@ -8,7 +8,7 @@
       :date="Data.patients.date"
       :info="sumInfoOfPatients"
       :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/hassei.html'"
-      :source="$t('参考元データ')"
+      source="参考元データ"
     />
   </v-col>
 </template>
@@ -48,7 +48,6 @@ export default {
     for (const row of patientsTable.datasets) {
       row['居住地'] = this.$t(row['居住地'])
       row['性別'] = this.$t(row['性別'])
-      row['退院'] = this.$t(row['退院'])
 
       if (row['年代'] === '10歳未満') {
         row['年代'] = this.$t('10歳未満')

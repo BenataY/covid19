@@ -1,21 +1,91 @@
 <template>
   <div>
     <v-card flat>
-      <v-card-text :class="{'Stage1': (stage == 1), 'Stage2': (stage == 2), 'Stage3': (stage == 3), 'Stage4': (stage == 4)}" class="Data">
+      <v-card-text class="StageTitle">
         <v-row >
-          <v-col class="col-12 TitleSub">
-            {{ titleSub }}
+          <v-col class="col-12">
+            Stage2
           </v-col>
         </v-row>
-        <v-row align="center">
+      </v-card-text>
+    </v-card>
+    <v-card flat>
+      <v-card-text class="Data" align="center">
+        <v-row>
+          <v-col class="col-2 Title">
+            外出
+          </v-col>
+          <v-col class="col-6 Title">
+            平日昼間
+          </v-col>
           <v-col class="col-4 Title">
-            {{ title }}
+            ○
           </v-col>
-          <v-col class="col-4 col-md-5 LabelMain">
-            {{ valueToday + $t(unit) }} <br v-if="smallSize" /><span class="LabelSub">{{ "前日 : " + valueYesterday + $t(unit) }}</span>
+        </v-row>
+        <v-row>
+          <v-col class="col-2 Title">
+
           </v-col>
-          <v-col class="col-4 col-md-3 LabelMain">
-            <span class="Stage" >Stage</span> {{ stage }}
+          <v-col class="col-6 Title">
+            夜間
+          </v-col>
+          <v-col class="col-4 Title">
+            ×
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col class="col-2 Title">
+
+          </v-col>
+          <v-col class="col-6 Title">
+            リスクの高い方
+          </v-col>
+          <v-col class="col-4 Title">
+            ×
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col class="col-2 Title">
+
+          </v-col>
+          <v-col class="col-6 Title">
+            東京圏
+          </v-col>
+          <v-col class="col-4 Title">
+            ×
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col class="col-2 Title">
+
+          </v-col>
+          <v-col class="col-6 Title">
+            イベント
+          </v-col>
+          <v-col class="col-4 Title">
+            ×
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col class="col-2 Title">
+            休業
+          </v-col>
+          <v-col class="col-6 Title">
+            ３密になりやすい業種
+          </v-col>
+          <v-col class="col-4 Title">
+            ×
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col class="col-2 Title">
+
+          </v-col>
+          <v-col class="col-6 Title">
+            劇場・イベントなど
+          </v-col>
+          <v-col class="col-4 Title">
+            ×
           </v-col>
         </v-row>
       </v-card-text>

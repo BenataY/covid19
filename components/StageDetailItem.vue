@@ -1,21 +1,21 @@
 <template>
   <div>
     <v-card flat>
-      <v-card-text :class="{'Stage1': (stage == 1), 'Stage2': (stage == 2), 'Stage3': (stage == 3), 'Stage4': (stage == 4)}" class="Data">
+      <v-card-text :class="{'Stage1': (stage == 1), 'Stage2': (stage == 2), 'Stage3': (stage == 3), 'Stage4': (stage == 4)}" class="StageDetailItem">
         <v-row >
-          <v-col class="col-12 TitleSub">
+          <v-col class="col-12 StageDetailItem-TitleSub">
             {{ titleSub }}
           </v-col>
         </v-row>
         <v-row align="center">
-          <v-col class="col-4 Title">
+          <v-col class="col-5 StageDetailItem-Title">
             {{ title }}
           </v-col>
-          <v-col class="col-4 col-md-5 LabelMain">
-            {{ valueToday + $t(unit) }} <br v-if="smallSize" /><span class="LabelSub">{{ "前日 : " + valueYesterday + $t(unit) }}</span>
+          <v-col align="center" class="col-3 StageDetailItem-Label">
+            {{ valueToday + $t(unit) }} <br v-if="smallSize" />
           </v-col>
-          <v-col class="col-4 col-md-3 LabelMain">
-            <span class="Stage" >Stage</span> {{ stage }}
+          <v-col align="center" class="col-4 StageDetailItem-Label">
+            Stage{{ stage }}
           </v-col>
         </v-row>
       </v-card-text>
@@ -82,53 +82,37 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
-  .Data {
+  .StageDetailItem {
     font-family: 'Hiragino Sans', sans-serif;
     padding: 9px 16px !important;
     margin: 9px 0;
 
-    .Title {
+    &-Title {
       font-size: 14px;
       padding: 0 12px;
 
       @include largerThan($large) {
-        font-size: 18px;
+        font-size: 16px;
+        padding: 0 12px;
       }
     }
 
-    .TitleSub {
+    &-TitleSub {
       font-size: 10px;
       padding: 0 12px;
 
       @include largerThan($large) {
         font-size: 12px;
+        padding: 0 12px;
       }
     }
 
-    .LabelMain {
-      font-size: 16px;
+    &-Label {
+      font-size: 14px;
       padding: 0 12px;
 
       @include largerThan($large) {
-        font-size: 20px;
-      }
-    }
-
-    .LabelSub {
-      font-size: 10px;
-      padding: 0;
-
-      @include largerThan($large) {
-        font-size: 12px;
-      padding: 0 0 0 6px;
-      }
-    }
-
-    .Stage {
-      font-size: 12px;
-
-      @include largerThan($large) {
-        font-size: 18px;
+        font-size: 16px;
       }
     }
   }

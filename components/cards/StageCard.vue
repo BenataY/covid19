@@ -1,20 +1,21 @@
 <template>
   <v-col cols="12" md="6" class="DataCard">
-    <data-label
-      :title="'緊急事態措置等の強化・緩和に関する判断指標'"
-      :title-id="'ibaraki-analysis'"
+    <stage-view
+      :title="'茨城版コロナNext（現在のコロナ対策指針）'"
+      :title-id="'stage'"
       :date="date"
+      :stage="3"
     />
   </v-col>
 </template>
 
 <script>
 import Data from '@/data/analysis.json'
-import DataLabel from '@/components/DataLabel.vue'
+import StageView from '@/components/StageView.vue'
 
 export default {
   components: {
-    DataLabel
+    StageView
   },
   data() {
     const date = Data.date

@@ -1,13 +1,18 @@
 {
     "newsItems": [
         {
-            "date": "2020/05/24",
+            "date": "2020/05/25",
             "text": "本日の新規感染者はおりませんでした"
         },
         {
-            "date": "2020/05/22",
+            "date": "2020/05/25",
+            "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/stage2.html",
+            "text": "茨城版コロナNext【Stage2】社会経済活動再開に向けた対策の段階的緩和について"
+        },
+        {
+            "date": "2020/05/25",
             "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/kaiken.html",
-            "text": "知事記者会見（5月22日更新）"
+            "text": "知事記者会見（5月25日更新）"
         },
         {
             "date": "2020/05/22",
@@ -18,11 +23,6 @@
             "date": "2020/05/19",
             "url": "https://www.pref.ibaraki.jp/shokorodo/chusho/shogyo/2020korona/guideline.html",
             "text": "新型コロナウイルス感染症の拡大を防止するため行っていただきたい取組（ガイドライン）"
-        },
-        {
-            "date": "2020/05/16",
-            "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/stage3.html",
-            "text": "茨城版コロナNext【Stage3】社会経済活動再開に向けた対策の段階的緩和について"
         }
     ]
 }

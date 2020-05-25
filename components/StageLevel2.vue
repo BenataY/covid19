@@ -86,7 +86,7 @@
             休業
           </v-col>
           <v-col class="col-6 StageLevel2-Border">
-            カラオケ等の遊興施設
+            カラオケ等遊興施設
           </v-col>
           <v-col class="col-1 StageLevel2-Border">
             △
@@ -249,8 +249,8 @@ export default Vue.extend({
   }
 
   .StageTitleLevel2 {
-    font-size: 20px;
-    padding: 0;
+    font-size: 20px !important;
+    padding: 0 !important;
     text-align: center;
     background-color: #FFE200;
   }

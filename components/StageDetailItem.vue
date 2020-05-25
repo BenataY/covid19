@@ -12,7 +12,7 @@
             {{ title }}
           </v-col>
           <v-col align="center" class="col-3 StageDetailItem-Label">
-            {{ valueToday + $t(unit) }} <br v-if="smallSize" />
+            {{ valueToday + $t(unit) }}
           </v-col>
           <v-col align="center" class="col-4 StageDetailItem-Label">
             Stage{{ stage }}

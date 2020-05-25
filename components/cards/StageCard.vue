@@ -4,7 +4,7 @@
       :title="'茨城版コロナNext（現在のコロナ対策指針）'"
       :title-id="'stage'"
       :date="date"
-      :stage="3"
+      :stage="2"
     />
   </v-col>
 </template>

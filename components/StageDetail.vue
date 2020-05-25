@@ -4,7 +4,7 @@
       <h3
         class="StageDetail-Title"
       >
-        県内では予防的観点からStage2の対策中 <br /> 6月8日以降Stage1へ対策の緩和を予定
+        予防的観点からStage2の対策中 <br /> 6月8日以降Stage1へ緩和予定
       </h3>
     </div>
     <div class="StageDetail-Data">

@@ -1,7 +1,7 @@
 <template>
   <v-col cols="12" md="6" class="DataCard">
     <stage-view
-      :title="'茨城版コロナNext（現在のコロナ対策指針）'"
+      :title="'茨城版コロナNext'"
       :title-id="'stage'"
       :date="date"
       :stage="2"

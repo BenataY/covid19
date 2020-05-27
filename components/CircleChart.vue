@@ -16,13 +16,11 @@
     </template>
     <template v-slot:button>
       <p :class="$style.note">
-        {{ '（注）総病床数 375床 = 医療病床 200床 + 軽症者等宿泊施設 175床' }}
+        {{ '（注）総病床数 326床 = 医療病床 151床 + 軽症者等宿泊施設 175床' }}
       </p>
     </template>
     <template v-slot:footer>
-      <open-data-link :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/documents/01200228.pdf'" label="医療病床数 参考データ（茨城県庁）" />
-      <br />
-      <open-data-link :url="'https://www.mhlw.go.jp/content/10900000/000627358.pdf'" label="軽症者等宿泊施設 参考データ（厚生労働省）" />
+      <open-data-link :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/documents/200416kaikena.pdf'" label="新型コロナウイルスに係る入院体制 - 4月16日知事記者会見資料" />
     </template>
   </data-view>
 </template>

@@ -122,6 +122,10 @@ export default Vue.extend({
           divider: true
         },
         {
+          title: this.$t('新しい生活様式について － 厚生労働省'),
+          link: 'https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000121431_newlifestyle.html#newlifestyle'
+        },
+        {
           title: this.$t('新型コロナウイルスを防ぐには'),
           link: 'https://www.mhlw.go.jp/content/10900000/000599643.pdf'
         },

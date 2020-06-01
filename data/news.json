@@ -1,8 +1,13 @@
 {
     "newsItems": [
         {
-            "date": "2020/05/31",
+            "date": "2020/06/01",
             "text": "本日の新規感染者はおりませんでした"
+        },
+        {
+            "date": "2020/06/01",
+            "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/message.html",
+            "text": "知事メッセージ（6月1日更新）"
         },
         {
             "date": "2020/05/25",
@@ -13,11 +18,6 @@
             "date": "2020/05/25",
             "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/kaiken.html",
             "text": "知事記者会見（5月25日更新）"
-        },
-        {
-            "date": "2020/05/22",
-            "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/message.html",
-            "text": "知事メッセージ（5月22日更新）"
         },
         {
             "date": "2020/05/19",

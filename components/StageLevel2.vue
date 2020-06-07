@@ -4,7 +4,7 @@
       <v-card-text class="StageTitleLevel2">
         <v-row >
           <v-col class="col-12">
-            Stage2
+            現在の規制　Stage2
           </v-col>
         </v-row>
       </v-card-text>

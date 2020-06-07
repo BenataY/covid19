@@ -10,30 +10,6 @@
         </h3>
       </div>
       <stage-level2 />
-      <v-expansion-panels class="DataLabel-Detail" flat>
-        <v-expansion-panel>
-          <v-expansion-panel-header
-            :hide-actions="true"
-            :style="{ transition: 'none' }"
-          >
-            <template slot:actions>
-              <div class="v-expansion-panel-header__icon">
-                <v-icon left>mdi-chevron-right</v-icon>
-              </div>
-            </template>
-            <span class="expansion-panel-text">{{
-              $t('現在の判断指標を表示')
-            }}</span>
-          </v-expansion-panel-header>
-          <v-expansion-panel-content>
-            <stage-detail
-              :title="'緊急事態措置等の強化・緩和に関する判断指標'"
-              :title-id="'ibaraki-analysis'"
-              :date="date"
-            />
-          </v-expansion-panel-content>
-        </v-expansion-panel>
-      </v-expansion-panels>
       <div class="DataLabel-Footer">
         <div class="Footer-Left">
           <slot name="footer" />

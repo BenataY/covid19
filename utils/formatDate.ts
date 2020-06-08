@@ -44,3 +44,12 @@ export const convertDateByCountryPreferTimeFormat = (
 export const convertDateToSimpleFormat = (dateString: string): string => {
   return dayjs(dateString).format('YYYY/MM/DD')
 }
+
+/**
+ * Get date string formatted Simple(M/D)
+ *
+ * @param dateString- Parsable string by dayjs
+ */
+export const convertDateToMDFormat = (dateString: string): string => {
+  return dayjs(dateString).format('M/D')
+}

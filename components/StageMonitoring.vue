@@ -19,7 +19,7 @@
               Stage
             </td>
             <td rowspan="2">
-              6/6<br />の状況
+              6/8<br />の状況
             </td>
           </tr>
           <tr>
@@ -206,7 +206,7 @@ import OpenDataLink from '@/components/OpenDataLink.vue'
 import StageDetail from '@/components/StageDetail.vue'
 import StageLevel2 from '@/components/StageLevel2.vue'
 import StageLevel3 from '@/components/StageLevel3.vue'
-import { convertDatetimeToISO8601Format } from '@/utils/formatDate'
+import { convertDatetimeToISO8601Format, convertDateToMDFormat } from '@/utils/formatDate'
 
 export default Vue.extend({
   components: {
@@ -249,6 +249,9 @@ export default Vue.extend({
   computed: {
     formattedDate(): string {
       return convertDatetimeToISO8601Format(this.date)
+    },
+    formattedDateMD(): string {
+      return convertDateToMDFormat(this.date)
     }
   }
 })

@@ -324,6 +324,7 @@ export default Vue.extend({
     border-collapse: collapse;
     color: $gray-1;
     font-size: 14px;
+    margin-bottom: 15px;
 
     @include largerThan($large) {
       font-size: 16px;
@@ -376,7 +377,6 @@ export default Vue.extend({
 
     .stage1 {
       background-color: $alert;
-      color: #FFF;
     }
 
     .stage2 {

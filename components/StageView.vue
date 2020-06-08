@@ -9,7 +9,11 @@
           {{ title }}
         </h3>
       </div>
-      <stage-level2 />
+      <stage-level1 />
+      <div class="DataLabel-Note">
+        <p>※１ 東京圏及び北海道への移動は慎重に</p>
+        <p>※２ ガイドラインに基づき開催</p>
+      </div>
       <div class="DataLabel-Footer">
         <div class="Footer-Left">
           <slot name="footer" />
@@ -30,6 +34,7 @@ import Vue from 'vue'
 import Data from '@/data/analysis.json'
 import OpenDataLink from '@/components/OpenDataLink.vue'
 import StageDetail from '@/components/StageDetail.vue'
+import StageLevel1 from '@/components/StageLevel1.vue'
 import StageLevel2 from '@/components/StageLevel2.vue'
 import StageLevel3 from '@/components/StageLevel3.vue'
 import { convertDatetimeToISO8601Format } from '@/utils/formatDate'
@@ -38,6 +43,7 @@ export default Vue.extend({
   components: {
     OpenDataLink,
     StageDetail,
+    StageLevel1,
     StageLevel2,
     StageLevel3
   },
@@ -146,6 +152,17 @@ export default Vue.extend({
 
   &-Detail {
     margin-top: 6px;
+  }
+
+  &-Note {
+    margin-top: 15px;
+    font-size: 12px;
+    color: $gray-3;
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
   }
 
   &-Footer {

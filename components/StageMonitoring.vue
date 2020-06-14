@@ -19,7 +19,7 @@
               Stage
             </td>
             <td rowspan="2">
-              {{ formattedDateMD(updateDate) }}<br />の状況
+              {{ formattedDateMD(updateDate) }}<br />の<br v-if="smallSize" />状況
             </td>
           </tr>
           <tr>
@@ -42,7 +42,7 @@
             <td class="rowTitleSub" rowspan="5">
               県<br />内
             </td>
-            <td class="rowTitle">
+            <td class="rowTitleNumber">
               ①
             </td>
             <td class="rowTitle">
@@ -65,7 +65,7 @@
             </td>
           </tr>
           <tr class="border">
-            <td class="rowTitle">
+            <td class="rowTitleNumber">
               ②
             </td>
             <td class="rowTitle">
@@ -88,7 +88,7 @@
             </td>
           </tr>
           <tr class="border">
-            <td class="rowTitle">
+            <td class="rowTitleNumber">
               ③
             </td>
             <td class="rowTitle">
@@ -111,7 +111,7 @@
             </td>
           </tr>
           <tr class="border">
-            <td class="rowTitle">
+            <td class="rowTitleNumber">
               ④
             </td>
             <td class="rowTitle">
@@ -134,7 +134,7 @@
             </td>
           </tr>
           <tr class="border">
-            <td class="rowTitle">
+            <td class="rowTitleNumber">
               ⑤
             </td>
             <td class="rowTitle">
@@ -160,7 +160,7 @@
             <td class="rowTitleSub">
               都<br />内
             </td>
-            <td class="rowTitle">
+            <td class="rowTitleNumber">
               ⑥
             </td>
             <td class="rowTitle">
@@ -365,11 +365,30 @@ export default Vue.extend({
 
     .rowTitle {
       padding: 5px;
+      font-size: 12px;
+
+      @include largerThan($large) {
+        font-size: 14px;
+      }
     }
 
     .rowTitleSub {
       text-align: center;
       padding: 5px;
+      font-size: 12px;
+
+      @include largerThan($large) {
+        font-size: 14px;
+      }
+    }
+
+    .rowTitleNumber {
+      padding: 0;
+      font-size: 12px;
+
+      @include largerThan($large) {
+        font-size: 14px;
+      }
     }
 
     tbody .rowItem {

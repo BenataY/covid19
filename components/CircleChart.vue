@@ -20,7 +20,7 @@
       </p>
     </template>
     <template v-slot:footer>
-      <open-data-link :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/documents/200416kaikena.pdf'" label="新型コロナウイルスに係る入院体制 - 4月16日知事記者会見資料" />
+      <open-data-link :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/documents/0605setsumei.pdf'" label="新型コロナ感染症ステージ別病床確保体制 - 6月5日知事記者会見資料" />
     </template>
   </data-view>
 </template>

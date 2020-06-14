@@ -16,7 +16,7 @@
     </template>
     <template v-slot:button>
       <p :class="$style.note">
-        {{ '（注）総病床数 326床 = 医療病床 151床 + 軽症者等宿泊施設 175床' }}
+        {{ '（注）総病床数 242床 = 医療病床 67床 + 軽症者等宿泊施設 175床' }}
       </p>
     </template>
     <template v-slot:footer>

@@ -24,10 +24,11 @@
     </div>
     <whats-new class="mb-4" :items="newsItems" />
     <v-row class="DataBlock">
-      <stage-card />
       <confirmed-cases-number-card />
-      <confirmed-cases-attributes-card />
       <confirmed-cases-details-card />
+      <stage-card />
+      <monitoring-card />
+      <confirmed-cases-attributes-card />
       <sickbeds-summary-card />
       <inspection-persons-number-card />
       <cities-card />

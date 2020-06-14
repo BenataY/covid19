@@ -19,7 +19,7 @@
               Stage
             </td>
             <td rowspan="2">
-              6/8<br />の状況
+              {{ formattedDateMD(updateDate) }}<br />の状況
             </td>
           </tr>
           <tr>
@@ -49,18 +49,18 @@
               重症病床<br />稼働率
             </td>
             <td class="rowItem" :class="{'s4c': (datas.criticalBeds.stage == 4)}">
-              60<span class="unit">%</span><span class="range">超</span>
+              60<span class="unit">%</span><br v-if="smallSize" /><span class="range">超</span>
             </td>
             <td class="rowItem" :class="{'s3c': (datas.criticalBeds.stage == 3)}">
-              60<span class="unit">%</span><span class="range">以下</span>
+              60<span class="unit">%</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
             <td class="rowItem" :class="{'s2c': (datas.criticalBeds.stage == 2)}">
-              30<span class="unit">%</span><span class="range">以下</span>
+              30<span class="unit">%</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
             <td class="rowItem" :class="{'s1c': (datas.criticalBeds.stage == 1)}">
-              10<span class="unit">%</span><span class="range">以下</span>
+              10<span class="unit">%</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
-            <td class="rowItem" :class="{'s1c': (datas.criticalBeds.stage == 1), 's2c': (datas.criticalBeds.stage == 2), 's3c': (datas.criticalBeds.stage == 3), 's4c': (datas.criticalBeds.stage == 4)}">
+            <td class="rowItem cellToday" :class="{'s1c': (datas.criticalBeds.stage == 1), 's2c': (datas.criticalBeds.stage == 2), 's3c': (datas.criticalBeds.stage == 3), 's4c': (datas.criticalBeds.stage == 4)}">
               {{ datas.criticalBeds.today }}<span class="unit">%</span>
             </td>
           </tr>
@@ -72,18 +72,18 @@
               病床稼働率
             </td>
             <td class="rowItem" :class="{'s4c': (datas.beds.stage == 4)}">
-              70<span class="unit">%</span><span class="range">超</span>
+              70<span class="unit">%</span><br v-if="smallSize" /><span class="range">超</span>
             </td>
             <td class="rowItem" :class="{'s3c': (datas.beds.stage == 3)}">
-              70<span class="unit">%</span><span class="range">以下</span>
+              70<span class="unit">%</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
             <td class="rowItem" :class="{'s2c': (datas.beds.stage == 2)}">
-              45<span class="unit">%</span><span class="range">以下</span>
+              45<span class="unit">%</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
             <td class="rowItem" :class="{'s1c': (datas.beds.stage == 1)}">
-              30<span class="unit">%</span><span class="range">以下</span>
+              30<span class="unit">%</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
-            <td class="rowItem" :class="{'s1c': (datas.beds.stage == 1), 's2c': (datas.beds.stage == 2), 's3c': (datas.beds.stage == 3), 's4c': (datas.beds.stage == 4)}">
+            <td class="rowItem cellToday" :class="{'s1c': (datas.beds.stage == 1), 's2c': (datas.beds.stage == 2), 's3c': (datas.beds.stage == 3), 's4c': (datas.beds.stage == 4)}">
               {{ datas.beds.today }}<span class="unit">%</span>
             </td>
           </tr>
@@ -95,18 +95,18 @@
               陽性者数
             </td>
             <td class="rowItem" :class="{'s4c': (datas.positive.stage == 4)}">
-              10<span class="unit">人</span><span class="range">超</span>
+              10<span class="unit">人</span><br v-if="smallSize" /><span class="range">超</span>
             </td>
             <td class="rowItem" :class="{'s3c': (datas.positive.stage == 3)}">
-              10<span class="unit">人</span><span class="range">以下</span>
+              10<span class="unit">人</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
             <td class="rowItem" :class="{'s2c': (datas.positive.stage == 2)}">
-              5<span class="unit">人</span><span class="range">以下</span>
+              5<span class="unit">人</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
             <td class="rowItem" :class="{'s1c': (datas.positive.stage == 1)}">
-              1<span class="unit">人</span><span class="range">以下</span>
+              1<span class="unit">人</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
-            <td class="rowItem" :class="{'s1c': (datas.positive.stage == 1), 's2c': (datas.positive.stage == 2), 's3c': (datas.positive.stage == 3), 's4c': (datas.positive.stage == 4)}">
+            <td class="rowItem cellToday" :class="{'s1c': (datas.positive.stage == 1), 's2c': (datas.positive.stage == 2), 's3c': (datas.positive.stage == 3), 's4c': (datas.positive.stage == 4)}">
               {{ datas.positive.today }}<span class="unit">人</span>
             </td>
           </tr>
@@ -118,18 +118,18 @@
               濃厚接触者<br />以外
             </td>
             <td class="rowItem" :class="{'s4c': (datas.contactor.stage == 4)}">
-              5<span class="unit">人</span><span class="range">超</span>
+              5<span class="unit">人</span><br v-if="smallSize" /><span class="range">超</span>
             </td>
             <td class="rowItem" :class="{'s3c': (datas.contactor.stage == 3)}">
-              5<span class="unit">人</span><span class="range">以下</span>
+              5<span class="unit">人</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
             <td class="rowItem" :class="{'s2c': (datas.contactor.stage == 2)}">
-              3<span class="unit">人</span><span class="range">以下</span>
+              3<span class="unit">人</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
             <td class="rowItem" :class="{'s1c': (datas.contactor.stage == 1)}">
-              1<span class="unit">人</span><span class="range">以下</span>
+              1<span class="unit">人</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
-            <td class="rowItem" :class="{'s1c': (datas.contactor.stage == 1), 's2c': (datas.contactor.stage == 2), 's3c': (datas.contactor.stage == 3), 's4c': (datas.contactor.stage == 4)}">
+            <td class="rowItem cellToday" :class="{'s1c': (datas.contactor.stage == 1), 's2c': (datas.contactor.stage == 2), 's3c': (datas.contactor.stage == 3), 's4c': (datas.contactor.stage == 4)}">
               {{ datas.contactor.today }}<span class="unit">人</span>
             </td>
           </tr>
@@ -141,18 +141,18 @@
               陽性率
             </td>
             <td class="rowItem" :class="{'s4c': (datas.positiveRate.stage == 4)}">
-              7<span class="unit">%</span><span class="range">超</span>
+              7<span class="unit">%</span><br v-if="smallSize" /><span class="range">超</span>
             </td>
             <td class="rowItem" :class="{'s3c': (datas.positiveRate.stage == 3)}">
-              7<span class="unit">%</span><span class="range">以下</span>
+              7<span class="unit">%</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
             <td class="rowItem" :class="{'s2c': (datas.positiveRate.stage == 2)}">
-              3<span class="unit">%</span><span class="range">以下</span>
+              3<span class="unit">%</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
             <td class="rowItem" :class="{'s1c': (datas.positiveRate.stage == 1)}">
-              1<span class="unit">%</span><span class="range">以下</span>
+              1<span class="unit">%</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
-            <td class="rowItem" :class="{'s1c': (datas.positiveRate.stage == 1), 's2c': (datas.positiveRate.stage == 2), 's3c': (datas.positiveRate.stage == 3), 's4c': (datas.positiveRate.stage == 4)}">
+            <td class="rowItem cellToday" :class="{'s1c': (datas.positiveRate.stage == 1), 's2c': (datas.positiveRate.stage == 2), 's3c': (datas.positiveRate.stage == 3), 's4c': (datas.positiveRate.stage == 4)}">
               {{ datas.positiveRate.today }}<span class="unit">%</span>
             </td>
           </tr>
@@ -167,18 +167,18 @@
               経路不明<br />陽性者
             </td>
             <td class="rowItem" :class="{'s4c': (datas.pathUnknown.stage == 4)}">
-              100<span class="unit">人</span><span class="range">超</span>
+              100<span class="unit">人</span><br v-if="smallSize" /><span class="range">超</span>
             </td>
             <td class="rowItem" :class="{'s3c': (datas.pathUnknown.stage == 3)}">
-              100<span class="unit">人</span><span class="range">以下</span>
+              100<span class="unit">人</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
             <td class="rowItem" :class="{'s2c': (datas.pathUnknown.stage == 2)}">
-              50<span class="unit">人</span><span class="range">以下</span>
+              50<span class="unit">人</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
             <td class="rowItem" :class="{'s1c': (datas.pathUnknown.stage == 1)}">
-              10<span class="unit">人</span><span class="range">以下</span>
+              10<span class="unit">人</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
-            <td class="rowItem" :class="{'s1c': (datas.pathUnknown.stage == 1), 's2c': (datas.pathUnknown.stage == 2), 's3c': (datas.pathUnknown.stage == 3), 's4c': (datas.pathUnknown.stage == 4)}">
+            <td class="rowItem cellToday" :class="{'s1c': (datas.pathUnknown.stage == 1), 's2c': (datas.pathUnknown.stage == 2), 's3c': (datas.pathUnknown.stage == 3), 's4c': (datas.pathUnknown.stage == 4)}">
               {{ datas.pathUnknown.today }}<span class="unit">人</span>
             </td>
           </tr>
@@ -190,7 +190,7 @@
           <open-data-link :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/stage2.html'" label="【茨城県庁】茨城版コロナNext について" />
           <div>
             <time :datetime="formattedDate">
-              {{ $t('{updateDate} 更新', { updateDate }) }}
+              {{ updateDate }} 更新
             </time>
           </div>
         </div>
@@ -206,7 +206,7 @@ import OpenDataLink from '@/components/OpenDataLink.vue'
 import StageDetail from '@/components/StageDetail.vue'
 import StageLevel2 from '@/components/StageLevel2.vue'
 import StageLevel3 from '@/components/StageLevel3.vue'
-import { convertDatetimeToISO8601Format, convertDateToMDFormat } from '@/utils/formatDate'
+import { convertDateToISO8601Format, convertDateToMDFormat } from '@/utils/formatDate'
 
 export default Vue.extend({
   components: {
@@ -243,16 +243,35 @@ export default Vue.extend({
     const updateDate = Data.date
     return {
       datas,
-      updateDate
+      updateDate,
+      smallSize: {}
     }
   },
-  computed: {
-    formattedDate(): string {
-      return convertDatetimeToISO8601Format(this.date)
+  methods: {
+    handleResize: function() {
+      if (window.innerWidth <= 600) {
+          this.smallSize = true
+      } else {
+          this.smallSize = false
+      }
     },
-    formattedDateMD(): string {
-      return convertDateToMDFormat(this.date)
+    formattedDate(dateString: string) {
+      return convertDateToISO8601Format(dateString)
+    },
+    formattedDateMD(dateString: string) {
+      return convertDateToMDFormat(dateString)
     }
+  },
+  mounted: function () {
+    if (window.innerWidth <= 600) {
+        this.smallSize = true
+    } else {
+        this.smallSize = false
+    }
+    window.addEventListener('resize', this.handleResize)
+  },
+  beforeDestroy: function () {
+    window.removeEventListener('resize', this.handleResize)
   }
 })
 </script>
@@ -355,6 +374,10 @@ export default Vue.extend({
 
     tbody .rowItem {
       text-align: center;
+    }
+
+    tbody .cellToday {
+      font-weight: bold;
     }
 
     tbody .rowItem .unit {

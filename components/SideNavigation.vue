@@ -103,7 +103,7 @@ export default Vue.extend({
         {
           icon: 'MapIcon',
           title: this.$t('県内感染者分布マップ'),
-          link: this.localePath('/patientsmap/')
+          link: this.localePath('/patientsMap/')
         },
         {
           icon: 'ParentIcon',

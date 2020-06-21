@@ -15,7 +15,11 @@
       :mobile-breakpoint="0"
       :custom-sort="customSort"
       class="cardTable"
-    />
+    >
+      <template v-slot:item.詳細="{ item }">
+        <v-btn v-model="item.詳細" small target="_blank" >{{ item.詳細 }}</v-btn>
+      </template>
+    </v-data-table>
     <template v-slot:infoPanel>
       <data-view-basic-info-panel
         :l-text="info.lText"

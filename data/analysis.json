@@ -1,5 +1,5 @@
 {
-  "date": "2020/06/21 22:00",
+  "date": "2020/06/22 20:00",
   "ibaraki": {
     "criticalBeds": {
       "today": "0.0",
@@ -7,7 +7,7 @@
       "stage": 1
     },
     "beds": {
-      "today": "3.9",
+      "today": "4.4",
       "yesterday": "",
       "stage": 1
     },
@@ -27,7 +27,7 @@
       "stage": 1
     },
     "pathUnknown": {
-      "today": "15.0",
+      "today": "15.6",
       "yesterday": "",
       "stage": 2
     }

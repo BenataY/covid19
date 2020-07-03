@@ -9,15 +9,16 @@
           {{ title }}
         </h3>
       </div>
-      <stage-level1 />
+      <stage-level2 />
       <div class="DataLabel-Note">
-        <p>※１ 東京圏及び北海道への移動は慎重に</p>
-        <p>※２ ガイドラインに基づき開催</p>
+        <p>※１ アマビエちゃん登録施設等利用推奨</p>
+        <p>※２ 高齢者等への注意喚起</p>
+        <p>※３ アマビエちゃんの登録が前提</p>
       </div>
       <div class="DataLabel-Footer">
         <div class="Footer-Left">
           <slot name="footer" />
-          <open-data-link :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/stage2.html'" label="【茨城県庁】茨城版コロナNext について" />
+          <open-data-link :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/200703_kaitei.html'" label="【茨城県庁】茨城版コロナNext（コロナ対策指針）の改定について" />
           <div>
             <time :datetime="formattedDate">
               {{ $t('{date} 更新', { date }) }}

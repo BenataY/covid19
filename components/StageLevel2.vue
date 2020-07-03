@@ -12,154 +12,66 @@
     <v-card flat>
       <v-card-text class="StageLevel2" align="center">
         <v-row>
-          <v-col class="col-2 StageLevel2-No-Border">
+          <v-col class="col-3 StageLevel2-No-Border">
             外出
           </v-col>
           <v-col class="col-6 StageLevel2-No-Border">
-            平日昼間
-          </v-col>
-          <v-col class="col-1 StageLevel2-No-Border">
-            ○
+            外出自粛なし
           </v-col>
           <v-col class="col-3 StageLevel2-No-Border">
-
+            ※１、※２
           </v-col>
         </v-row>
         <v-row>
-          <v-col class="col-2 StageLevel2-No-Border">
-
+          <v-col class="col-3 StageLevel2-Border">
+            事業者
           </v-col>
           <v-col class="col-6 StageLevel2-Border">
-            週末・夜間
-          </v-col>
-          <v-col class="col-1 StageLevel2-Border">
-            ○
+            休業要請なし
           </v-col>
           <v-col class="col-3 StageLevel2-Border">
-
+            ※３
           </v-col>
         </v-row>
         <v-row>
-          <v-col class="col-2 StageLevel2-No-Border">
-
-          </v-col>
-          <v-col class="col-6 StageLevel2-Border">
-            リスクの高い方
-          </v-col>
-          <v-col class="col-1 StageLevel2-Border">
-            ×
-          </v-col>
           <v-col class="col-3 StageLevel2-Border">
-
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col class="col-2 StageLevel2-No-Border">
-
-          </v-col>
-          <v-col class="col-6 StageLevel2-Border">
-            東京圏
-          </v-col>
-          <v-col class="col-1 StageLevel2-Border">
-            ×
-          </v-col>
-          <v-col class="col-3 StageLevel2-Border">
-
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col class="col-2 StageLevel2-No-Border">
-
-          </v-col>
-          <v-col class="col-6 StageLevel2-Border">
             イベント
           </v-col>
-          <v-col class="col-1 StageLevel2-Border">
-            △
-          </v-col>
-          <v-col class="col-3 StageLevel2-Border">
-            大規模自粛
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col class="col-2 StageLevel2-Border">
-            休業
-          </v-col>
           <v-col class="col-6 StageLevel2-Border">
-            カラオケ等遊興施設
-          </v-col>
-          <v-col class="col-1 StageLevel2-Border">
-            △
+            自粛要請なし
           </v-col>
           <v-col class="col-3 StageLevel2-Border">
-            一部解除
+            ※３
           </v-col>
         </v-row>
         <v-row>
-          <v-col class="col-2 StageLevel2-No-Border">
-
-          </v-col>
-          <v-col class="col-6 StageLevel2-Border">
-            映画館等の劇場
-          </v-col>
-          <v-col class="col-1 StageLevel2-Border">
-            ○
-          </v-col>
           <v-col class="col-3 StageLevel2-Border">
-
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col class="col-2 StageLevel2-No-Border">
-
-          </v-col>
-          <v-col class="col-6 StageLevel2-Border">
-            運動・遊戯施設
-          </v-col>
-          <v-col class="col-1 StageLevel2-Border">
-            ○
-          </v-col>
-          <v-col class="col-3 StageLevel2-Border">
-
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col class="col-2 StageLevel2-Border">
             学校
           </v-col>
           <v-col class="col-6 StageLevel2-Border">
-            県立学校
-          </v-col>
-          <v-col class="col-1 StageLevel2-Border">
-            ×
+            通常登校・通常授業
           </v-col>
           <v-col class="col-3 StageLevel2-Border">
 
           </v-col>
         </v-row>
         <v-row>
-          <v-col class="col-2 StageLevel2-No-Border">
+          <v-col class="col-3 StageLevel2-No-Border">
 
           </v-col>
           <v-col class="col-6 StageLevel2-Border">
-            分散登校
-          </v-col>
-          <v-col class="col-1 StageLevel2-Border">
-            ○
+            部活動可能
           </v-col>
           <v-col class="col-3 StageLevel2-Border">
-            週３〜５日
+
           </v-col>
         </v-row>
         <v-row>
-          <v-col class="col-2 StageLevel2-No-Border">
+          <v-col class="col-3 StageLevel2-No-Border">
 
           </v-col>
           <v-col class="col-6 StageLevel2-Border">
-            部活動・給食
-          </v-col>
-          <v-col class="col-1 StageLevel2-Border">
-            ×
+            給食あり
           </v-col>
           <v-col class="col-3 StageLevel2-Border">
 

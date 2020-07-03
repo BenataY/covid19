@@ -1,8 +1,13 @@
 {
     "newsItems": [
         {
-            "date": "2020/07/02",
-            "text": "本日分の新規感染者を反映しました。（新規感染者２名）"
+            "date": "2020/07/05",
+            "text": "本日分の新規感染者を反映しました。（新規感染者6名）"
+        },
+        {
+            "date": "2020/07/03",
+            "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/200703_kaitei.html",
+            "text": "【7月3日～】茨城版コロナNext（コロナ対策指針）の改定について"
         },
         {
             "date": "2020/06/25",
@@ -13,11 +18,6 @@
             "date": "2020/06/24",
             "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/message.html",
             "text": "知事メッセージ（6月24日更新）"
-        },
-        {
-            "date": "2020/06/05",
-            "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/stage2.html",
-            "text": "茨城版コロナNext【Stage1】社会経済活動再開に向けた対策の段階的緩和について"
         }
     ]
 }

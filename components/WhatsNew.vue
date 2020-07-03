@@ -12,9 +12,9 @@
           mdi-bullhorn
         </v-icon>
         <external-link
-          url="https://www.pref.ibaraki.jp/1saigai/2019-ncov/stage1.html"
+          url="https://www.pref.ibaraki.jp/1saigai/2019-ncov/200703_kaitei.html"
         >
-          対策 Stage1（抑制状態）
+          対策 Stage2（概ね抑制）
         </external-link>
       </span>
     </div>
@@ -119,8 +119,8 @@ export default Vue.extend({
     }
 
     .WhatsNew-link-to-emergency-page {
-      background-color: $alert;
-      border: 2px solid $alert;
+      background-color: $caution;
+      border: 2px solid $caution;
       color: $gray-1;
       border-radius: 4px;
       font-size: 1rem;

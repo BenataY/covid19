@@ -1,91 +1,80 @@
 <template>
   <div>
     <v-card flat>
-      <v-card-text class="StageTitle">
+      <v-card-text class="StageTitleLevel3">
         <v-row >
           <v-col class="col-12">
-            Stage2
+            現在の規制　Stage3
           </v-col>
         </v-row>
       </v-card-text>
     </v-card>
     <v-card flat>
-      <v-card-text class="Data" align="center">
+      <v-card-text class="StageLevel3" align="center">
         <v-row>
-          <v-col class="col-2 Title">
+          <v-col class="col-3 StageLevel3-No-Border">
             外出
           </v-col>
-          <v-col class="col-6 Title">
-            平日昼間
+          <v-col class="col-6 StageLevel3-No-Border">
+            外出自粛なし
           </v-col>
-          <v-col class="col-4 Title">
-            ○
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col class="col-2 Title">
-
-          </v-col>
-          <v-col class="col-6 Title">
-            夜間
-          </v-col>
-          <v-col class="col-4 Title">
-            ×
+          <v-col class="col-3 StageLevel3-No-Border">
+            ※１、※２
           </v-col>
         </v-row>
         <v-row>
-          <v-col class="col-2 Title">
-
+          <v-col class="col-3 StageLevel3-Border">
+            事業者
           </v-col>
-          <v-col class="col-6 Title">
-            リスクの高い方
+          <v-col class="col-6 StageLevel3-Border">
+            休業要請なし
           </v-col>
-          <v-col class="col-4 Title">
-            ×
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col class="col-2 Title">
-
-          </v-col>
-          <v-col class="col-6 Title">
-            東京圏
-          </v-col>
-          <v-col class="col-4 Title">
-            ×
+          <v-col class="col-3 StageLevel3-Border">
+            ※３
           </v-col>
         </v-row>
         <v-row>
-          <v-col class="col-2 Title">
-
-          </v-col>
-          <v-col class="col-6 Title">
+          <v-col class="col-3 StageLevel3-Border">
             イベント
           </v-col>
-          <v-col class="col-4 Title">
-            ×
+          <v-col class="col-6 StageLevel3-Border">
+            自粛要請なし
+          </v-col>
+          <v-col class="col-3 StageLevel3-Border">
+            ※３
           </v-col>
         </v-row>
         <v-row>
-          <v-col class="col-2 Title">
-            休業
+          <v-col class="col-3 StageLevel3-Border">
+            学校
           </v-col>
-          <v-col class="col-6 Title">
-            ３密になりやすい業種
+          <v-col class="col-6 StageLevel3-Border">
+            通常登校・通常授業
           </v-col>
-          <v-col class="col-4 Title">
-            ×
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col class="col-2 Title">
+          <v-col class="col-3 StageLevel3-Border">
 
           </v-col>
-          <v-col class="col-6 Title">
-            劇場・イベントなど
+        </v-row>
+        <v-row>
+          <v-col class="col-3 StageLevel3-No-Border">
+
           </v-col>
-          <v-col class="col-4 Title">
-            ×
+          <v-col class="col-6 StageLevel3-Border">
+            部活動可能
+          </v-col>
+          <v-col class="col-3 StageLevel3-Border">
+
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col class="col-3 StageLevel3-No-Border">
+
+          </v-col>
+          <v-col class="col-6 StageLevel3-Border">
+            給食あり
+          </v-col>
+          <v-col class="col-3 StageLevel3-Border">
+
           </v-col>
         </v-row>
       </v-card-text>
@@ -152,70 +141,29 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
-  .Data {
+  .StageLevel3 {
     font-family: 'Hiragino Sans', sans-serif;
-    padding: 9px 16px !important;
-    margin: 9px 0;
+    font-size: 14px;
+    padding: 0 12px;
 
-    .Title {
-      font-size: 14px;
-      padding: 0 12px;
-
-      @include largerThan($large) {
-        font-size: 18px;
-      }
-    }
-
-    .TitleSub {
-      font-size: 10px;
-      padding: 0 12px;
-
-      @include largerThan($large) {
-        font-size: 12px;
-      }
-    }
-
-    .LabelMain {
+    @include largerThan($large) {
       font-size: 16px;
-      padding: 0 12px;
-
-      @include largerThan($large) {
-        font-size: 20px;
-      }
     }
 
-    .LabelSub {
-      font-size: 10px;
-      padding: 0;
-
-      @include largerThan($large) {
-        font-size: 12px;
-      padding: 0 0 0 6px;
-      }
+    &-Border {
+      padding: 5px 0 5px 0;
+      border-top: 1px solid #999;
     }
 
-    .Stage {
-      font-size: 12px;
-
-      @include largerThan($large) {
-        font-size: 18px;
-      }
+    &-No-Border {
+      padding: 5px 0 5px 0;
     }
   }
 
-  .Stage1 {
-    background-color: #D9ECF7;
-  }
-
-  .Stage2 {
-    background-color: #FCF8E3;
-  }
-
-  .Stage3 {
-    background-color: #fff3e6;
-  }
-
-  .Stage4 {
-    background-color: #F2DEDE;
+  .StageTitleLevel3 {
+    font-size: 20px !important;
+    padding: 0 !important;
+    text-align: center;
+    background-color: $warning;
   }
 </style>

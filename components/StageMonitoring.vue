@@ -187,7 +187,7 @@
       <div class="DataLabel-Footer">
         <div class="Footer-Left">
           <slot name="footer" />
-          <open-data-link :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/200703_kaitei.html'" label="【茨城県庁】茨城版コロナNext（コロナ対策指針）の改定について" />
+          <open-data-link :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/stage23.html'" label="「茨城版コロナNext」 対策StageをStage3に強化" />
           <div>
             <time :datetime="formattedDate">
               {{ updateDate }} 更新

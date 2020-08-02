@@ -53,7 +53,7 @@
           </tr>
           <tr>
             <td class="content" v-bind="headingAttrs">
-              {{ $t('水戸保健所') }}
+              {{ $t('水戸市保健所') }}
             </td>
             <td class="bureau">{{ $t('平日 9:00 〜 17:00') }}</td>
             <td class="tel"><a href="tel:029-350-7650">029-350-7650</a></td>

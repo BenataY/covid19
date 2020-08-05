@@ -1,18 +1,18 @@
 {
     "newsItems": [
         {
-            "date": "2020/08/04",
-            "text": "本日分の新規感染者を反映しました。（新規陽性者7名）"
+            "date": "2020/08/05",
+            "text": "本日分の新規感染者を反映しました。（新規陽性者10名）"
         },
         {
-            "date": "2020/07/31",
-            "url": "https://www.pref.ibaraki.jp/somu/hodo/hodo/20200731chiji.html",
-            "text": "知事記者会見（7月31日更新）"
+            "date": "2020/08/05",
+            "url": "https://www.pref.ibaraki.jp/somu/hodo/hodo/20200805chiji.html",
+            "text": "知事記者会見（8月5日更新）"
         },
         {
-            "date": "2020/07/31",
-            "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/stage23.html",
-            "text": "「茨城版コロナNext」 対策StageをStage3に強化"
+            "date": "2020/08/05",
+            "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/kaiken200805.html",
+            "text": "【8月5日発表】「茨城版コロナNext」 対策StageはStage3を維持"
         },
         {
             "date": "2020/06/25",

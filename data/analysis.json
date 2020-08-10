@@ -1,33 +1,33 @@
 {
-  "date": "2020/08/09 21:00",
+  "date": "2020/08/10 22:30",
   "ibaraki": {
     "criticalBeds": {
-      "today": "2.9",
+      "today": "3.3",
       "yesterday": "",
       "stage": 1
     },
     "beds": {
-      "today": "32.9",
+      "today": "33.2",
       "yesterday": "",
       "stage": 2
     },
     "positive": {
-      "today": "10.7",
+      "today": "10.9",
       "yesterday": "",
       "stage": 4
     },
     "contactor": {
-      "today": "4.1",
+      "today": "4.3",
       "yesterday": "",
       "stage": 3
     },
     "positiveRate": {
-      "today": "3.5",
+      "today": "4.0",
       "yesterday": "",
       "stage": 3
     },
     "pathUnknown": {
-      "today": "211.1",
+      "today": "216.4",
       "yesterday": "",
       "stage": 4
     }

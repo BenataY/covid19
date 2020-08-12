@@ -7,7 +7,7 @@
       "stage": 1
     },
     "beds": {
-      "today": "33.6",
+      "today": "32.8",
       "yesterday": "",
       "stage": 2
     },
@@ -17,17 +17,17 @@
       "stage": 4
     },
     "contactor": {
-      "today": "3.9",
+      "today": "3.6",
       "yesterday": "",
       "stage": 3
     },
     "positiveRate": {
-      "today": "4.2",
+      "today": "4.5",
       "yesterday": "",
       "stage": 3
     },
     "pathUnknown": {
-      "today": "213.7",
+      "today": "202.7",
       "yesterday": "",
       "stage": 4
     }

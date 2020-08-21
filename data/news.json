@@ -1,13 +1,13 @@
 {
     "newsItems": [
         {
-            "date": "2020/08/20",
-            "text": "本日分の新規感染者を反映しました。（新規陽性者3名）"
+            "date": "2020/08/21",
+            "text": "本日分の新規感染者を反映しました。（新規陽性者11名）"
         },
         {
-            "date": "2020/08/18",
-            "url": "https://www.pref.ibaraki.jp/somu/hodo/hodo/20200818chiji.html",
-            "text": "知事記者会見（8月18日更新）"
+            "date": "2020/08/21",
+            "url": "https://www.pref.ibaraki.jp/somu/hodo/hodo/20200821chiji.html",
+            "text": "知事記者会見（8月21日更新）"
         },
         {
             "date": "2020/08/18",

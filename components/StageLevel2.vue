@@ -30,7 +30,7 @@
             休業要請なし
           </v-col>
           <v-col class="col-3 StageLevel2-Border">
-            ※３
+            ※３、※４
           </v-col>
         </v-row>
         <v-row>
@@ -41,7 +41,7 @@
             自粛要請なし
           </v-col>
           <v-col class="col-3 StageLevel2-Border">
-            ※３
+            ※３、※４
           </v-col>
         </v-row>
         <v-row>

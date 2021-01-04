@@ -47,7 +47,7 @@
             <td class="content" v-bind="headingAttrs">
               {{ $t('茨城県庁') }}
             </td>
-            <td class="bureau">{{ $t('24時間対応 (土日・祝祭日を含む)') }}</td>
+            <td class="bureau">{{ $t('8:30 ～ 22:00 (土日・祝祭日を含む)') }}</td>
             <td class="tel"><a href="tel:029-301-3200">029-301-3200</a></td>
             <td class="bureau">{{ $t('茨城県内全域') }}</td>
           </tr>

@@ -1,18 +1,18 @@
 {
     "newsItems": [
         {
-            "date": "2021/01/06",
-            "text": "本日分の新規感染者を反映しました。（新規陽性者71名）"
+            "date": "2021/01/07",
+            "text": "本日分の新規感染者を反映しました。（新規陽性者90名）"
         },
         {
-            "date": "2021/01/06",
-            "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/0105_taisaku.html",
-            "text": "【1月6日更新】新型コロナウイルス感染症対策の徹底について"
+            "date": "2021/01/07",
+            "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/210107_kaiken.html",
+            "text": "【1月7日発表】緊急の新型コロナウイルス感染防止対策の実施について"
         },
         {
-            "date": "2021/01/05",
-            "url": "https://www.pref.ibaraki.jp/somu/hodo/hodo/20210105chiji.html",
-            "text": "事記者会見（1月5日更新）"
+            "date": "2021/01/07",
+            "url": "https://www.pref.ibaraki.jp/somu/hodo/hodo/20210107chiji.html",
+            "text": "知事記者会見（1月7日更新）"
         },
         {
             "date": "2021/01/05",

@@ -9,17 +9,12 @@
           {{ title }}
         </h3>
       </div>
-      <stage-level3 />
-      <div class="DataLabel-Note">
-        <p>※１ アマビエちゃん登録施設の利用推奨</p>
-        <p>※２ 高齢者等への注意喚起</p>
-        <p>※３ アマビエちゃんの登録が前提</p>
-        <p>※４ 大規模イベントはガイドラインに必須項目を設けて対策強化</p>
-      </div>
+      <stage-level4 />
+      <div />
       <div class="DataLabel-Footer">
         <div class="Footer-Left">
           <slot name="footer" />
-          <open-data-link :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/kaiken201111.html'" label="【11月11日発表】「茨城版コロナNext」対策StageをStage3に強化" />
+          <open-data-link :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/kinkyujitaisengen.html'" label="県独自の緊急事態措置（対策）の概要" />
           <div>
             <time :datetime="formattedDate">
               {{ $t('{date} 更新', { date }) }}
@@ -39,6 +34,7 @@ import StageDetail from '@/components/StageDetail.vue'
 import StageLevel1 from '@/components/StageLevel1.vue'
 import StageLevel2 from '@/components/StageLevel2.vue'
 import StageLevel3 from '@/components/StageLevel3.vue'
+import StageLevel4 from '@/components/StageLevel4.vue'
 import { convertDatetimeToISO8601Format } from '@/utils/formatDate'
 
 export default Vue.extend({
@@ -47,7 +43,8 @@ export default Vue.extend({
     StageDetail,
     StageLevel1,
     StageLevel2,
-    StageLevel3
+    StageLevel3,
+    StageLevel4
   },
   props: {
     title: {

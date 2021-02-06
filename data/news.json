@@ -1,23 +1,23 @@
 {
     "newsItems": [
         {
-            "date": "2021/02/04",
-            "text": "本日分の新規感染者を反映しました。（新規陽性者64名）"
+            "date": "2021/02/06",
+            "text": "本日分の新規感染者を反映しました。（新規陽性者58名）"
         },
         {
-            "date": "2021/01/29",
-            "url": "https://www.pref.ibaraki.jp/somu/hodo/hodo/20210129chiji.html",
-            "text": "知事記者会見（1月29日更新）"
+            "date": "2021/02/05",
+            "url": "https://www.pref.ibaraki.jp/somu/hodo/hodo/20210205chiji.html",
+            "text": "知事記者会見（2月5日更新）"
         },
         {
-            "date": "2021/01/15",
+            "date": "2021/02/05",
             "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/kinkyujitaisengen.html",
-            "text": "独自の緊急事態措置（対策）の概要"
+            "text": "県独自の緊急事態宣言を県内全域で延長します（2月28日まで）"
         },
         {
-            "date": "2021/01/14",
-            "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/message.html",
-            "text": "知事メッセージ（新型コロナウイルス感染症）"
+            "date": "2021/02/05",
+            "url": "https://www.pref.ibaraki.jp/sangyo/chusho/kikaku/jitanyousei201127kyouryokukin.html",
+            "text": "城県新型コロナウイルス感染症拡大防止営業時間短縮要請協力金（令和3年1月）について"
         },
         {
             "date": "2020/06/25",

@@ -14,7 +14,7 @@
         <external-link
           url="https://www.pref.ibaraki.jp/1saigai/2019-ncov/kaiken201111.html"
         >
-          対策 Stage4（感染リスク高）
+          対策 Stage3（感染拡大）
         </external-link>
       </span>
     </div>
@@ -119,8 +119,8 @@ export default Vue.extend({
     }
 
     .WhatsNew-link-to-emergency-page {
-      background-color: $danger-cell;
-      border: 2px solid $danger;
+      background-color: $warning-cell;
+      border: 2px solid $warning;
       color: $gray-1;
       border-radius: 4px;
       font-size: 1rem;

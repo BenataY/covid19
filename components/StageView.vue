@@ -9,7 +9,7 @@
           {{ title }}
         </h3>
       </div>
-      <stage-level4 />
+      <stage-level3_2 />
       <div />
       <div class="DataLabel-Footer">
         <div class="Footer-Left">
@@ -34,6 +34,7 @@ import StageDetail from '@/components/StageDetail.vue'
 import StageLevel1 from '@/components/StageLevel1.vue'
 import StageLevel2 from '@/components/StageLevel2.vue'
 import StageLevel3 from '@/components/StageLevel3.vue'
+import StageLevel3_2 from '@/components/StageLevel3_2.vue'
 import StageLevel4 from '@/components/StageLevel4.vue'
 import { convertDatetimeToISO8601Format } from '@/utils/formatDate'
 
@@ -44,6 +45,7 @@ export default Vue.extend({
     StageLevel1,
     StageLevel2,
     StageLevel3,
+    StageLevel3_2,
     StageLevel4
   },
   props: {

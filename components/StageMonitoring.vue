@@ -39,29 +39,29 @@
         </thead>
         <tbody>
           <tr>
-            <td class="rowTitleSub" rowspan="5">
-              県<br />内
+            <td class="rowTitleSub" rowspan="2">
+              県内<br />医療<br />体制
             </td>
             <td class="rowTitleNumber">
               ①
             </td>
             <td class="rowTitle">
-              重症病床<br />稼働率
+              病床稼働数
             </td>
-            <td class="rowItem" :class="{'s4c': (datas.criticalBeds.stage == 4)}">
-              60<span class="unit">%</span><br v-if="smallSize" /><span class="range">超</span>
+            <td class="rowItem" :class="{'s4c': (datas.beds.stage == 4)}">
+              287<span class="unit">床</span><br v-if="smallSize" /><span class="range">超</span>
             </td>
-            <td class="rowItem" :class="{'s3c': (datas.criticalBeds.stage == 3)}">
-              60<span class="unit">%</span><br v-if="smallSize" /><span class="range">以下</span>
+            <td class="rowItem" :class="{'s3c': (datas.beds.stage == 3)}">
+              287<span class="unit">床</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
-            <td class="rowItem" :class="{'s2c': (datas.criticalBeds.stage == 2)}">
-              30<span class="unit">%</span><br v-if="smallSize" /><span class="range">以下</span>
+            <td class="rowItem" :class="{'s2c': (datas.beds.stage == 2)}">
+              185<span class="unit">床</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
-            <td class="rowItem" :class="{'s1c': (datas.criticalBeds.stage == 1)}">
-              10<span class="unit">%</span><br v-if="smallSize" /><span class="range">以下</span>
+            <td class="rowItem" :class="{'s1c': (datas.beds.stage == 1)}">
+              67<span class="unit">床</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
-            <td class="rowItem cellToday" :class="{'s1c': (datas.criticalBeds.stage == 1), 's2c': (datas.criticalBeds.stage == 2), 's3c': (datas.criticalBeds.stage == 3), 's4c': (datas.criticalBeds.stage == 4)}">
-              {{ datas.criticalBeds.today }}<span class="unit">%</span>
+            <td class="rowItem cellToday" :class="{'s1c': (datas.beds.stage == 1), 's2c': (datas.beds.stage == 2), 's3c': (datas.beds.stage == 3), 's4c': (datas.beds.stage == 4)}">
+              {{ datas.beds.today }}<span class="unit">床</span>
             </td>
           </tr>
           <tr class="border">
@@ -69,25 +69,28 @@
               ②
             </td>
             <td class="rowTitle">
-              病床稼働率
+              重症病床<br />稼働数
             </td>
-            <td class="rowItem" :class="{'s4c': (datas.beds.stage == 4)}">
-              70<span class="unit">%</span><br v-if="smallSize" /><span class="range">超</span>
+            <td class="rowItem" :class="{'s4c': (datas.criticalBeds.stage == 4)}">
+              24<span class="unit">床</span><br v-if="smallSize" /><span class="range">超</span>
             </td>
-            <td class="rowItem" :class="{'s3c': (datas.beds.stage == 3)}">
-              70<span class="unit">%</span><br v-if="smallSize" /><span class="range">以下</span>
+            <td class="rowItem" :class="{'s3c': (datas.criticalBeds.stage == 3)}">
+              24<span class="unit">床</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
-            <td class="rowItem" :class="{'s2c': (datas.beds.stage == 2)}">
-              45<span class="unit">%</span><br v-if="smallSize" /><span class="range">以下</span>
+            <td class="rowItem" :class="{'s2c': (datas.criticalBeds.stage == 2)}">
+              12<span class="unit">床</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
-            <td class="rowItem" :class="{'s1c': (datas.beds.stage == 1)}">
-              30<span class="unit">%</span><br v-if="smallSize" /><span class="range">以下</span>
+            <td class="rowItem" :class="{'s1c': (datas.criticalBeds.stage == 1)}">
+              7<span class="unit">床</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
-            <td class="rowItem cellToday" :class="{'s1c': (datas.beds.stage == 1), 's2c': (datas.beds.stage == 2), 's3c': (datas.beds.stage == 3), 's4c': (datas.beds.stage == 4)}">
-              {{ datas.beds.today }}<span class="unit">%</span>
+            <td class="rowItem cellToday" :class="{'s1c': (datas.criticalBeds.stage == 1), 's2c': (datas.criticalBeds.stage == 2), 's3c': (datas.criticalBeds.stage == 3), 's4c': (datas.criticalBeds.stage == 4)}">
+              {{ datas.criticalBeds.today }}<span class="unit">床</span>
             </td>
           </tr>
           <tr class="border">
+            <td class="rowTitleSub" rowspan="2">
+              県内<br />感染<br />状況
+            </td>
             <td class="rowTitleNumber">
               ③
             </td>
@@ -95,16 +98,16 @@
               陽性者数
             </td>
             <td class="rowItem" :class="{'s4c': (datas.positive.stage == 4)}">
-              10<span class="unit">人</span><br v-if="smallSize" /><span class="range">超</span>
+              100<span class="unit">人</span><br v-if="smallSize" /><span class="range">超</span>
             </td>
             <td class="rowItem" :class="{'s3c': (datas.positive.stage == 3)}">
-              10<span class="unit">人</span><br v-if="smallSize" /><span class="range">以下</span>
+              100<span class="unit">人</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
             <td class="rowItem" :class="{'s2c': (datas.positive.stage == 2)}">
-              5<span class="unit">人</span><br v-if="smallSize" /><span class="range">以下</span>
+              60<span class="unit">人</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
             <td class="rowItem" :class="{'s1c': (datas.positive.stage == 1)}">
-              1<span class="unit">人</span><br v-if="smallSize" /><span class="range">以下</span>
+              20<span class="unit">人</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
             <td class="rowItem cellToday" :class="{'s1c': (datas.positive.stage == 1), 's2c': (datas.positive.stage == 2), 's3c': (datas.positive.stage == 3), 's4c': (datas.positive.stage == 4)}">
               {{ datas.positive.today }}<span class="unit">人</span>
@@ -118,68 +121,19 @@
               濃厚接触者<br />以外
             </td>
             <td class="rowItem" :class="{'s4c': (datas.contactor.stage == 4)}">
-              5<span class="unit">人</span><br v-if="smallSize" /><span class="range">超</span>
+              40<span class="unit">人</span><br v-if="smallSize" /><span class="range">超</span>
             </td>
             <td class="rowItem" :class="{'s3c': (datas.contactor.stage == 3)}">
-              5<span class="unit">人</span><br v-if="smallSize" /><span class="range">以下</span>
+              40<span class="unit">人</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
             <td class="rowItem" :class="{'s2c': (datas.contactor.stage == 2)}">
-              3<span class="unit">人</span><br v-if="smallSize" /><span class="range">以下</span>
+              25<span class="unit">人</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
             <td class="rowItem" :class="{'s1c': (datas.contactor.stage == 1)}">
-              1<span class="unit">人</span><br v-if="smallSize" /><span class="range">以下</span>
+              10<span class="unit">人</span><br v-if="smallSize" /><span class="range">以下</span>
             </td>
             <td class="rowItem cellToday" :class="{'s1c': (datas.contactor.stage == 1), 's2c': (datas.contactor.stage == 2), 's3c': (datas.contactor.stage == 3), 's4c': (datas.contactor.stage == 4)}">
               {{ datas.contactor.today }}<span class="unit">人</span>
-            </td>
-          </tr>
-          <tr class="border">
-            <td class="rowTitleNumber">
-              ⑤
-            </td>
-            <td class="rowTitle">
-              陽性率
-            </td>
-            <td class="rowItem" :class="{'s4c': (datas.positiveRate.stage == 4)}">
-              7<span class="unit">%</span><br v-if="smallSize" /><span class="range">超</span>
-            </td>
-            <td class="rowItem" :class="{'s3c': (datas.positiveRate.stage == 3)}">
-              7<span class="unit">%</span><br v-if="smallSize" /><span class="range">以下</span>
-            </td>
-            <td class="rowItem" :class="{'s2c': (datas.positiveRate.stage == 2)}">
-              3<span class="unit">%</span><br v-if="smallSize" /><span class="range">以下</span>
-            </td>
-            <td class="rowItem" :class="{'s1c': (datas.positiveRate.stage == 1)}">
-              1<span class="unit">%</span><br v-if="smallSize" /><span class="range">以下</span>
-            </td>
-            <td class="rowItem cellToday" :class="{'s1c': (datas.positiveRate.stage == 1), 's2c': (datas.positiveRate.stage == 2), 's3c': (datas.positiveRate.stage == 3), 's4c': (datas.positiveRate.stage == 4)}">
-              {{ datas.positiveRate.today }}<span class="unit">%</span>
-            </td>
-          </tr>
-          <tr class="border">
-            <td class="rowTitleSub">
-              都<br />内
-            </td>
-            <td class="rowTitleNumber">
-              ⑥
-            </td>
-            <td class="rowTitle">
-              経路不明<br />陽性者
-            </td>
-            <td class="rowItem" :class="{'s4c': (datas.pathUnknown.stage == 4)}">
-              100<span class="unit">人</span><br v-if="smallSize" /><span class="range">超</span>
-            </td>
-            <td class="rowItem" :class="{'s3c': (datas.pathUnknown.stage == 3)}">
-              100<span class="unit">人</span><br v-if="smallSize" /><span class="range">以下</span>
-            </td>
-            <td class="rowItem" :class="{'s2c': (datas.pathUnknown.stage == 2)}">
-              50<span class="unit">人</span><br v-if="smallSize" /><span class="range">以下</span>
-            </td>
-            <td class="rowItem" :class="{'s1c': (datas.pathUnknown.stage == 1)}">
-              10<span class="unit">人</span><br v-if="smallSize" /><span class="range">以下</span>
-            </td>
-            <td class="rowItem cellToday" :class="{'s1c': (datas.pathUnknown.stage == 1), 's2c': (datas.pathUnknown.stage == 2), 's3c': (datas.pathUnknown.stage == 3), 's4c': (datas.pathUnknown.stage == 4)}">
-              {{ datas.pathUnknown.today }}<span class="unit">人</span>
             </td>
           </tr>
         </tbody>
@@ -187,7 +141,7 @@
       <div class="DataLabel-Footer">
         <div class="Footer-Left">
           <slot name="footer" />
-          <open-data-link :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/kinkyujitaisengen.html'" label="県独自の緊急事態措置（対策）の概要" />
+          <open-data-link :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/shihyo1.html'" label="緊急事態措置等の強化・緩和に関する判断指標」の考え方" />
           <div>
             <time :datetime="formattedDate">
               {{ updateDate }} 更新
@@ -203,17 +157,11 @@
 import Vue from 'vue'
 import Data from '@/data/analysis.json'
 import OpenDataLink from '@/components/OpenDataLink.vue'
-import StageDetail from '@/components/StageDetail.vue'
-import StageLevel2 from '@/components/StageLevel2.vue'
-import StageLevel3 from '@/components/StageLevel3.vue'
 import { convertDateToISO8601Format, convertDateToMDFormat } from '@/utils/formatDate'
 
 export default Vue.extend({
   components: {
-    OpenDataLink,
-    StageDetail,
-    StageLevel2,
-    StageLevel3
+    OpenDataLink
   },
   props: {
     title: {
@@ -361,6 +309,7 @@ export default Vue.extend({
 
     tbody td {
       padding: 0;
+      height: 60px;
     }
 
     .rowTitle {
@@ -453,194 +402,6 @@ export default Vue.extend({
       background-color: $danger-cell;
     }
   }
-
-  &-Footer {
-    @include font-size(12);
-
-    padding: 0 !important;
-    display: flex;
-    justify-content: space-between;
-    margin-top: auto;
-    color: $gray-3 !important;
-    text-align: right;
-    background-color: $white !important;
-    .Permalink {
-      color: $gray-3 !important;
-    }
-
-    .OpenDataLink {
-      text-decoration: none;
-
-      .ExternalLinkIcon {
-        vertical-align: text-bottom;
-      }
-    }
-
-    .Footer-Left {
-      text-align: left;
-    }
-
-    .Footer-Right {
-      position: relative;
-      display: flex;
-      align-items: flex-end;
-
-      .DataLabel-Share-Opener {
-        cursor: pointer;
-        margin: -14px;
-        padding: 14px;
-
-        > svg {
-          width: auto !important;
-        }
-
-        &:focus {
-          outline: dotted $gray-3 1px;
-        }
-      }
-
-      .DataLabel-Share-Buttons {
-        position: absolute;
-        padding: 8px;
-        right: -4px;
-        bottom: 1.5em;
-        width: 240px;
-        border: solid 1px $gray-4;
-        background: $white !important;
-        border-radius: 8px;
-        text-align: left;
-        font-size: 1rem;
-        z-index: 2;
-
-        > * {
-          padding: 4px 0;
-        }
-
-        > .Close-Button {
-          display: flex;
-          justify-content: flex-end;
-          color: $gray-3;
-
-          button {
-            border-radius: 50%;
-            border: 1px solid #fff;
-
-            &:focus {
-              border: 1px dotted #707070;
-              outline: none;
-            }
-          }
-        }
-
-        > .EmbedCode {
-          position: relative;
-          padding: 4px;
-          padding-right: 30px;
-          color: rgb(3, 3, 3);
-          border: solid 1px #eee;
-          border-radius: 8px;
-          font-size: 12px;
-
-          .EmbedCode-Copy {
-            position: absolute;
-            top: 0.3em;
-            right: 0.3em;
-            color: $gray-3;
-          }
-
-          button {
-            border-radius: 50%;
-            border: solid 1px #eee;
-
-            &:focus {
-              border: 1px dotted #707070;
-              outline: none;
-            }
-          }
-        }
-
-        > .Buttons {
-          display: flex;
-          justify-content: center;
-          margin-top: 4px;
-
-          .icon-resize {
-            border-radius: 50%;
-
-            &.twitter {
-              color: #fff;
-              background: #2a96eb;
-            }
-
-            &.facebook {
-              color: #364e8a;
-            }
-
-            &.line {
-              color: #1cb127;
-            }
-          }
-
-          button {
-            width: 30px;
-            height: 30px;
-            margin-left: 4px;
-            margin-right: 4px;
-
-            &:focus {
-              border-radius: 50%;
-              border: 1px dotted #707070;
-              outline: none;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .overlay {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    user-select: none;
-    opacity: 0.8;
-
-    > .overlay-text {
-      text-align: center;
-      padding: 2em;
-      width: 60%;
-      background: $gray-2;
-      border-radius: 8px;
-      color: $white !important;
-    }
-  }
 }
 
-textarea {
-  font: 400 11px system-ui;
-  width: 100%;
-  height: 2.4rem;
-}
-
-.v-expansion-panel-header__icon {
-  margin-left: -5px !important;
-
-  & .v-icon--left {
-    margin-right: 5px;
-  }
-
-  .v-expansion-panel--active & .v-icon {
-    transform: rotate(90deg) !important;
-  }
-}
-
-.expansion-panel-text {
-  color: $gray-1;
-}
 </style>

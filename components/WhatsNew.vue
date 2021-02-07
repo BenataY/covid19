@@ -12,7 +12,7 @@
           mdi-bullhorn
         </v-icon>
         <external-link
-          url="https://www.pref.ibaraki.jp/1saigai/2019-ncov/kaiken201111.html"
+          url="https://www.pref.ibaraki.jp/1saigai/2019-ncov/210205_ver3.html"
         >
           対策 Stage3（感染拡大）
         </external-link>

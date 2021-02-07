@@ -54,7 +54,6 @@ import SickbedsSummaryCard from '@/components/cards/SickbedsSummaryCard.vue'
 import AgeCard from '@/components/cards/AgeCard.vue'
 import CitiesCard from '@/components/cards/CitiesCard.vue'
 import InspectionPersonsNumberCard from '@/components/cards/InspectionPersonsNumberCard.vue'
-import IbarakiAnalysisCard from '@/components/cards/IbarakiAnalysisCard.vue'
 import StageCard from '@/components/cards/StageCard.vue'
 import MonitoringCard from '@/components/cards/MonitoringCard.vue'
 import { convertDatetimeToISO8601Format } from '@/utils/formatDate'
@@ -72,7 +71,6 @@ export default Vue.extend({
     AgeCard,
     CitiesCard,
     InspectionPersonsNumberCard,
-    IbarakiAnalysisCard,
     StageCard,
     MonitoringCard
   },

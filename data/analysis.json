@@ -1,20 +1,20 @@
 {
-  "date": "2021/02/07 18:00",
+  "date": "2021/02/08 23:00",
   "ibaraki": {
     "beds": {
-      "today": "230",
+      "today": "218",
       "stage": 3
     },
     "criticalBeds": {
-      "today": "16",
+      "today": "17",
       "stage": 3
     },
     "positive": {
-      "today": "46.3",
+      "today": "46.7",
       "stage": 2
     },
     "contactor": {
-      "today": "9.47",
+      "today": "9.0",
       "stage": 1
     }
   }

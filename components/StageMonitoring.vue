@@ -155,7 +155,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import Data from '@/data/analysis.json'
+import Data from '@/data/monitoring.json'
 import OpenDataLink from '@/components/OpenDataLink.vue'
 import { convertDateToISO8601Format, convertDateToMDFormat } from '@/utils/formatDate'
 
@@ -187,7 +187,7 @@ export default Vue.extend({
     }
   },
   data() {
-    const datas = Data.ibaraki
+    const datas = Data.data
     const updateDate = Data.date
     return {
       datas,

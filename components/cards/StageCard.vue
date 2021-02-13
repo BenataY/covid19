@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Data from '@/data/analysis.json'
+import Data from '@/data/monitoring.json'
 import StageView from '@/components/StageView.vue'
 
 export default {

@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import Data from '@/data/data.json'
+import Data from '@/data/other.json'
 import CitiesBarChart from '@/components/CitiesBarChart.vue'
 
 export default {

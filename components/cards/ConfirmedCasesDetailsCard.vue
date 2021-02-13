@@ -28,7 +28,7 @@
 </style>
 
 <script>
-import Data from '@/data/data.json'
+import Data from '@/data/other.json'
 import formatConfirmedCases from '@/utils/formatConfirmedCases'
 import DataView from '@/components/DataView.vue'
 import ConfirmedCasesDetailsTable from '@/components/ConfirmedCasesDetailsTable.vue'

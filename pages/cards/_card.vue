@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import Data from '@/data/data.json'
+import Data from '@/data/other.json'
 import Patients from '@/data/patients.json'
 import ConfirmedCasesDetailsCard from '@/components/cards/ConfirmedCasesDetailsCard.vue'
 import ConfirmedCasesNumberCard from '@/components/cards/ConfirmedCasesNumberCard.vue'

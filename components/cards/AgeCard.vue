@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Data from '@/data/data.json'
+import Data from '@/data/other.json'
 import formatVariableGraph from '@/utils/formatVariableGraph.ts'
 import CircleChartAge from '@/components/CircleChartAge.vue'
 

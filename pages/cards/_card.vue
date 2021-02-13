@@ -17,6 +17,7 @@
 
 <script>
 import Data from '@/data/data.json'
+import Patients from '@/data/patients.json'
 import ConfirmedCasesDetailsCard from '@/components/cards/ConfirmedCasesDetailsCard.vue'
 import ConfirmedCasesNumberCard from '@/components/cards/ConfirmedCasesNumberCard.vue'
 import ConfirmedCasesAttributesCard from '@/components/cards/ConfirmedCasesAttributesCard.vue'
@@ -42,7 +43,7 @@ export default {
         break
       case 'attributes-of-confirmed-cases':
         title = this.$t('陽性患者の属性')
-        updatedAt = Data.patients.date
+        updatedAt = Patients.date
         break
       case 'number-of-inspection-persons':
         title = this.$t('検査実施人数')

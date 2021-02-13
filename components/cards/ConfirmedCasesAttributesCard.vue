@@ -5,7 +5,7 @@
       :title-id="'attributes-of-confirmed-cases'"
       :chart-data="patientsTable"
       :chart-option="{}"
-      :date="Data.patients.date"
+      :date="Patients.date"
       :info="sumInfoOfPatients"
       :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/hassei.html'"
       source="参考元データ"
@@ -15,6 +15,7 @@
 
 <script>
 import Data from '@/data/data.json'
+import Patients from '@/data/patients.json'
 import formatGraph from '@/utils/formatGraph'
 import formatTable from '@/utils/formatTable'
 import DataTable from '@/components/DataTable.vue'
@@ -27,7 +28,7 @@ export default {
     // 感染者数グラフ
     const patientsGraph = formatGraph(Data.patients_summary.data)
     // 感染者数
-    const patientsTable = formatTable(Data.patients.data)
+    const patientsTable = formatTable(Patients.data)
 
     const sumInfoOfPatients = {
       lText: patientsGraph[
@@ -59,6 +60,7 @@ export default {
 
     const data = {
       Data,
+      Patients,
       patientsTable,
       sumInfoOfPatients
     }

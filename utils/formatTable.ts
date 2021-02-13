@@ -1,22 +1,21 @@
 import dayjs from 'dayjs'
 
 const headers = [
-  { text: 'NO', value: 'NO', align: 'center' },
-  { text: 'リリース日', value: '公表日' },
-  { text: '居住地', value: '居住地' },
-  { text: '年代', value: '年代' },
-  { text: '性別', value: '性別' },
-  { text: 'データ元', value: '参考', align: 'center' }
+  { text: 'no', value: 'NO', align: 'center' },
+  { text: 'date', value: '公表日' },
+  { text: 'addr', value: '居住地' },
+  { text: 'age', value: '年代' },
+  { text: 'sex', value: '性別' },
+  { text: 'class', value: '区分', align: 'center' }
 ]
 
 type DataType = {
-  NO: number
-  リリース日: string
-  居住地: string | null
-  年代: string | null
-  性別: '男性' | '女性' | string
-  データ元: string | null
-  退院: '◯' | null
+  no: number
+  date: string
+  addr: string | null
+  age: string | null
+  sex: '男性' | '女性' | string
+  class: string | null
   [key: string]: any
 }
 
@@ -24,11 +23,10 @@ type TableDataType = {
   sortNo: number
   NO: number
   公表日: string
-  居住地: DataType['居住地']
-  年代: DataType['年代']
-  性別: DataType['性別'] | '不明'
-  参考: DataType['データ元']
-  退院: DataType['退院']
+  居住地: DataType['addr']
+  年代: DataType['age']
+  性別: DataType['sex'] | '不明'
+  区分: DataType['class']
 }
 
 type TableDateType = {
@@ -48,14 +46,13 @@ export default (data: DataType[]) => {
   }
   data.forEach(d => {
     const TableRow: TableDataType = {
-      sortNo: Number(d['NO']) ?? 0,
-      NO: d['NO'],
-      公表日: dayjs(d['リリース日']).format('MM/DD') ?? '不明',
-      居住地: d['居住地'] ?? '調査中',
-      年代: d['年代'] ?? '不明',
-      性別: d['性別'] ?? '不明',
-      参考: d['データ元'],
-      退院: d['退院']
+      sortNo: Number(d['no']) ?? 0,
+      NO: d['no'],
+      公表日: dayjs(d['date']).format('MM/DD') ?? '不明',
+      居住地: d['addr'] ?? '調査中',
+      年代: d['age'] ?? '不明',
+      性別: d['sex'] ?? '不明',
+      区分: d['class']
     }
     tableDate.datasets.push(TableRow)
   })

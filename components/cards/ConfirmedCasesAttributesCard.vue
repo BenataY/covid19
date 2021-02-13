@@ -46,9 +46,6 @@ export default {
     }
     // 陽性患者の属性 中身の翻訳
     for (const row of patientsTable.datasets) {
-      row['居住地'] = [row['居住地']]
-      row['性別'] = [row['性別']]
-
       if (row['年代'] === '10歳未満') {
         row['年代'] = '10歳未満'
       } else if (row['年代'] === '不明') {
@@ -57,9 +54,6 @@ export default {
         row['年代'] = '非公表'
       } else if (row['年代'] === '調査中') {
         row['年代'] = '調査中'
-      } else {
-        const age = row['年代'].substring(0, 2)
-        row['年代'] = ['{age}代', { age }]
       }
     }
 

@@ -5,6 +5,7 @@ type DataType = {
 
 export type GraphDataType = {
   label: string
+  labelDetail: string
   transition: number
   cumulative: number
 }
@@ -31,6 +32,7 @@ export default (data: DataType[], mode: number) => {
         patSum += subTotal
         graphData.push({
           label: `${date.getMonth() + 1}/${date.getDate()}`,
+          labelDetail: `${d['date']}`,
           transition: subTotal,
           cumulative: patSum
         })

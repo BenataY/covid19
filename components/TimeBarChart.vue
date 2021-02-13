@@ -489,7 +489,7 @@ const options: ThisTypedComponentOptionsWithRecordProps<
       return this.chartData
         .map((d, _) => {
           return {
-            text: d.label,
+            text: d.labelDetail,
             transition: d.transition.toLocaleString(),
             cumulative: d.cumulative.toLocaleString()
           }

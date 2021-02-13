@@ -12,12 +12,6 @@
     <inspection-persons-number-card
       v-else-if="this.$route.params.card == 'number-of-inspection-persons'"
     />
-    <telephone-advisory-reports-number-card
-      v-else-if="
-        this.$route.params.card ==
-          'number-of-reports-to-covid19-telephone-advisory-center'
-      "
-    />
   </div>
 </template>
 
@@ -27,15 +21,13 @@ import ConfirmedCasesDetailsCard from '@/components/cards/ConfirmedCasesDetailsC
 import ConfirmedCasesNumberCard from '@/components/cards/ConfirmedCasesNumberCard.vue'
 import ConfirmedCasesAttributesCard from '@/components/cards/ConfirmedCasesAttributesCard.vue'
 import InspectionPersonsNumberCard from '@/components/cards/InspectionPersonsNumberCard.vue'
-import TelephoneAdvisoryReportsNumberCard from '@/components/cards/TelephoneAdvisoryReportsNumberCard.vue'
 
 export default {
   components: {
     ConfirmedCasesDetailsCard,
     ConfirmedCasesNumberCard,
     ConfirmedCasesAttributesCard,
-    InspectionPersonsNumberCard,
-    TelephoneAdvisoryReportsNumberCard
+    InspectionPersonsNumberCard
   },
   data() {
     let title, updatedAt
@@ -55,10 +47,6 @@ export default {
       case 'number-of-inspection-persons':
         title = this.$t('検査実施人数')
         updatedAt = Data.inspection_persons.date
-        break
-      case 'number-of-reports-to-covid19-telephone-advisory-center':
-        title = this.$t('新型コロナコールセンター相談件数')
-        updatedAt = Data.contacts.date
         break
     }
 

@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Data from '@/data/data.json'
+import PatientsSummary from '@/data/patientsSummary.json'
 import Patients from '@/data/patients.json'
 import formatGraph from '@/utils/formatGraph'
 import formatTable from '@/utils/formatTable'
@@ -26,7 +26,7 @@ export default {
   },
   data() {
     // 感染者数グラフ
-    const patientsGraph = formatGraph(Data.patients_summary.data)
+    const patientsGraph = formatGraph(PatientsSummary.data)
     // 感染者数
     const patientsTable = formatTable(Patients.data)
 
@@ -59,7 +59,7 @@ export default {
     }
 
     const data = {
-      Data,
+      PatientsSummary,
       Patients,
       patientsTable,
       sumInfoOfPatients

@@ -5,7 +5,7 @@
       :title-id="'number-of-inspection-persons'"
       :chart-id="'number-of-inspection-persons'"
       :chart-data="graphData"
-      :date="data.patients_summary.date"
+      :date="data.date"
       :unit="$t('人')"
       :url="'https://www.pref.ibaraki.jp/hokenfukushi/eiken/kikaku/covid-19_ibarakieiken_kensa.html'"
     >
@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import Data from '@/data/data.json'
+import PatientsSummary from '@/data/patientsSummary.json'
 import formatGraph from '@/utils/formatGraph'
 import TimeBarChart from '@/components/TimeBarChart.vue'
 
@@ -35,10 +35,10 @@ export default {
   },
   data() {
     // 検査実施人数グラフ
-    const graphData = formatGraph(Data.patients_summary.data, 1)
+    const graphData = formatGraph(PatientsSummary.data, 1)
 
     return {
-      data: Data,
+      data: PatientsSummary,
       graphData
     }
   }

@@ -5,7 +5,7 @@
       :title-id="'number-of-confirmed-cases'"
       :chart-id="'time-bar-chart-patients'"
       :chart-data="patientsGraph"
-      :date="Data.patients_summary.date"
+      :date="PatientsSummary.date"
       :unit="$t('人')"
       :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/hassei.html'"
       :source="$t('参考元データ')"
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Data from '@/data/data.json'
+import PatientsSummary from '@/data/patientsSummary.json'
 import formatGraph from '@/utils/formatGraph'
 import TimeBarChart from '@/components/TimeBarChart.vue'
 
@@ -24,10 +24,10 @@ export default {
   },
   data() {
     // 感染者数グラフ
-    const patientsGraph = formatGraph(Data.patients_summary.data)
+    const patientsGraph = formatGraph(PatientsSummary.data)
 
     const data = {
-      Data,
+      PatientsSummary,
       patientsGraph
     }
     return data

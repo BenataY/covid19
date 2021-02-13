@@ -3,7 +3,7 @@
     <data-view
       :title="$t('検査陽性者の状況')"
       :title-id="'details-of-confirmed-cases'"
-      :date="Data.patients_summary.date"
+      :date="Data.lastUpdate"
     >
       <template v-slot:button>
         <p :class="$style.note">

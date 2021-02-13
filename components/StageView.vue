@@ -30,7 +30,6 @@
 import Vue from 'vue'
 import Data from '@/data/analysis.json'
 import OpenDataLink from '@/components/OpenDataLink.vue'
-import StageDetail from '@/components/StageDetail.vue'
 import StageLevel1 from '@/components/StageLevel1.vue'
 import StageLevel2 from '@/components/StageLevel2.vue'
 import StageLevel3 from '@/components/StageLevel3.vue'
@@ -41,7 +40,6 @@ import { convertDatetimeToISO8601Format } from '@/utils/formatDate'
 export default Vue.extend({
   components: {
     OpenDataLink,
-    StageDetail,
     StageLevel1,
     StageLevel2,
     StageLevel3,

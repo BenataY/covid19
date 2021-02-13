@@ -16,9 +16,6 @@
       :custom-sort="customSort"
       class="cardTable"
     >
-      <template v-slot:item.参考="{ item }">
-        <a v-if="item.参考" :href="item.参考" target="_blank">詳細</a>
-      </template>
     </v-data-table>
     <template v-slot:infoPanel>
       <data-view-basic-info-panel

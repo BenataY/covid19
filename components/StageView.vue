@@ -15,11 +15,6 @@
         <div class="Footer-Left">
           <slot name="footer" />
           <open-data-link :url="'https://www.pref.ibaraki.jp/1saigai/2019-ncov/kinkyujitaisengen.html'" label="県独自の緊急事態措置（対策）の概要" />
-          <div>
-            <time :datetime="formattedDate">
-              {{ $t('{date} 更新', { date }) }}
-            </time>
-          </div>
         </div>
       </div>
     </div>
@@ -28,7 +23,6 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import Data from '@/data/monitoring.json'
 import OpenDataLink from '@/components/OpenDataLink.vue'
 import StageLevel1 from '@/components/StageLevel1.vue'
 import StageLevel2 from '@/components/StageLevel2.vue'
@@ -67,17 +61,6 @@ export default Vue.extend({
       type: Boolean,
       required: false,
       default: false
-    }
-  },
-  data() {
-    const datas = Data.data
-    return {
-      datas
-    }
-  },
-  computed: {
-    formattedDate(): string {
-      return convertDatetimeToISO8601Format(this.date)
     }
   }
 })

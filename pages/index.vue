@@ -26,10 +26,9 @@
     <v-row class="DataBlock">
       <confirmed-cases-number-card />
       <confirmed-cases-details-card />
-      <stage-card />
       <monitoring-card />
       <confirmed-cases-attributes-card />
-      <inspection-persons-number-card />
+      <stage-card />
       <cities-card />
       <age-card />
     </v-row>
@@ -51,7 +50,6 @@ import ConfirmedCasesNumberCard from '@/components/cards/ConfirmedCasesNumberCar
 import ConfirmedCasesAttributesCard from '@/components/cards/ConfirmedCasesAttributesCard.vue'
 import AgeCard from '@/components/cards/AgeCard.vue'
 import CitiesCard from '@/components/cards/CitiesCard.vue'
-import InspectionPersonsNumberCard from '@/components/cards/InspectionPersonsNumberCard.vue'
 import StageCard from '@/components/cards/StageCard.vue'
 import MonitoringCard from '@/components/cards/MonitoringCard.vue'
 import { convertDatetimeToISO8601Format } from '@/utils/formatDate'
@@ -67,7 +65,6 @@ export default Vue.extend({
     ConfirmedCasesAttributesCard,
     AgeCard,
     CitiesCard,
-    InspectionPersonsNumberCard,
     StageCard,
     MonitoringCard
   },

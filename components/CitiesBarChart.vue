@@ -14,7 +14,7 @@
       :chart-id="chartId"
       :chart-data="displayData"
       :options="displayOption"
-      :height="530"
+      :height="750"
     />
     <v-data-table
       :style="{ top: '-9999px', position: canvas ? 'fixed' : 'static' }"
@@ -194,7 +194,7 @@ const options: ThisTypedComponentOptionsWithRecordProps<
                 display: true
               },
               ticks: {
-                fontSize: 9,
+                fontSize: 10,
                 fontColor: '#808080',
                 callback(label) {
                   return `${label}${self.unit}`
@@ -208,7 +208,7 @@ const options: ThisTypedComponentOptionsWithRecordProps<
                 display: false
               },
               ticks: {
-                fontSize: 9,
+                fontSize: 10,
                 fontColor: '#808080'
               }
             }

@@ -1,45 +1,62 @@
 {
-  "lastUpdate": "2021/02/13 22:46",
+  "lastUpdate": "2021/02/14 02:26",
   "main_summary": {
-    "attr": "検査実施人数",
-    "value": 97940,
     "children": [
       {
-        "attr": "陽性者数",
+        "attr": "陽性患者数",
+        "date": "2021/02/14",
         "value": 5334,
         "children": [
           {
-            "attr": "入院中",
+            "attr": "療養中",
             "value": 433,
             "children": [
               {
-                "attr": "軽症",
-                "value": 77
+                "attr": "入院中",
+                "value": 188,
+                "children": [
+                  {
+                    "attr": "重症",
+                    "value": 17
+                  },
+                  {
+                    "attr": "中等症",
+                    "value": 94
+                  },
+                  {
+                    "attr": "軽症",
+                    "value": 77
+                  }
+                ]
               },
               {
-                "attr": "中等症",
-                "value": 94
+                "attr": "自宅療養",
+                "value": 149
               },
               {
-                "attr": "重症",
-                "value": 17
+                "attr": "宿泊療養",
+                "value": 96
               }
             ]
+          },
+          {
+            "attr": "退院退所",
+            "value": 4719
           },
           {
             "attr": "死亡",
             "value": 91
           },
           {
-            "attr": "退院不明",
-            "value": 4810
+            "attr": "その他",
+            "value": 91
           }
         ]
       }
     ]
   },
   "age": {
-    "date": "2021/02/13",
+    "date": "2021/02/14",
     "data": {
       "10歳代以下": 627,
       "20～30歳代": 1751,
@@ -50,7 +67,7 @@
     }
   },
   "cities": {
-    "date": "2021/02/13",
+    "date": "2021/02/14",
     "data": {
       "labels": [
         "つくば市",

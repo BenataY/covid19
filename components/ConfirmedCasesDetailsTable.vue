@@ -1,64 +1,106 @@
 <template>
   <ul :class="$style.container">
-    <li :class="[$style.box, $style.tall, $style.tested]">
+    <li :class="[$style.box, $style.parent]">
       <div :class="$style.content">
+        <span> 陽性者数 (累計) </span>
         <span>
-          {{ $t('検査人数') }}
-          <br />({{ $t('累計') }})
+          <strong>{{ 陽性者数.toLocaleString() }}</strong>
+          <span :class="$style.unit">人</span>
         </span>
-        <span>
-          <strong>{{ 検査実施人数 }}</strong>
-          <span :class="$style.unit">{{ $t('人') }}</span>
-        </span>
-      </div>
-    </li>
-    <li :class="[$style.box, $style.tall, $style.parent, $style.confirmed]">
-      <div :class="$style.pillar">
-        <div :class="$style.content">
-          <span>
-            {{ $t('陽性者数') }}
-            <br />({{ $t('累計') }})
-          </span>
-          <span>
-            <strong>{{ 陽性者数 }}</strong>
-            <span :class="$style.unit">{{ $t('人') }}</span>
-          </span>
-        </div>
       </div>
       <ul :class="$style.group">
-        <li :class="[$style.box, $style.hospitalized]">
-          <div :class="$style.pillar">
-            <div :class="$style.content">
-              <span>{{ $t('入院中') }}</span>
-              <span>
-                <strong>{{ 入院中 }}</strong>
-                <span :class="$style.unit">{{ $t('人') }}</span>
-              </span>
-            </div>
+        <li :class="[$style.box, $style.parent]">
+          <div :class="$style.content">
+            <span>療養中</span>
+            <span>
+              <strong>{{ 療養中.toLocaleString() }}</strong>
+              <span :class="$style.unit">人</span>
+            </span>
+          </div>
+          <ul :class="$style.group">
+            <li :class="[$style.box, $style.parent]">
+              <div :class="$style.content">
+                <span>入院中</span>
+                <span>
+                  <strong>{{ 入院中.toLocaleString() }}</strong>
+                  <span :class="$style.unit">人</span>
+                </span>
+              </div>
+              <ul :class="$style.group">
+                <li :class="[$style.box]">
+                  <div :class="$style.content">
+                    <span>重症</span>
+                    <span>
+                      <strong>{{ 重症.toLocaleString() }}</strong>
+                      <span :class="$style.unit">人</span>
+                    </span>
+                  </div>
+                </li>
+                <li :class="[$style.box]">
+                  <div :class="$style.content">
+                    <span>中等症</span>
+                    <span>
+                      <strong>{{ 中等症.toLocaleString() }}</strong>
+                      <span :class="$style.unit">人</span>
+                    </span>
+                  </div>
+                </li>
+                <li :class="[$style.box]">
+                  <div :class="$style.content">
+                    <span>軽症</span>
+                    <span>
+                      <strong>{{ 軽症.toLocaleString() }}</strong>
+                      <span :class="$style.unit">人</span>
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li :class="[$style.box]">
+              <div :class="$style.content">
+                <span>自宅療養</span>
+                <span>
+                  <strong>{{ 自宅療養.toLocaleString() }}</strong>
+                  <span :class="$style.unit">人</span>
+                </span>
+              </div>
+            </li>
+            <li :class="[$style.box]">
+              <div :class="$style.content">
+                <span>宿泊施設での療養</span>
+                <span>
+                  <strong>{{ 宿泊療養.toLocaleString() }}</strong>
+                  <span :class="$style.unit">人</span>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li :class="[$style.box]">
+          <div :class="$style.content">
+            <span>退院・退所等</span>
+            <span>
+              <strong>{{ 退院退所.toLocaleString() }}</strong>
+              <span :class="$style.unit">人</span>
+            </span>
           </div>
         </li>
-        <li :class="[$style.box, $style.deceased]">
-          <div :class="$style.pillar">
-            <div :class="$style.content">
-              <span>{{ $t('死亡') }}</span>
-              <span>
-                <strong>{{ 死亡 }}</strong>
-                <span :class="$style.unit">{{ $t('人') }}</span>
-              </span>
-            </div>
+        <li :class="[$style.box]">
+          <div :class="$style.content">
+            <span>死亡</span>
+            <span>
+              <strong>{{ 死亡.toLocaleString() }}</strong>
+              <span :class="$style.unit">人</span>
+            </span>
           </div>
         </li>
-        <li :class="[$style.box, $style.recovered]">
-          <div :class="$style.pillar">
-            <div :class="$style.content">
-              <!-- eslint-disable vue/no-v-html-->
-              <span>{{ $t('退院等') }}</span>
-              <!-- eslint-enable vue/no-v-html-->
-              <span>
-                <strong>{{ 退院不明 }}</strong>
-                <span :class="$style.unit">{{ $t('人') }}</span>
-              </span>
-            </div>
+        <li :class="[$style.box]">
+          <div :class="$style.content">
+            <span>その他</span>
+            <span>
+              <strong>{{ その他.toLocaleString() }}</strong>
+              <span :class="$style.unit">人</span>
+            </span>
           </div>
         </li>
       </ul>
@@ -72,76 +114,62 @@ import Vue from 'vue'
 /* eslint-disable vue/prop-name-casing */
 export default Vue.extend({
   props: {
-    検査実施人数: {
-      type: Number,
-      required: true
-    },
     陽性者数: {
       type: Number,
-      required: true
+      required: true,
+    },
+    療養中: {
+      type: Number,
+      required: true,
     },
     入院中: {
       type: Number,
-      required: true
-    },
-    軽症: {
-      type: Number,
-      required: true
-    },
-    中等症: {
-      type: Number,
-      required: true
+      required: true,
     },
     重症: {
       type: Number,
-      required: true
+      required: true,
+    },
+    中等症: {
+      type: Number,
+      required: true,
+    },
+    軽症: {
+      type: Number,
+      required: true,
+    },
+    自宅療養: {
+      type: Number,
+      required: true,
+    },
+    宿泊療養: {
+      type: Number,
+      required: true,
+    },
+    退院退所: {
+      type: Number,
+      required: true,
     },
     死亡: {
       type: Number,
-      required: true
+      required: true,
     },
-    退院不明: {
+    その他: {
       type: Number,
-      required: true
-    }
+      required: true,
+    },
   },
-  methods: {
-    /** 桁数に応じて位置の調整をする */
-    getAdjustX(input: number) {
-      const length = input.toString(10).length
-      switch (length) {
-        case 1: {
-          return 3
-        }
-        case 2: {
-          return 0
-        }
-        case 3: {
-          return -3
-        }
-        case 4: {
-          return -8
-        }
-        default: {
-          return 0
-        }
-      }
-    }
-  }
 })
 </script>
 
 <style lang="scss" module>
 $default-bdw: 3px;
-$default-boxh: 120px;
 $default-boxdiff: 35px;
 
 // .container > .box > (.group > .box > ...) .pillar > .content
 
 .container {
   width: 100%;
-  display: flex;
-  justify-content: center;
   box-sizing: border-box;
   color: $green-1;
   line-height: 1.35;
@@ -157,140 +185,80 @@ $default-boxdiff: 35px;
   }
 }
 
-.pillar {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  flex: 0 0 auto;
-  text-align: center;
-  width: 100%;
-  border: $default-bdw solid $green-1;
-}
-
 .group {
-  display: flex;
   flex: 0 0 auto;
-  padding-left: 0;
-  padding-top: $default-bdw;
+  padding-left: $default-bdw !important;
   border-top: $default-bdw solid $green-1;
   border-left: $default-bdw solid $green-1;
 }
 
-.box {
+.content {
+  padding: 5px 10px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border: $default-bdw solid $green-1;
+
+  > span {
+    display: block;
+
+    @include font-size(14);
+
+    &:first-child {
+      text-align: left;
+      margin-top: 1px;
+      flex-shrink: 2;
+    }
+
+    &:last-child {
+      margin-left: 10px;
+      text-align: right;
+      // white-space: nowrap;
+      flex-shrink: 1;
+    }
+
+    &:not(:last-child) {
+      overflow-wrap: break-word;
+    }
+  }
+
+  strong {
+    @include font-size(16);
+  }
+
+  span.unit {
+    @include font-size(14);
+  }
+}
+
+.box {
+  display: block;
+  margin-top: $default-bdw;
 
   &.parent {
     border-top: $default-bdw solid $green-1;
     border-left: $default-bdw solid $green-1;
     position: relative;
-    padding-top: $default-boxdiff - $default-bdw * 2;
+    padding-left: $default-boxdiff - $default-bdw * 2;
 
     &::after {
       content: '';
       display: block;
       position: absolute;
-      top: -1px;
-      right: 0;
-      height: $default-boxdiff - $default-bdw - 2;
-      border-left: $default-bdw solid $green-1;
+      left: -1px;
+      bottom: 0;
+      width: $default-boxdiff - $default-bdw - 2;
+      border-bottom: $default-bdw solid $green-1;
     }
 
-    > .pillar {
-      margin-top: -($default-boxdiff - $default-bdw * 2);
+    > .content {
+      margin-left: -($default-boxdiff - $default-bdw * 2);
+      width: calc(100% + #{($default-boxdiff - $default-bdw * 2)});
       border-top: none;
-      border-right: none;
       border-left: none;
+      border-bottom: none;
     }
-  }
-
-  &.tested {
-    background-color: $gray-5;
-    margin-right: $default-bdw;
-    border: $default-bdw solid $gray-3;
-    width: 21.3%;
-    flex: 0 0 auto;
-    text-align: center;
-    color: $gray-2;
-    display: block;
-    padding-top: $default-boxh - $default-boxdiff - $default-bdw - 2;
-
-    &::after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: -1px;
-      right: 0;
-    }
-  }
-
-  &.confirmed {
-    width: 78.7%;
-
-    > .pillar {
-      // [4列] 1/4
-      width: calc((100% + #{$default-bdw} * 2) / 4 - #{$default-bdw} * 3);
-    }
-
-    > .group {
-      // [4列] 3/4
-      width: calc((100% + #{$default-bdw} * 2) / 4 * 3 + #{$default-bdw});
-    }
-  }
-
-  &.hospitalized {
-    margin-left: $default-bdw;
-    // [3列] 1/3
-    width: calc(100% / 3 * 1 - #{$default-bdw});
-
-    > .pillar {
-      // [3列] 1/3
-      width: calc((100% + #{$default-bdw}) / 1 - #{$default-bdw});
-    }
-  }
-
-  &.minor,
-  &.severe {
-    margin-left: $default-bdw;
-    // [1列] 1/1
-    width: calc(100% - #{$default-bdw});
-  }
-
-  &.deceased,
-  &.recovered {
-    margin-left: $default-bdw;
-    // [3列] 1/3
-    width: calc(100% / 3 - #{$default-bdw});
-  }
-}
-
-.content {
-  min-height: $default-boxh;
-  padding: 10px 2px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-
-  > span {
-    display: block;
-    width: 100%;
-
-    @include font-size(16);
-
-    &:last-child {
-      margin-top: 0.1em;
-    }
-
-    &:not(:last-child) {
-      word-break: break-all;
-    }
-  }
-  span strong {
-    @include font-size(18);
-  }
-
-  span.unit {
-    @include font-size(16);
   }
 }
 
@@ -302,22 +270,30 @@ $default-boxdiff: 35px;
   }
 }
 
-@mixin override($vw, $bdw, $fz, $boxh, $boxdiff) {
-  .pillar {
-    border-width: px2vw($bdw, $vw);
-  }
-
+@mixin override($vw, $bdw, $fz, $boxdiff) {
   .group {
-    padding-top: px2vw($bdw, $vw);
-    border-top-width: px2vw($bdw, $vw);
-    border-left-width: px2vw($bdw, $vw);
+    padding-left: px2vw($bdw, $vw) !important;
+    border-top: px2vw($bdw, $vw) solid $green-1;
+    border-left: px2vw($bdw, $vw) solid $green-1;
   }
 
   .content {
+    padding: px2vw(5, $vw) px2vw(10, $vw);
+    border: px2vw($bdw, $vw) solid $green-1;
+
     > span {
       @include font-size($fz);
+
+      &:first-child {
+        margin-top: px2vw(1, $vw);
+      }
+
+      &:last-child {
+        margin-left: 10px;
+      }
     }
-    span strong {
+
+    strong {
       @include font-size($fz + 2);
     }
 
@@ -327,84 +303,38 @@ $default-boxdiff: 35px;
   }
 
   .box {
+    margin-top: px2vw($bdw, $vw);
+
     &.parent {
-      border-top-width: px2vw($bdw, $vw);
-      border-left-width: px2vw($bdw, $vw);
-      padding-top: px2vw($boxdiff, $vw) - px2vw($bdw, $vw) * 2;
+      border-top: px2vw($bdw, $vw) solid $green-1;
+      border-left: px2vw($bdw, $vw) solid $green-1;
+      padding-left: px2vw($boxdiff, $vw) - px2vw($bdw, $vw) * 2;
 
       &::after {
-        height: px2vw($boxdiff - $bdw, $vw);
-        border-left-width: px2vw($bdw, $vw);
+        width: px2vw($boxdiff - $bdw, $vw);
+        border-bottom: px2vw($bdw, $vw) solid $green-1;
       }
 
-      > .pillar {
-        margin-top: px2vw((-($boxdiff - $bdw * 2)), $vw);
+      > .content {
+        margin-left: -(px2vw($boxdiff, $vw) - px2vw($bdw, $vw) * 2);
+        width: calc(100% + #{(px2vw($boxdiff, $vw) - px2vw($bdw, $vw) * 2)});
       }
-    }
-
-    &.confirmed {
-      > .pillar {
-        width: calc(
-          (100% + #{px2vw($bdw, $vw)} * 2) / 4 - #{px2vw($bdw, $vw)} * 3
-        );
-      }
-
-      > .group {
-        width: calc(
-          (100% + #{px2vw($bdw, $vw)} * 2) / 4 * 3 + #{px2vw($bdw, $vw)}
-        );
-      }
-    }
-
-    &.hospitalized {
-      margin-left: px2vw($bdw, $vw);
-      width: calc(100% / 3 - #{px2vw($bdw, $vw)});
-    }
-
-    &.minor,
-    &.severe {
-      margin-left: px2vw($bdw, $vw);
-      width: calc(100% / 3 - #{px2vw($bdw, $vw)});
-    }
-
-    &.deceased,
-    &.recovered {
-      margin-left: px2vw($bdw, $vw);
-      width: calc(100% / 3 - #{px2vw($bdw, $vw)});
     }
   }
 }
 
-// variables.scss Breakpoints: huge (1440)
-@include lessThan(1440) {
-  @include override(1440, 3, 15, 150, 35);
-}
-
 // Vuetify Breakpoints: Large (1264)
 @include lessThan(1263) {
-  @include override(1263, 2, 13, 107, 24);
-}
-
-// variables.scss Breakpoints: large (1170)
-@include lessThan(1170) {
-  @include override(1170, 2, 13, 107, 24);
+  @include override(1263, 3, 14, 35);
 }
 
 // Vuetify Breakpoints: Small (960)
 @include lessThan(959) {
-  @include override(960, 4, 14, 180, 40);
-}
-
-@include lessThan(767) {
-  @include override(960, 3, 14, 180, 40);
+  @include override(960, 3, 14, 35);
 }
 
 // Vuetify Breakpoints: Extra Small (600)
 @include lessThan(600) {
-  @include override(600, 3, 14, 150, 35);
-}
-
-@include lessThan(420) {
-  @include override(600, 2, 12, 150, 35);
+  @include override(600, 3, 14, 35);
 }
 </style>

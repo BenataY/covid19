@@ -1,24 +1,24 @@
 {
-  "date": "2021/02/13",
+  "date": "2021/02/14",
   "data": {
     "beds": {
-      "today": 188,
-      "before": 232,
+      "today": 186,
+      "before": 230,
       "stage": 3
     },
     "criticalBeds": {
-      "today": 17,
-      "before": 15,
+      "today": 16,
+      "before": 16,
       "stage": 3
     },
     "positive": {
-      "today": 34.6,
-      "before": 48.1,
+      "today": 32.9,
+      "before": 46.3,
       "stage": 2
     },
     "contactor": {
-      "today": 7,
-      "before": 10.7,
+      "today": 6.3,
+      "before": 9.47,
       "stage": 1
     }
   }

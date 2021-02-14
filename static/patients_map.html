@@ -95,22 +95,22 @@
     利根町: [35.857916, 140.139147]
   }
 
-  $.getJSON("https://script.google.com/macros/s/AKfycbxeeKUKXPGkQwHZlNDryn7n-bHEjth4LC80kDbok1ksqSGgu14/exec?",
-    { md: "patients" },
+  $.getJSON("https://script.google.com/macros/s/AKfycbyT75jdaGEwXYnA-aiL6PQk0bYfDwPbNuuzVnSPeM-4GyEiTISZZLQ_Pw/exec?",
+    { mode: "patientsFull" },
     function(datas) {
       for (let i in datas['data']) {
         var data = datas['data'][i];
-        if (!data['居住地'] || (cities[data['居住地']] == null)) {
+        if (!data['addr'] || (cities[data['addr']] == null)) {
           continue;
         }
 
-        var marker_test = L.marker(cities[data['居住地']]);
+        var marker_test = L.marker(cities[data['addr']]);
         marker_test.bindPopup(
-          "<b>" + data['NO'] + "例目</b><br />" +
-          "年代：" + data['年代'] + "<br />" +
-          "性別：" + data['性別'] + "<br />" +
-          "居住：" + data['居住地'] + "<br />" +
-          "職業：" + data['職業']
+          "<b>" + data['no'] + "例目</b><br />" +
+          "年代：" + data['age'] + "<br />" +
+          "性別：" + data['sex'] + "<br />" +
+          "居住：" + data['addr'] + "<br />" +
+          "区分：" + data['class']
         );
         markers.addLayer(marker_test);
       }

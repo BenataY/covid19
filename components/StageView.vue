@@ -9,7 +9,7 @@
           {{ title }}
         </h3>
       </div>
-      <stage-level3_2 />
+      <stage-level2_2 />
       <div />
       <div class="DataLabel-Footer">
         <div class="Footer-Left">
@@ -26,6 +26,7 @@ import Vue from 'vue'
 import OpenDataLink from '@/components/OpenDataLink.vue'
 import StageLevel1 from '@/components/StageLevel1.vue'
 import StageLevel2 from '@/components/StageLevel2.vue'
+import StageLevel2_2 from '@/components/StageLevel2_2.vue'
 import StageLevel3 from '@/components/StageLevel3.vue'
 import StageLevel3_2 from '@/components/StageLevel3_2.vue'
 import StageLevel4 from '@/components/StageLevel4.vue'
@@ -36,6 +37,7 @@ export default Vue.extend({
     OpenDataLink,
     StageLevel1,
     StageLevel2,
+    StageLevel2_2,
     StageLevel3,
     StageLevel3_2,
     StageLevel4

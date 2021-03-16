@@ -1,9 +1,9 @@
 {
-  "date": "2021/03/15",
+  "date": "2021/03/16",
   "data": {
     "beds": {
-      "today": 141,
-      "before": 149,
+      "today": 136,
+      "before": 138,
       "stage": 2
     },
     "criticalBeds": {
@@ -12,13 +12,13 @@
       "stage": 1
     },
     "positive": {
-      "today": 26,
-      "before": 29.1,
+      "today": 25.9,
+      "before": 30.3,
       "stage": 2
     },
     "contactor": {
-      "today": 6.4,
-      "before": 5.9,
+      "today": 6.1,
+      "before": 6.3,
       "stage": 1
     }
   }

@@ -1,23 +1,23 @@
 {
     "newsItems": [
         {
-            "date": "2021/03/17",
-            "text": "本日分の新規感染者を反映しました。（新規陽性者40名）"
+            "date": "2021/03/18",
+            "text": "本日分の新規感染者を反映しました。（新規陽性者47名）"
         },
         {
-            "date": "2021/02/22",
-            "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/kinkyujitaisengen.html",
-            "text": "県独自の緊急事態宣言を解除しました（2月23日から）"
+            "date": "2021/03/18",
+            "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/210316_kaiken.html",
+            "text": "茨城県まん延防止警戒期間を設定しました"
         },
         {
-            "date": "2021/02/05",
+            "date": "2021/03/18",
+            "url": "https://www.pref.ibaraki.jp/1saigai/2019-ncov/covid-19_vaccine/team.html",
+            "text": "新型コロナウイルスワクチンについて"
+        },
+        {
+            "date": "2021/03/11",
             "url": "https://www.pref.ibaraki.jp/sangyo/chusho/kikaku/jitanyousei201127kyouryokukin.html",
-            "text": "城県新型コロナウイルス感染症拡大防止営業時間短縮要請協力金（令和3年1月）について"
-        },
-        {
-            "date": "2020/06/25",
-            "url": "https://www.pref.ibaraki.jp/shokorodo/chusho/shogyo/2020koronatsuuchi/20200615.html",
-            "text": "感染防止対策システム「いばらきアマビエちゃん」について"
+            "text": "茨城県新型コロナウイルス感染症拡大防止営業時間短縮要請協力金（令和3年2月8日開始分）について"
         }
     ]
 }

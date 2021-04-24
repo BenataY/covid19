@@ -1,8 +1,8 @@
 {
-  "date": "2021/04/22",
+  "date": "2021/04/23",
   "data": {
     "beds": {
-      "today": 154,
+      "today": 160,
       "before": 126,
       "stage": 2
     },
@@ -12,12 +12,12 @@
       "stage": 2
     },
     "positive": {
-      "today": 56.6,
+      "today": 58.3,
       "before": 39.6,
       "stage": 2
     },
     "contactor": {
-      "today": 25.4,
+      "today": 26.1,
       "before": 15,
       "stage": 3
     }
